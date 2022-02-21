@@ -1,7 +1,7 @@
 import Footer from "../layout/footer";
 import Header from "../layout/header-3";
 import { useState } from "react";
-import ModalVideo from "react-modal-video";
+//import ModalVideo from "react-modal-video";
 import AllServices from "../element/all-services";
 import Link from "next/link";
 
@@ -113,13 +113,13 @@ function ServicesDetails1() {
                             <i className="flaticon-play"></i>
                           </a>
                         </div>
-                        <ModalVideo
+                        {/*   <ModalVideo
                           channel="youtube"
                           autoplay
                           isOpen={isOpen}
                           videoId="UpolBSznWp0"
                           onClose={() => setOpen(false)}
-                        />
+                        /> */}
                       </div>
                     </div>
                   </div>

@@ -1,4 +1,11 @@
-import { useState } from "react";
+import React from "react";
+
+function test() {
+  return <div>test</div>;
+}
+
+export default test;
+/* import { useState } from "react";
 import { Accordion, Card } from "react-bootstrap";
 
 
@@ -73,3 +80,4 @@ const Test = () => {
 };
 
 export default Test;
+ */
