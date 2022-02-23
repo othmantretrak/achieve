@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useState } from "react";
+import Fire from "../component/iconCompenents/Fire";
 function Header() {
   const [show, setShow] = useState(false);
   const [open, setOpen] = useState("home");
@@ -37,8 +38,9 @@ function Header() {
               <div className="extra-nav">
                 <div className="extra-cell">
                   <Link href="contact-us-1">
-                    <a className="btn btn-link d-inline-flex align-items-center">
-                      <i className="fa fa-angle-right m-r10"></i>Get A Quote
+                    <a className="btn btn-corner gradient btn-primary">
+                      <Fire />
+                      Get A Quote
                     </a>
                   </Link>
                 </div>
@@ -65,13 +67,17 @@ function Header() {
 
                   <li className={`${open === "services" ? "open" : ""}`}>
                     <Link href="/services-1">
-                      <a>Services</a>
+                      <a>Diensten</a>
                     </Link>
                   </li>
-
+                  <li className={`${open === "services" ? "open" : ""}`}>
+                    <Link href="/pricing-table-3">
+                      <a>Tarieven</a>
+                    </Link>
+                  </li>
                   <li>
-                    <Link href="/contact-us-1">
-                      <a>Contact Us</a>
+                    <Link href="/contact-us-3">
+                      <a>Contact</a>
                     </Link>
                   </li>
                   <li className={`${open === "about" ? "open" : ""}`}>

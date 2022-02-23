@@ -13613,7 +13613,8 @@ label.error {
 .form-control {
   box-shadow: 0 0px 10px 4px rgba(31, 66, 135, 0.1);
   height: 45px;
-  border-radius: 1.5rem !important;
+  border-radius: 0.25rem !important;
+  border: 1px solid #cccccc;
   padding: 10px 20px;
   position: relative;
   font-size: 15px;
@@ -13743,6 +13744,9 @@ textarea {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 1.5rem;
   border-top-right-radius: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .btn-corner:hover,
 .btn-corner:active,
@@ -13751,6 +13755,9 @@ textarea {
   border-bottom-right-radius: 1.5rem;
   border-bottom-left-radius: 0;
   border-top-right-radius: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn-link i {
@@ -16293,6 +16300,13 @@ textarea {
 }
 .pricingtable-wrapper.style-1 .btn {
   transition: all 0.5s;
+}
+.pricingtable-wrapper .wrap-service svg {
+  fill: #896eff;
+}
+.pricingtable-wrapper.style-1:hover,
+.pricingtable-wrapper.style-1.active .wrap-service svg {
+  fill: white;
 }
 .pricingtable-wrapper.style-1:hover,
 .pricingtable-wrapper.style-1.active {

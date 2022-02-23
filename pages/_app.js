@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Slider from "react-rangeslider";
+import LoadingScreen from "../component/Loading-Screen/loading-screen";
 import "react-rangeslider/lib/index.css";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
@@ -39,8 +40,8 @@ function MyApp({ Component, pageProps }) {
   };
 
   const onChange = (value) => {
-    setSliderValu(value);
-    body_.style.padding = value + "px";
+    console.log({ window });
+    window.scrollTo(0, 0);
   };
 
   header === "fixed" && scrollPosition > 10
@@ -50,19 +51,18 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <div className="page-wraper">
+        <LoadingScreen />
         <Component {...pageProps} />
       </div>
 
-      <a href="#top">
-        <button
-          className="scroltop icon-up"
-          type="button"
-          style={{ display: "inline-block" }}
-          onChange={onChange}
-        >
-          <i className="fa fa-arrow-up" />
-        </button>
-      </a>
+      <button
+        className="scroltop icon-up"
+        type="button"
+        style={{ display: "inline-block" }}
+        onClick={onChange}
+      >
+        <i className="fa fa-arrow-up" />
+      </button>
     </>
   );
 }
