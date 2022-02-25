@@ -37,7 +37,7 @@ function Header() {
               {/* <!-- Extra Nav --> */}
               <div className="extra-nav">
                 <div className="extra-cell">
-                  <Link href="contact-us-1">
+                  <Link href="/contact-us-3">
                     <a className="btn btn-corner  btn-primary">
                       <Fire />
                       Get A Quote
