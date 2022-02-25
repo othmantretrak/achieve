@@ -38,7 +38,7 @@ function Header() {
               <div className="extra-nav">
                 <div className="extra-cell">
                   <Link href="contact-us-1">
-                    <a className="btn btn-corner gradient btn-primary">
+                    <a className="btn btn-corner  btn-primary">
                       <Fire />
                       Get A Quote
                     </a>
@@ -88,17 +88,14 @@ function Header() {
                 </ul>
                 <div className="dlab-social-icon">
                   <ul>
-                    <Link href="https://en-gb.facebook.com/">
-                      <a className="fa fa-facebook"></a>
+                    <Link href="https://www.facebook.com/achieve.nl/">
+                      <a className="fa-brands fa-facebook"></a>
                     </Link>
-                    <Link href="https://twitter.com/login?lang=en">
-                      <a className="fa fa-twitter"></a>
+                    <Link href="https://twitter.com/">
+                      <a className="fa-brands fa-twitter"></a>
                     </Link>
-                    <Link href="https://www.linkedin.com/login">
-                      <a className="fa fa-linkedin"></a>
-                    </Link>
-                    <Link href="https://www.instagram.com/">
-                      <a className="fa fa-instagram"></a>
+                    <Link href="www.instagram.com/achieve.nl/">
+                      <a className="fa-brands fa-instagram"></a>
                     </Link>
                   </ul>
                 </div>

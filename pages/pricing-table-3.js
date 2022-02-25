@@ -3,13 +3,17 @@ import PricingT3 from "../component/pricingTable-3";
 import Footer3 from "../layout/footer-3";
 import Header3 from "../layout/header-3";
 import Link from "next/link";
+import PriceCard from "../component/PriceCard";
+import Tabs from "../component/Tabs";
+import PricingT4 from "../component/pricingTable-4";
 
 function PricingTable3() {
   const [open, setOpen] = useState("p2");
+
   return (
     <>
       <Header3 />
-      <div className="page-content bg-white">
+      <div className="page-content bg-gray">
         {/* <!-- Banner  --> */}
         <div
           className="dlab-bnr-inr style-1 bg-primary"
@@ -39,7 +43,7 @@ function PricingTable3() {
           </div>
         </div>
         {/* <!-- Banner End --> */}
-        <PricingT3 />
+        <PricingT4 />
       </div>
       <Footer3 />
     </>

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 function Footer() {
   return (
     <>
@@ -46,7 +48,7 @@ function Footer() {
                       </a>
                     </div>
                     <div className="icon-content">
-                      <p>Zuidplein 54, Rotterdam</p>
+                      <p>Zuidplein 54, 3083 CW Rotterdam</p>
                     </div>
                   </div>
                 </div>
@@ -59,30 +61,29 @@ function Footer() {
                 data-wow-delay="0.2s"
               >
                 <div className="widget widget_about">
-                  <h5 className="footer-title">About Us</h5>
+                  {/*  <h5 className="footer-title">About Us</h5> */}
                   <p>
-                    Maecenas pellentesque placerat quam, in finibus nisl
-                    tincidunt sed. Aliquam magna augue, malesuada ut feugiat
-                    eget, cursus eget felis.
+                    ‘’What the mind can conceive and believe it can achieve.’’ -
+                    Napoleon Hill
                   </p>
                   <div className="dlab-social-icon">
                     <ul>
                       <li>
                         <a
-                          className="fa fa-facebook"
-                          href="https://en-gb.facebook.com/"
+                          className="fa-brands fa-facebook"
+                          href="https://www.facebook.com/achieve.nl/"
                         ></a>
                       </li>
                       <li>
                         <a
-                          className="fa fa-instagram"
-                          href="https://www.instagram.com/"
+                          className="fa-brands fa-instagram"
+                          href="www.instagram.com/achieve.nl/"
                         ></a>
                       </li>
                       <li>
                         <a
-                          className="fa fa-twitter"
-                          href="https://twitter.com/login?lang=en"
+                          className="fa-brands fa-twitter"
+                          href="https://twitter.com"
                         ></a>
                       </li>
                     </ul>
@@ -95,22 +96,32 @@ function Footer() {
                 data-wow-delay="0.4s"
               >
                 <div className="widget widget_services">
-                  <h5 className="footer-title">Our links</h5>
+                  <h5 className="footer-title">Menu</h5>
                   <ul>
                     <li>
-                      <a href="javascript:void(0);">Home</a>
+                      <Link href="/">
+                        <a>Home</a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="javascript:void(0);">About Us</a>
+                      <Link href="/about-us-1">
+                        <a>Over ons</a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="javascript:void(0);">Services</a>
+                      <Link href="/services-1">
+                        <a>Diensten</a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="javascript:void(0);">Team</a>
+                      <Link href="/pricing-table-3">
+                        <a>Tarieven</a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="javascript:void(0);">Blog</a>
+                      <Link href="/projects">
+                        <a>Cases</a>
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -121,22 +132,24 @@ function Footer() {
                 data-wow-delay="0.6s"
               >
                 <div className="widget widget_services">
-                  <h5 className="footer-title">Our Services</h5>
+                  <h5 className="footer-title">Onze diensten</h5>
                   <ul>
                     <li>
-                      <a href="javascript:void(0);">Strategy & Research</a>
+                      <a href="javascript:void(0);">Branding</a>
                     </li>
                     <li>
                       <a href="javascript:void(0);">Web Development</a>
                     </li>
                     <li>
-                      <a href="javascript:void(0);">Web Solution</a>
+                      <a href="javascript:void(0);">Email Marketing</a>
                     </li>
                     <li>
-                      <a href="javascript:void(0);">Digital Marketing</a>
+                      <a href="javascript:void(0);">Social Advertising </a>
                     </li>
                     <li>
-                      <a href="javascript:void(0);">App Design </a>
+                      <a href="javascript:void(0);">
+                        Search Engine Advertising
+                      </a>
                     </li>
                   </ul>
                 </div>
@@ -147,22 +160,19 @@ function Footer() {
                 data-wow-delay="0.8s"
               >
                 <div className="widget widget_services">
-                  <h5 className="footer-title">Other links</h5>
+                  <h5 className="footer-title">Over Achieve</h5>
                   <ul>
                     <li>
                       <a href="javascript:void(0);">FAQ</a>
                     </li>
                     <li>
-                      <a href="javascript:void(0);">Portfolio</a>
+                      <a href="javascript:void(0);">Contact</a>
                     </li>
                     <li>
-                      <a href="javascript:void(0);">Privacy Policy</a>
+                      <a href="javascript:void(0);">Privacy</a>
                     </li>
                     <li>
-                      <a href="javascript:void(0);">Terms & Conditions</a>
-                    </li>
-                    <li>
-                      <a href="javascript:void(0);">Support </a>
+                      <a href="javascript:void(0);">Algemene voorwaarden</a>
                     </li>
                   </ul>
                 </div>

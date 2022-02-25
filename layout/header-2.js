@@ -319,17 +319,14 @@ function Header2() {
                 </ul>
                 <div className="dlab-social-icon">
                   <ul>
-                    <Link href="https://en-gb.facebook.com/">
-                      <a className="fa fa-facebook"></a>
+                    <Link href="https://www.facebook.com/achieve.nl/">
+                      <a className="fa-brands fa-facebook"></a>
                     </Link>
-                    <Link href="https://twitter.com/login?lang=en">
-                      <a className="fa fa-twitter"></a>
+                    <Link href="https://twitter.com/">
+                      <a className="fa-brands fa-twitter"></a>
                     </Link>
-                    <Link href="https://www.linkedin.com/login">
-                      <a className="fa fa-linkedin"></a>
-                    </Link>
-                    <Link href="https://www.instagram.com/">
-                      <a className="fa fa-instagram"></a>
+                    <Link href="www.instagram.com/achieve.nl/">
+                      <a className="fa-brands fa-instagram"></a>
                     </Link>
                   </ul>
                 </div>

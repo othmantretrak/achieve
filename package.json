@@ -23,6 +23,7 @@
     "react-scroll-to-top": "^1.0.8",
     "react-slick": "^0.28.1",
     "react-text-collapse": "^0.6.1",
+    "react-use-cookie": "^1.3.0",
     "react-visibility-sensor": "^5.1.1",
     "simple-react-lightbox": "^3.6.9-0",
     "slick-carousel": "^1.8.1",

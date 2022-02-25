@@ -20,7 +20,7 @@ function Services1() {
         >
           <div className="container">
             <div className="dlab-bnr-inr-entry">
-              <h1>Services 1</h1>
+              <h1>Onze diensten</h1>
               {/* <!-- Breadcrumb Row --> */}
               <nav aria-label="breadcrumb" className="breadcrumb-row">
                 <ul className="breadcrumb">
@@ -30,7 +30,7 @@ function Services1() {
                     </Link>
                   </li>
                   <li className="breadcrumb-item active" aria-current="page">
-                    Services
+                    Onze diensten
                   </li>
                 </ul>
               </nav>
@@ -44,7 +44,7 @@ function Services1() {
         <AllServices />
 
         {/* <!-- Newsletter --> */}
-        <section
+        {/*  <section
           className="content-inner-3 bg-primary"
           style={{
             backgroundImage: "url(images/background/bg13.png)",
@@ -113,10 +113,10 @@ function Services1() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* <!-- Fetures --> */}
-        <section className="content-inner-2">
+        {/*  <section className="content-inner-2">
           <div className="container">
             <div className="row align-items-center">
               <div
@@ -190,7 +190,7 @@ function Services1() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* <!-- Team --> */}
         <Team />
@@ -199,7 +199,7 @@ function Services1() {
         <Testimonial />
 
         {/* <!-- Get A Quote --> */}
-        <Quote />
+        {/* <Quote /> */}
 
         {/* <!-- Call To action --> */}
         <section

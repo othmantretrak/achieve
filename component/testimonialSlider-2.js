@@ -2,13 +2,13 @@ import Slider from "react-slick";
 
 function TestimonialSlider2() {
   const settings = {
-    dots: true,
+    dots: false,
     dotsClass: "swiper-container testimonial-thumbs d-flex",
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    customPaging: function (i) {
+    /*   customPaging: function (i) {
       return (
         <div className="swiper-wrapper">
           <div className="testimonial-pic">
@@ -17,7 +17,7 @@ function TestimonialSlider2() {
           </div>
         </div>
       );
-    },
+    }, */
   };
   return (
     <>

@@ -109,12 +109,13 @@ function Portfolio3() {
               All
             </a>
           </li>
-          <li className={`btn ${filter === "web_design" ? "active" : ""}`}>
+
+          <li className={`btn ${filter === "branding" ? "active" : ""}`}>
             <a
-              active={filter === "web_design"}
-              onClick={() => setFilter("web_design")}
+              active={filter === "branding"}
+              onClick={() => setFilter("branding")}
             >
-              Web Design
+              Branding
             </a>
           </li>
           <li className={`btn ${filter === "web_development" ? "active" : ""}`}>
@@ -125,25 +126,25 @@ function Portfolio3() {
               Web Development
             </a>
           </li>
-          <li className={`btn ${filter === "branding" ? "active" : ""}`}>
-            <a
-              active={filter === "branding"}
-              onClick={() => setFilter("branding")}
-            >
-              Branding
-            </a>
-          </li>
           <li className={`btn ${filter === "mobile_app" ? "active" : ""}`}>
             <a
               active={filter === "mobile_app"}
               onClick={() => setFilter("mobile_app")}
             >
-              Mobile App
+              E-mail marketing
             </a>
           </li>
           <li className={`btn ${filter === "seo" ? "active" : ""}`}>
             <a active={filter === "seo"} onClick={() => setFilter("seo")}>
-              SEO
+              Content creation
+            </a>
+          </li>
+          <li className={`btn ${filter === "web_design" ? "active" : ""}`}>
+            <a
+              active={filter === "web_design"}
+              onClick={() => setFilter("web_design")}
+            >
+              Advertising
             </a>
           </li>
         </ul>
@@ -160,7 +161,9 @@ function Portfolio3() {
                   data-wow-delay="0.1s"
                 >
                   <div className="dlab-box dlab-overlay-box style-3 m-b30">
-                    <div className="dlab-media dlab-img-overlay1">{item.img}</div>
+                    <div className="dlab-media dlab-img-overlay1">
+                      {item.img}
+                    </div>
                     <div className="dlab-info">
                       <h5 className="title">
                         <a href="javascript:void(0);">{item.title}</a>

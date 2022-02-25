@@ -8,6 +8,7 @@ import Testimonial from "../element/testimonial";
 import Blog from "../element/blog";
 import Link from "next/link";
 import Quote from "../element/quote";
+import Quote3 from "../element/quote-3";
 
 function AboutUs1() {
   const [isOpen, setOpen] = useState(false);
@@ -22,7 +23,7 @@ function AboutUs1() {
         >
           <div className="container">
             <div className="dlab-bnr-inr-entry">
-              <h1>About us 1</h1>
+              <h1>Over ons</h1>
               {/* <!-- Breadcrumb Row --> */}
               <nav aria-label="breadcrumb" className="breadcrumb-row">
                 <ul className="breadcrumb">
@@ -32,7 +33,7 @@ function AboutUs1() {
                     </Link>
                   </li>
                   <li className="breadcrumb-item active" aria-current="page">
-                    About us
+                    Over ons
                   </li>
                 </ul>
               </nav>
@@ -62,24 +63,44 @@ function AboutUs1() {
               >
                 <div className="section-head style-1 mb-4">
                   <h6 className="sub-title bgl-primary m-b20 text-primary">
-                    About Us
+                    Over ons
                   </h6>
-                  <h2 className="title">
-                    How We Can Help You Achieve Your Business Goal
-                  </h2>
+                  <h2 className="title">Hallo! wij zijn achieve.</h2>
                 </div>
                 <p>
-                  Integer pretium molestie nisl, non blandit lectus suscipit in.
-                  Vivamus tellus diam, iaculis eget nulla sit amet, tincidunt
-                  consectetur sem. Suspendisse laoreet, quam sed faucibus
-                  feugiat, tortor velit suscipit orci, sed consectetur ante eros
-                  id urna. Mauris luctus nulla ut pharetra tempor.
+                  Achieve is een digital agency bestaande uit een kleine groep
+                  specialisten met ieder hun specifieke ambities, kwaliteiten en
+                  vaardigheden. Het team blijft constant op de hoogte van de
+                  nieuwste ontwikkelingen in het digitale landschap. Dat is voor
+                  ons geen opgave, omdat we van onze passie ons werk hebben
+                  gemaakt. Dit is wat we leuk vinden en daarom zijn we er ook
+                  goed in.
                 </p>
                 <p className="m-b30">
-                  Mauris egestas eleifend sapien eu malesuada. Phasellus at
-                  metus eget sapien tristique accumsan non sit amet augue.
+                  De voortdurend veranderende digitale wereld was ooit een ‘nice
+                  to have’, maar is tegenwoordig een kritische succesfactor voor
+                  elk bedrijf. Of het nu gaat om het bereiken van prospects, het
+                  communiceren met klanten, of het rechtstreeks verkopen van
+                  diensten of producten, het internet heeft de manier waarop we
+                  zaken doen veranderd. Juist doordat die technologie continu
+                  doorontwikkelt, is het belangrijk dat bedrijven hun digitale
+                  aanwezigheid mee laten veranderen. Zo blijf je relevant en bij
+                  de tijd.
                 </p>
-                <div className="row">
+                <p className="m-b30">
+                  Heb je zelf geen specialistische kennis in huis? Is het
+                  aannemen van specialisten te duur? Druk met je eigen zaak?
+                  Geen tijd voor marketing activiteiten? Dat is precies waar
+                  Achieve kan helpen. Wij ondersteunen jouw bedrijf bij de groei
+                  naar het volgende niveau. Dat doen we niet alleen, maar samen
+                  met jou en je team. Jij kent de doelgroep van je onderneming
+                  beter dan wie dan ook en samen bereiken we het meest. Geef je
+                  digital marketing uit handen maar blijf op de hoogte middels
+                  maandelijkse rapportages en advies van specialisten. Door
+                  middel van creativiteit, technologie en data verbinden we de
+                  juiste mensen aan jouw merk.
+                </p>
+                {/* <div className="row">
                   <div className="col-lg-6">
                     <ul className="list-arrow primary">
                       <li>Nulla dict posuere veliitae.</li>
@@ -96,14 +117,14 @@ function AboutUs1() {
                       <li>Aliquam diam tempor.</li>
                     </ul>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
         </section>
 
         {/* <!-- Counter --> */}
-        <Counter />
+        {/* <Counter /> */}
 
         {/* <!-- About Us --> */}
         <section className="content-inner-2">
@@ -209,13 +230,13 @@ function AboutUs1() {
         <Testimonial />
 
         {/* <!-- Blog --> */}
-        <Blog />
+        {/* <Blog /> */}
 
         {/* <!-- Get A Quote --> */}
-        <Quote />
+        <Quote3 />
 
         {/* <!-- Call To Action --> */}
-        <section
+        {/*  <section
           style={{
             backgroundImage: "url(images/background/bg5.jpg)",
             backgroundSize: "cover",
@@ -250,7 +271,7 @@ function AboutUs1() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
       </div>
       <Footer />
     </>

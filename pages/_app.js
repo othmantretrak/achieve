@@ -6,10 +6,10 @@ import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import useScrollPosition from "use-scroll-position";
 import "../css/style.css";
-import "../icons/font-awesome/css/font-awesome.min.css";
 import "../css/skin/skin-1.css";
 import "../styles/globals.css";
 import "../styles/switcher.css";
+import { AuthProvider } from "../common/useLoader";
 
 function MyApp({ Component, pageProps }) {
   const [toggle1, setToggle1] = useState(false);
@@ -51,8 +51,9 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <div className="page-wraper">
-        <LoadingScreen />
-        <Component {...pageProps} />
+        <AuthProvider>
+          <Component {...pageProps} />
+        </AuthProvider>
       </div>
 
       <button

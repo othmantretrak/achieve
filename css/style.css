@@ -17,8 +17,8 @@
     
 */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
-@import url("../icons/line-awesome/css/line-awesome.min.css");
-@import url("../icons/font-awesome/css/font-awesome.min.css");
+
+
 @import url("../icons/flaticon/flaticon.css");
 @import url("../icons/themify/themify-icons.css");
 :root {
@@ -2707,11 +2707,7 @@ fieldset:disabled a.btn {
   background-color: #896eff;
   border-color: #896eff;
 }
-.btn-primary:hover {
-  color: #fff;
-  background-color: #6a48ff;
-  border-color: #5f3bff;
-}
+
 .btn-primary:focus,
 .btn-primary.focus {
   box-shadow: 0 0 0 0rem rgba(155, 132, 255, 0.5);
@@ -13748,17 +13744,7 @@ textarea {
   justify-content: center;
   align-items: center;
 }
-.btn-corner:hover,
-.btn-corner:active,
-.btn-corner:focus {
-  border-top-left-radius: 1.5rem;
-  border-bottom-right-radius: 1.5rem;
-  border-bottom-left-radius: 0;
-  border-top-right-radius: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 
 .btn-link i {
   display: inline-block;
@@ -21154,3 +21140,4 @@ footer .widget_getintuch ul li i {
 }
 
 /*# sourceMappingURL=style.css.map */
+@import "../styles/customcss.css";

@@ -19,19 +19,20 @@ function Slider1() {
             <div className="row align-items-center">
               <div className="col-md-6">
                 <div className="banner-content">
-                  <h6
+                  {/*  <h6
                     data-wow-duration="1s"
                     data-wow-delay="0.5s"
                     className="wow fadeInUp sub-title text-primary"
                   >
                     We Create Ideas
-                  </h6>
+                  </h6> */}
                   <h1
                     data-wow-duration="1.2s"
                     data-wow-delay="1s"
                     className="wow fadeInUp "
                   >
-                    Groeien op basis van data en de kracht van{" "}
+                    Groeien op basis van{" "}
+                    <span className="text-primary">data</span> en de kracht van{" "}
                     <span className="text-primary">creativiteit.</span>
                   </h1>
                   <p
@@ -44,7 +45,7 @@ function Slider1() {
                     als resultaat meer bezoekers, kwalitatieve leads en keiharde
                     omzet.
                   </p>
-                  <Link href="about-us-1">
+                  <Link href="services-1">
                     <a
                       data-wow-duration="1.6s"
                       data-wow-delay="2s"
@@ -67,6 +68,31 @@ function Slider1() {
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="shape20">
+          <img src="/images/shape/shape19.png" alt="image" />
+        </div>
+        <div className="shape21">
+          <img src="/images/shape/shape20.png" alt="image" />
+        </div>
+        <div className="shape19">
+          <img src="/images/shape/shape18.png" alt="image" />
+        </div>
+        <div className="shape22">
+          <img src="/images/shape/shape21.png" alt="image" />
+        </div>
+        <div className="shape23">
+          <img
+            src="https://hepro-react.envytheme.com/images/shape/shape22.svg"
+            alt="image"
+          />
+        </div>
+        <div className="shape24">
+          <img src="/images/shape/shape23.png" alt="image" />
+        </div>
+        <div className="shape26">
+          <img src="/images/shape/shape25.png" alt="image" />
         </div>
       </div>
     </>

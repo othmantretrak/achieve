@@ -184,19 +184,19 @@ function Footer2() {
                   <ul>
                     <li>
                       <a
-                        className="fa fa-facebook"
-                        href="https://facebook.com/"
+                        className="fa-brands fa-facebook"
+                        href="https://www.facebook.com/achieve.nl/"
                       ></a>
                     </li>
                     <li>
                       <a
-                        className="fa fa-instagram"
-                        href="https://www.instagram.com/"
+                        className="fa-brands fa-instagram"
+                        href="www.instagram.com/achieve.nl/"
                       ></a>
                     </li>
                     <li>
                       <a
-                        className="fa fa-twitter"
+                        className="fa-brands fa-twitter"
                         href="https://twitter.com"
                       ></a>
                     </li>

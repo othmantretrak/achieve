@@ -1,12 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Script from "next/script";
 import loadingPace from "../loadingPace";
 import appData from "../../data/app.json";
+import { setCookie, getCookie } from "react-use-cookie";
+import { useLoader } from "../../common/useLoader";
 
 const LoadingScreen = () => {
-  React.useEffect(() => {
+  //const [showLoading, setShowLoading] = useLoader();
+  const { showLoading } = useLoader();
+
+  console.log(showLoading);
+  useEffect(() => {
+    //const showLoading = getCookie("showLoading");
     let bodyEl = document.querySelector("body");
-    if (appData.showLoading) {
+    if (showLoading === true) {
       loadingPace();
       if (bodyEl.classList.contains("hideX")) {
         bodyEl.classList.remove("hideX");
@@ -14,15 +21,15 @@ const LoadingScreen = () => {
     } else {
       bodyEl.classList.add("hideX");
     }
-  });
+  }, [showLoading]);
   return (
     <>
-      <div className={`${appData.showLoading === true ? "showX" : "hideX"}`}>
+      <div className={`${showLoading === true ? "showX" : "hideX"}`}>
         <div id="preloader">
           <div className="loading-text">Loading</div>
         </div>
       </div>
-      {appData.showLoading ? (
+      {showLoading === true ? (
         <Script
           id="pace"
           strategy="beforeInteractive"
