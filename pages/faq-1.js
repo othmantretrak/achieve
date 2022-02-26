@@ -2,8 +2,9 @@ import Accordion1 from "../element/accordion";
 import Footer from "../layout/footer";
 import Header from "../layout/header-3";
 import Link from "next/link";
+import Accordion_sm from "../element/accordion_sm";
 
-function FAQ1() {
+function FAQ1({ sitInfo, faqs }) {
   return (
     <>
       <Header />
@@ -47,7 +48,7 @@ function FAQ1() {
                 data-wow-duration="2s"
                 data-wow-delay="0.2s"
               >
-                <Accordion1 />
+                <Accordion_sm faqs={faqs} />
               </div>
             </div>
           </div>
@@ -83,9 +84,17 @@ function FAQ1() {
           </div>
         </section>
       </div>
-      <Footer />
+      <Footer sitInfo={sitInfo} />
     </>
   );
 }
-
+export async function getStaticProps({ preview = false }) {
+  const sitInfo = await getAllSiteInfo(preview);
+  const faqs = await getAllFaq(preview);
+  //console.log({ cases });
+  return {
+    props: { sitInfo, faqs },
+    revalidate: 1,
+  };
+}
 export default FAQ1;

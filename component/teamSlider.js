@@ -45,6 +45,7 @@ function TeamSlider() {
         {...settings}
         className="team-carousel1 owl owl-carousel owl-none owl-theme owl-dots-primary-full"
       >
+        {/* {team && team.map(t=>())} */}
         <div
           className="item wow fadeInUp"
           data-wow-duration="2s"

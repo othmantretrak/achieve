@@ -9,7 +9,7 @@ import Blog from "../element/blog";
 import Link from "next/link";
 import Quote from "../element/quote";
 
-function TermOfUse() {
+function TermOfUse({ sitInfo }) {
   const [isOpen, setOpen] = useState(false);
   return (
     <>
@@ -484,9 +484,17 @@ function TermOfUse() {
           </div>
         </section>
       </div>
-      <Footer />
+      <Footer sitInfo={sitInfo} />
     </>
   );
+}
+export async function getStaticProps({ preview = false }) {
+  const sitInfo = await getAllSiteInfo(preview);
+  //console.log({ cases });
+  return {
+    props: { sitInfo },
+    revalidate: 1,
+  };
 }
 
 export default TermOfUse;

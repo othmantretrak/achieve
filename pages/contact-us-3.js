@@ -1,9 +1,10 @@
 import Link from "next/link";
 import Quote3 from "../element/quote-3";
+import Footer from "../layout/footer";
 import Footer3 from "../layout/footer-3";
 import Header3 from "../layout/header-3";
 
-function ContactUs1() {
+function ContactUs1({ sitInfo }) {
   return (
     <>
       <Header3 />
@@ -39,11 +40,18 @@ function ContactUs1() {
         {/* <!-- Banner End --> */}
 
         {/* <!-- Get A Quote --> */}
-        <Quote3/>
+        <Quote3 />
       </div>
-      <Footer3 />
+      <Footer sitInfo={sitInfo} />
     </>
   );
 }
-
+export async function getStaticProps({ preview = false }) {
+  const sitInfo = await getAllSiteInfo(preview);
+  //console.log({ cases });
+  return {
+    props: { sitInfo },
+    revalidate: 1,
+  };
+}
 export default ContactUs1;

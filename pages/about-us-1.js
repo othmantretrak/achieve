@@ -9,8 +9,10 @@ import Blog from "../element/blog";
 import Link from "next/link";
 import Quote from "../element/quote";
 import Quote3 from "../element/quote-3";
+import Testimonial2 from "../element/testimonial-2";
+import { getAllSiteInfo, getAllTeams, getAllTestimonials } from "../lib/api";
 
-function AboutUs1() {
+function AboutUs1({ sitInfo, team, testimonials }) {
   const [isOpen, setOpen] = useState(false);
   return (
     <>
@@ -227,7 +229,7 @@ function AboutUs1() {
         </section>
 
         {/* <!-- Testimonials --> */}
-        <Testimonial />
+        <Testimonial2 testimonials={testimonials} />
 
         {/* <!-- Blog --> */}
         {/* <Blog /> */}
@@ -273,9 +275,18 @@ function AboutUs1() {
           </div>
         </section> */}
       </div>
-      <Footer />
+      <Footer sitInfo={sitInfo} />
     </>
   );
 }
-
+export async function getStaticProps({ preview = false }) {
+  const sitInfo = await getAllSiteInfo(preview);
+  const team = await getAllTeams(preview);
+  const testimonials = await getAllTestimonials(preview);
+  console.log({ team });
+  return {
+    props: { sitInfo, team, testimonials },
+    revalidate: 1,
+  };
+}
 export default AboutUs1;

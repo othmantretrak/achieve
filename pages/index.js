@@ -36,6 +36,7 @@ import {
   getAllFaq,
   getAllPostsForHome,
   getAllSiteInfo,
+  getAllTeams,
   getAllTestimonials,
 } from "../lib/api";
 function Home({ testimonials, faqs, sitInfo, categories, cases }) {
@@ -89,7 +90,8 @@ export async function getStaticProps({ preview = false }) {
   const sitInfo = await getAllSiteInfo(preview);
   const categories = await getAllCategories(preview);
   const cases = await getAllCases(preview);
-  console.log({ cases });
+  const team = await getAllTeams(preview);
+  //console.log({ team });
   return {
     props: { testimonials, preview, faqs, sitInfo, categories, cases },
     revalidate: 1,

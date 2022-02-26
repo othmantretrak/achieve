@@ -9,7 +9,7 @@ import Blog from "../element/blog";
 import Link from "next/link";
 import Quote from "../element/quote";
 
-function PrivacyPolicy() {
+function PrivacyPolicy({ sitInfo }) {
   const [isOpen, setOpen] = useState(false);
   return (
     <>
@@ -484,9 +484,16 @@ function PrivacyPolicy() {
           </div>
         </section>
       </div>
-      <Footer />
+      <Footer sitInfo={sitInfo} />
     </>
   );
 }
-
+export async function getStaticProps({ preview = false }) {
+  const sitInfo = await getAllSiteInfo(preview);
+  //console.log({ cases });
+  return {
+    props: { sitInfo },
+    revalidate: 1,
+  };
+}
 export default PrivacyPolicy;

@@ -2,7 +2,7 @@ import { useState } from "react";
 import Footer from "../layout/footer";
 import Header from "../layout/header-3";
 import Link from "next/link";
-function PricingTable1() {
+function PricingTable1({ sitInfo }) {
   const [open, setOpen] = useState("p2");
   return (
     <>
@@ -192,9 +192,16 @@ function PricingTable1() {
           </div>
         </section>
       </div>
-      <Footer />
+      <Footer sitInfo={sitInfo} />
     </>
   );
 }
-
+export async function getStaticProps({ preview = false }) {
+  const sitInfo = await getAllSiteInfo(preview);
+  //console.log({ cases });
+  return {
+    props: { sitInfo },
+    revalidate: 1,
+  };
+}
 export default PricingTable1;

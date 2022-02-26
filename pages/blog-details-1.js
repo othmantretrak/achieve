@@ -3,7 +3,7 @@ import Header from "../layout/header-3";
 import Link from "next/link";
 import Cta from "../element/cta";
 
-function BlogDetails1() {
+function BlogDetails1({ sitInfo }) {
   return (
     <>
       <Header />
@@ -638,9 +638,17 @@ function BlogDetails1() {
         {/* <!-- Call To Action --> */}
         <Cta />
       </div>
-      <Footer />
+      <Footer sitInfo={sitInfo} />
     </>
   );
+}
+export async function getStaticProps({ preview = false }) {
+  const sitInfo = await getAllSiteInfo(preview);
+  //console.log({ cases });
+  return {
+    props: { sitInfo },
+    revalidate: 1,
+  };
 }
 
 export default BlogDetails1;

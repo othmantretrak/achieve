@@ -3,7 +3,7 @@ import Quote from "../element/quote";
 import Footer from "../layout/footer";
 import Header from "../layout/header-3";
 
-function ContactUs1() {
+function ContactUs1({ sitInfo }) {
   return (
     <>
       <Header />
@@ -76,9 +76,17 @@ function ContactUs1() {
           </div>
         </section>
       </div>
-      <Footer />
+      <Footer sitInfo={sitInfo} />
     </>
   );
+}
+export async function getStaticProps({ preview = false }) {
+  const sitInfo = await getAllSiteInfo(preview);
+  //console.log({ cases });
+  return {
+    props: { sitInfo },
+    revalidate: 1,
+  };
 }
 
 export default ContactUs1;

@@ -5,7 +5,7 @@ import { useState } from "react";
 import AllServices from "../element/all-services";
 import Link from "next/link";
 
-function ServicesDetails1() {
+function ServicesDetails1({ sitInfo }) {
   const [isOpen, setOpen] = useState(false);
   return (
     <>
@@ -170,9 +170,16 @@ function ServicesDetails1() {
           </div>
         </section>
       </div>
-      <Footer />
+      <Footer sitInfo={sitInfo} />
     </>
   );
 }
-
+export async function getStaticProps({ preview = false }) {
+  const sitInfo = await getAllSiteInfo(preview);
+  //console.log({ cases });
+  return {
+    props: { sitInfo },
+    revalidate: 1,
+  };
+}
 export default ServicesDetails1;

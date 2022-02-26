@@ -2,7 +2,7 @@ import Header from "../layout/header-3";
 import Footer from "./../layout/footer";
 import Link from "next/link";
 
-function BlogLargeRightSidebar() {
+function BlogLargeRightSidebar({ sitInfo }) {
   return (
     <>
       <Header />
@@ -471,9 +471,16 @@ function BlogLargeRightSidebar() {
           </div>
         </section>
       </div>
-      <Footer />
+      <Footer sitInfo={sitInfo} />
     </>
   );
 }
-
+export async function getStaticProps({ preview = false }) {
+  const sitInfo = await getAllSiteInfo(preview);
+  //console.log({ cases });
+  return {
+    props: { sitInfo },
+    revalidate: 1,
+  };
+}
 export default BlogLargeRightSidebar;
