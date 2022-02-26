@@ -2,6 +2,7 @@ import Link from "next/link";
 import Quote from "../element/quote";
 import Footer from "../layout/footer";
 import Header from "../layout/header-3";
+import { getAllSiteInfo } from "../lib/api";
 
 function ContactUs1({ sitInfo }) {
   return (

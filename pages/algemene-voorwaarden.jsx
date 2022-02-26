@@ -8,6 +8,7 @@ import Testimonial from "../element/testimonial";
 import Blog from "../element/blog";
 import Link from "next/link";
 import Quote from "../element/quote";
+import { getAllSiteInfo } from "../lib/api";
 
 function TermOfUse({ sitInfo }) {
   const [isOpen, setOpen] = useState(false);

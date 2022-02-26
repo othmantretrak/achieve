@@ -6,6 +6,7 @@ import Team from "../element/team";
 import Testimonial from "../element/testimonial";
 import Link from "next/link";
 import Quote from "../element/quote";
+import { getAllSiteInfo } from "../lib/api";
 
 function Services1({ sitInfo }) {
   const [open, setOpen] = useState("p2");

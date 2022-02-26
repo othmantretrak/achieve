@@ -1,6 +1,7 @@
 import Header from "../layout/header-3";
 import Footer from "./../layout/footer";
 import Link from "next/link";
+import { getAllSiteInfo } from "../lib/api";
 
 function BlogLargeRightSidebar({ sitInfo }) {
   return (

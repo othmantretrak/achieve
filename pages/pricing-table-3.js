@@ -6,8 +6,9 @@ import Link from "next/link";
 import PriceCard from "../component/PriceCard";
 import Tabs from "../component/Tabs";
 import PricingT4 from "../component/pricingTable-4";
+import Footer from "../layout/footer";
 
-function PricingTable3() {
+function PricingTable3({ sitInfo }) {
   const [open, setOpen] = useState("p2");
 
   return (
@@ -45,9 +46,17 @@ function PricingTable3() {
         {/* <!-- Banner End --> */}
         <PricingT4 />
       </div>
-      <Footer3 />
+      <Footer sitInfo={sitInfo} />
     </>
   );
+}
+export async function getStaticProps({ preview = false }) {
+  const sitInfo = await getAllSiteInfo(preview);
+  //console.log({ cases });
+  return {
+    props: { sitInfo },
+    revalidate: 1,
+  };
 }
 
 export default PricingTable3;

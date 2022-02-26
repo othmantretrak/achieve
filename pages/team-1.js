@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Footer from "../layout/footer";
 import Header from "../layout/header-3";
+import { getAllSiteInfo } from "../lib/api";
 
 function Team1({ sitInfo }) {
   return (

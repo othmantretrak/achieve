@@ -3,6 +3,7 @@ import Footer from "../layout/footer";
 import Header from "../layout/header-3";
 import Link from "next/link";
 import Accordion_sm from "../element/accordion_sm";
+import { getAllFaq, getAllSiteInfo } from "../lib/api";
 
 function FAQ1({ sitInfo, faqs }) {
   return (

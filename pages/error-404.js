@@ -1,6 +1,7 @@
 import Footer from "../layout/footer";
 import Header from "../layout/header-3";
 import Link from "next/link";
+import { getAllSiteInfo } from "../lib/api";
 
 function Error404({ sitInfo }) {
   return (

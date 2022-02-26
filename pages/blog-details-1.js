@@ -2,6 +2,7 @@ import Footer from "../layout/footer";
 import Header from "../layout/header-3";
 import Link from "next/link";
 import Cta from "../element/cta";
+import { getAllSiteInfo } from "../lib/api";
 
 function BlogDetails1({ sitInfo }) {
   return (

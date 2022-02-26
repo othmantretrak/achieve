@@ -3,6 +3,7 @@ import Quote3 from "../element/quote-3";
 import Footer from "../layout/footer";
 import Footer3 from "../layout/footer-3";
 import Header3 from "../layout/header-3";
+import { getAllSiteInfo } from "../lib/api";
 
 function ContactUs1({ sitInfo }) {
   return (
