@@ -1,5 +1,5 @@
 import Footer from "../layout/footer";
-import Header from "../layout/header-3";
+import Header3 from "../layout/header-3";
 import { useState } from "react";
 import AllServices from "../element/all-services";
 import Team from "../element/team";
@@ -11,7 +11,7 @@ function Services1() {
   const [open, setOpen] = useState("p2");
   return (
     <>
-      <Header />
+      <Header3 />
       <div className="page-content bg-white">
         {/* <!-- Banner  --> */}
         <div

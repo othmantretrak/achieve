@@ -18,7 +18,6 @@
 */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
 
-
 @import url("../icons/flaticon/flaticon.css");
 @import url("../icons/themify/themify-icons.css");
 :root {
@@ -2718,13 +2717,7 @@ fieldset:disabled a.btn {
   background-color: #896eff;
   border-color: #896eff;
 }
-.btn-primary:not(:disabled):not(.disabled):active,
-.btn-primary:not(:disabled):not(.disabled).active,
-.show > .btn-primary.dropdown-toggle {
-  color: #fff;
-  background-color: #5f3bff;
-  border-color: #552eff;
-}
+
 .btn-primary:not(:disabled):not(.disabled):active:focus,
 .btn-primary:not(:disabled):not(.disabled).active:focus,
 .show > .btn-primary.dropdown-toggle:focus {
@@ -13744,7 +13737,6 @@ textarea {
   justify-content: center;
   align-items: center;
 }
-
 
 .btn-link i {
   display: inline-block;

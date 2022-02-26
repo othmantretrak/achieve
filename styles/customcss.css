@@ -1,7 +1,7 @@
 .extra-nav .btn-corner {
   border-radius: 10px;
-  color: #896eff;
-  background-color: white;
+  color: white;
+  background-color: #896eff;
   vertical-align: middle;
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
@@ -10,9 +10,15 @@
   transition-property: all;
 }
 .extra-nav .wrap-service svg {
+  fill: white;
+}
+.extra-nav .btn-corner:hover svg {
   fill: #896eff;
 }
-.extra-nav .btn-corner:hover {
+.extra-nav .btn-corner:hover,
+.extra-nav .btn-corner:active {
+  color: #896eff;
+  background-color: white;
   transform: scale(1.1);
   transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
 }

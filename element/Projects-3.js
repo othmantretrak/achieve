@@ -1,6 +1,6 @@
 import Portfolio3 from "../component/portfolio-3";
 
-function Projects3() {
+function Projects3({ categories, cases }) {
   return (
     <>
       {/* <!-- Projects --> */}
@@ -10,7 +10,7 @@ function Projects3() {
             <h2 className="title">Onze diensten</h2>
             <div className="dlab-separator style-2 bg-primary"></div>
           </div>
-          <Portfolio3 />
+          <Portfolio3 categories={categories} cases={cases} />
         </div>
       </section>
     </>

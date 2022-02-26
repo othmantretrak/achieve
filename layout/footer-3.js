@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-function Footer3() {
+function Footer3({ sitInfo }) {
   return (
     <>
       {/* <!-- Footer --> */}
@@ -36,19 +36,19 @@ function Footer3() {
                       <li>
                         <a
                           className="fa-brands fa-facebook"
-                          href="https://www.facebook.com/achieve.nl/"
+                          href={sitInfo[0].facebook}
                         ></a>
                       </li>
                       <li>
                         <a
                           className="fa-brands fa-instagram"
-                          href="www.instagram.com/achieve.nl/"
+                          href={sitInfo[0].instagram}
                         ></a>
                       </li>
                       <li>
                         <a
                           className="fa-brands fa-twitter"
-                          href="https://twitter.com"
+                          href={sitInfo[0].twitter}
                         ></a>
                       </li>
                     </ul>
@@ -161,21 +161,21 @@ function Footer3() {
                     <li>
                       <i className="fa fa-phone gradient"></i>
                       <span>
-                        +31 85 4016590
+                        {sitInfo[0].phone}
                         <br />
-                        +31 85 4016590
+                        {sitInfo[0].phone}
                       </span>
                     </li>
                     <li>
                       <i className="fa fa-envelope gradient"></i>
                       <span>
-                        info@achieve.nl <br />
-                        info@achieve.nl
+                        {sitInfo[0].email} <br />
+                        {sitInfo[0].email}
                       </span>
                     </li>
                     <li>
                       <i className="fa fa-map-marker gradient"></i>
-                      <span>Zuidplein 54, 3083 CW Rotterdam</span>
+                      <span> {sitInfo[0].address}</span>
                     </li>
                   </ul>
                 </div>

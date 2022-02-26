@@ -1,12 +1,31 @@
 // import Image1 from "images/projects/grid/pic1";
 import Image from "next/image";
+import { imageBuilder } from "../lib/sanity";
 import { useEffect, useState } from "react";
 
-function Portfolio3() {
-  const portfolio = [
+function Portfolio3({ categories, cases }) {
+  //console.log({ cases });
+
+  const portfolio = cases.map((obj) => {
+    return {
+      title: obj.title,
+      category: ["all", ...obj.categories.map((c) => c.catslug)],
+      img: (
+        <Image
+          src={imageBuilder(obj.coverImage).width(370).height(370).url()}
+          layout="responsive"
+          width={370}
+          height={370}
+          alt="case"
+        />
+      ),
+    };
+  });
+  //console.log({ test: test[0].category });
+  /* const portfolio = [
     {
       title: "Software Landing Page Design",
-      category: ["all", "web_design", "branding"],
+      category: ["all", "search-engine-advertising", "branding"],
       img: (
         <Image
           src="/images/projects/project-1/pic1.jpg"
@@ -82,7 +101,7 @@ function Portfolio3() {
       ),
       author: "Jhone Doe",
     },
-  ];
+  ]; */
 
   const [filter, setFilter] = useState("all");
   const [projects, setProjects] = useState([]);
@@ -109,16 +128,19 @@ function Portfolio3() {
               All
             </a>
           </li>
+          {categories &&
+            categories.map((c) => (
+              <li
+                key={c._id}
+                className={`btn ${filter === c.slug ? "active" : ""}`}
+              >
+                <a active={filter === c.slug} onClick={() => setFilter(c.slug)}>
+                  {c.title}
+                </a>
+              </li>
+            ))}
 
-          <li className={`btn ${filter === "branding" ? "active" : ""}`}>
-            <a
-              active={filter === "branding"}
-              onClick={() => setFilter("branding")}
-            >
-              Branding
-            </a>
-          </li>
-          <li className={`btn ${filter === "web_development" ? "active" : ""}`}>
+          {/* <li className={`btn ${filter === "web_development" ? "active" : ""}`}>
             <a
               active={filter === "web_development"}
               onClick={() => setFilter("web_development")}
@@ -146,7 +168,7 @@ function Portfolio3() {
             >
               Advertising
             </a>
-          </li>
+          </li> */}
         </ul>
       </div>
 
@@ -168,9 +190,9 @@ function Portfolio3() {
                       <h5 className="title">
                         <a href="javascript:void(0);">{item.title}</a>
                       </h5>
-                      <p className="post-author">
+                      {/* <p className="post-author">
                         By <a href="javascript:void(0);">{item.author}</a>
-                      </p>
+                      </p> */}
                     </div>
                   </div>
                 </li>

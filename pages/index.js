@@ -30,7 +30,15 @@ import Slider3 from "../element/slider-3";
 import Slider2 from "../element/slider-2";
 import PricingT3 from "../component/pricingTable-3";
 import PricingT4 from "../component/pricingTable-4";
-function Home() {
+import {
+  getAllCases,
+  getAllCategories,
+  getAllFaq,
+  getAllPostsForHome,
+  getAllSiteInfo,
+  getAllTestimonials,
+} from "../lib/api";
+function Home({ testimonials, faqs, sitInfo, categories, cases }) {
   useEffect(() => {
     document.querySelector("body").setAttribute("color", "color_1");
   }, []);
@@ -58,22 +66,33 @@ function Home() {
         <AboutUs />
         {/* <Counter /> */}
         {/* <Features /> */}
-        <Projects3 />
+        <Projects3 categories={categories} cases={cases} />
         {/* <Team /> */}
         {/* <Pricing /> */}
         <PricingT4 />
         {/* <Newsletter /> */}
-        <Testimonial2 />
+        <Testimonial2 testimonials={testimonials} />
         <div className="container">
-          <Accordion_sm />
+          <Accordion_sm faqs={faqs} />
         </div>
         {/* <Blog /> */}
         <Quote3 />
         <Cta />
       </div>
-      <Footer3 />
+      <Footer sitInfo={sitInfo} />
     </>
   );
 }
-
+export async function getStaticProps({ preview = false }) {
+  const testimonials = await getAllTestimonials(preview);
+  const faqs = await getAllFaq(preview);
+  const sitInfo = await getAllSiteInfo(preview);
+  const categories = await getAllCategories(preview);
+  const cases = await getAllCases(preview);
+  console.log({ cases });
+  return {
+    props: { testimonials, preview, faqs, sitInfo, categories, cases },
+    revalidate: 1,
+  };
+}
 export default Home;

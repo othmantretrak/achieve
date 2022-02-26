@@ -40,7 +40,7 @@ function Header() {
                   <Link href="/contact-us-3">
                     <a className="btn btn-corner  btn-primary">
                       <Fire />
-                      Get A Quote
+                      Gratis intake
                     </a>
                   </Link>
                 </div>
@@ -64,10 +64,14 @@ function Header() {
                       <a>Home</a>
                     </Link>
                   </li>
-
+                  <li className={`${open === "services" ? "open" : ""}`}>
+                    <Link href="/about-us-1">
+                      <a>Over ons</a>
+                    </Link>
+                  </li>
                   <li className={`${open === "services" ? "open" : ""}`}>
                     <Link href="/services-1">
-                      <a>Diensten</a>
+                      <a>Diensten </a>
                     </Link>
                   </li>
                   <li className={`${open === "services" ? "open" : ""}`}>
@@ -75,14 +79,14 @@ function Header() {
                       <a>Tarieven</a>
                     </Link>
                   </li>
+                  <li className={`${open === "services" ? "open" : ""}`}>
+                    <Link href="/projects">
+                      <a>Cases </a>
+                    </Link>
+                  </li>
                   <li>
                     <Link href="/contact-us-3">
                       <a>Contact</a>
-                    </Link>
-                  </li>
-                  <li className={`${open === "about" ? "open" : ""}`}>
-                    <Link href="/faq-1">
-                      <a>Faq</a>
                     </Link>
                   </li>
                 </ul>

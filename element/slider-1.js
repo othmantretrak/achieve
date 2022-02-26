@@ -70,12 +70,6 @@ function Slider1() {
           </div>
         </div>
 
-        <div className="shape20">
-          <img src="/images/shape/shape19.png" alt="image" />
-        </div>
-        <div className="shape21">
-          <img src="/images/shape/shape20.png" alt="image" />
-        </div>
         <div className="shape19">
           <img src="/images/shape/shape18.png" alt="image" />
         </div>

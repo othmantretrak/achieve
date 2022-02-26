@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-function Footer() {
+function Footer({ sitInfo }) {
   return (
     <>
       {/* <!-- Footer --> */}
@@ -33,9 +33,9 @@ function Footer() {
                     </div>
                     <div className="icon-content">
                       <p>
-                        +31 85 4016590
+                        {sitInfo[0].phone}
                         <br />
-                        info@achieve.nl
+                        {sitInfo[0].email}
                       </p>
                     </div>
                   </div>
@@ -48,7 +48,7 @@ function Footer() {
                       </a>
                     </div>
                     <div className="icon-content">
-                      <p>Zuidplein 54, 3083 CW Rotterdam</p>
+                      <p>{sitInfo[0].address}</p>
                     </div>
                   </div>
                 </div>
@@ -71,19 +71,19 @@ function Footer() {
                       <li>
                         <a
                           className="fa-brands fa-facebook"
-                          href="https://www.facebook.com/achieve.nl/"
+                          href={sitInfo[0].facebook}
                         ></a>
                       </li>
                       <li>
                         <a
                           className="fa-brands fa-instagram"
-                          href="www.instagram.com/achieve.nl/"
+                          href={sitInfo[0].instagram}
                         ></a>
                       </li>
                       <li>
                         <a
                           className="fa-brands fa-twitter"
-                          href="https://twitter.com"
+                          href={sitInfo[0].twitter}
                         ></a>
                       </li>
                     </ul>

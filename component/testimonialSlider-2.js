@@ -1,6 +1,6 @@
 import Slider from "react-slick";
 
-function TestimonialSlider2() {
+function TestimonialSlider2({ testimonials }) {
   const settings = {
     dots: false,
     dotsClass: "swiper-container testimonial-thumbs d-flex",
@@ -51,66 +51,22 @@ function TestimonialSlider2() {
             <div className="swiper-container testimonial-content">
               <div className="swiper-wrapper">
                 <Slider {...settings}>
-                  <div className="swiper-slide">
-                    <div className="testimonial-4 quote-right">
-                      <div className="testimonial-text">
-                        <strong className="testimonial-name">Cak Dikin</strong>
-                        <span className="testimonial-position text-primary m-b20">
-                          CEO & Founder{" "}
-                        </span>
-                        <p>
-                          Duis feugiat est tincidunt ligula maximus convallis.
-                          Aenean ultricies, mi non vestibulum auctor, erat
-                          tortor porttitor ipsum, nec dictum tortor sem eget
-                          nunc. Etiam sed facilisis erat. Vestibulum sed posuere
-                          augue, ut molestie erat. Nam ipsum tellus, tempus vel
-                          ante ut, aliquet finibus dui. Proin lacinia, erat ut
-                          feugiat fringilla, tortor eros ultricies sem, sed
-                          finibus massa ex sit amet ligula.
-                        </p>
+                  {testimonials &&
+                    testimonials.map((t) => (
+                      <div key={t._id} className="swiper-slide">
+                        <div className="testimonial-4 quote-right">
+                          <div className="testimonial-text">
+                            <strong className="testimonial-name">
+                              {t.fullName}
+                            </strong>
+                            <span className="testimonial-position text-primary m-b20">
+                              CEO & Founder{" "}
+                            </span>
+                            <p>{t.message}</p>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                  <div className="swiper-slide">
-                    <div className="testimonial-4 quote-right">
-                      <div className="testimonial-text">
-                        <strong className="testimonial-name">Cak Dikin</strong>
-                        <span className="testimonial-position text-primary m-b20">
-                          CEO & Founder{" "}
-                        </span>
-                        <p>
-                          Duis feugiat est tincidunt ligula maximus convallis.
-                          Aenean ultricies, mi non vestibulum auctor, erat
-                          tortor porttitor ipsum, nec dictum tortor sem eget
-                          nunc. Etiam sed facilisis erat. Vestibulum sed posuere
-                          augue, ut molestie erat. Nam ipsum tellus, tempus vel
-                          ante ut, aliquet finibus dui. Proin lacinia, erat ut
-                          feugiat fringilla, tortor eros ultricies sem, sed
-                          finibus massa ex sit amet ligula.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="swiper-slide">
-                    <div className="testimonial-4 quote-right">
-                      <div className="testimonial-text">
-                        <strong className="testimonial-name">Cak Dikin</strong>
-                        <span className="testimonial-position text-primary m-b20">
-                          CEO & Founder{" "}
-                        </span>
-                        <p>
-                          Duis feugiat est tincidunt ligula maximus convallis.
-                          Aenean ultricies, mi non vestibulum auctor, erat
-                          tortor porttitor ipsum, nec dictum tortor sem eget
-                          nunc. Etiam sed facilisis erat. Vestibulum sed posuere
-                          augue, ut molestie erat. Nam ipsum tellus, tempus vel
-                          ante ut, aliquet finibus dui. Proin lacinia, erat ut
-                          feugiat fringilla, tortor eros ultricies sem, sed
-                          finibus massa ex sit amet ligula.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+                    ))}
                 </Slider>
               </div>
               <div className="swiper-pagination"></div>
