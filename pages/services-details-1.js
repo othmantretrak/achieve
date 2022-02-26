@@ -4,6 +4,7 @@ import { useState } from "react";
 //import ModalVideo from "react-modal-video";
 import AllServices from "../element/all-services";
 import Link from "next/link";
+import { getAllSiteInfo } from "../lib/api";
 
 function ServicesDetails1({ sitInfo }) {
   const [isOpen, setOpen] = useState(false);

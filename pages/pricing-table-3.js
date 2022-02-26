@@ -7,6 +7,7 @@ import PriceCard from "../component/PriceCard";
 import Tabs from "../component/Tabs";
 import PricingT4 from "../component/pricingTable-4";
 import Footer from "../layout/footer";
+import { getAllSiteInfo } from "../lib/api";
 
 function PricingTable3({ sitInfo }) {
   const [open, setOpen] = useState("p2");
