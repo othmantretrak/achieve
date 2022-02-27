@@ -124,9 +124,7 @@ function Portfolio3({ categories, cases }) {
       <div className="site-filters style-3 clearfix center m-b40">
         <ul className="filters">
           <li className={`btn ${filter === "all" ? "active" : ""}`}>
-            <a active={filter === "all"} onClick={() => setFilter("all")}>
-              All
-            </a>
+            <a onClick={() => setFilter("all")}>All</a>
           </li>
           {categories &&
             categories.map((c) => (
@@ -134,7 +132,10 @@ function Portfolio3({ categories, cases }) {
                 key={c._id}
                 className={`btn ${filter === c.slug ? "active" : ""}`}
               >
-                <a active={filter === c.slug} onClick={() => setFilter(c.slug)}>
+                <a
+                  //$active={filter === c.slug}
+                  onClick={() => setFilter(c.slug)}
+                >
                   {c.title}
                 </a>
               </li>
@@ -188,10 +189,10 @@ function Portfolio3({ categories, cases }) {
                     </div>
                     <div className="dlab-info">
                       <h5 className="title">
-                        <a href="javascript:void(0);">{item.title}</a>
+                        <a href="#">{item.title}</a>
                       </h5>
                       {/* <p className="post-author">
-                        By <a href="javascript:void(0);">{item.author}</a>
+                        By <a href="#">{item.author}</a>
                       </p> */}
                     </div>
                   </div>

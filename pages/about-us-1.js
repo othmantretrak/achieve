@@ -153,10 +153,7 @@ function AboutUs1({ sitInfo, team, testimonials }) {
                   <div className="col-lg-12 col-md-6">
                     <div className="icon-bx-wraper style-6 left p-0 m-b30 icon-up">
                       <div className="icon-bx-sm bg-white">
-                        <a
-                          href="javascript:void(0);"
-                          className="icon-cell text-primary"
-                        >
+                        <a href="#" className="icon-cell text-primary">
                           <i className="flaticon-chat"></i>
                         </a>
                       </div>
@@ -172,10 +169,7 @@ function AboutUs1({ sitInfo, team, testimonials }) {
                   <div className="col-lg-12 col-md-6">
                     <div className="icon-bx-wraper style-6 left p-0 m-b30 icon-up">
                       <div className="icon-bx-sm bg-white">
-                        <a
-                          href="javascript:void(0);"
-                          className="icon-cell text-primary"
-                        >
+                        <a href="#" className="icon-cell text-primary">
                           <i className="flaticon-bullhorn"></i>
                         </a>
                       </div>

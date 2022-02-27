@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 // import { WOW } from "wowjs";
-
+import Colapsed from "../component/iconCompenents/Colapsed";
 function Service() {
   const [open, setOpen] = useState("p2");
   // useEffect(() => {
@@ -40,17 +40,24 @@ function Service() {
                 onMouseOver={() => setOpen("p1")}
               >
                 <div className="icon-bx-md radius bg-yellow shadow-yellow">
-                  <a href="javascript:void(0);" className="icon-cell">
+                  <a href="#" className="icon-cell">
                     <i className="flaticon-office"></i>
                   </a>
                 </div>
                 <div className="icon-content">
-                  <h4 className="dlab-title">Strategy & Research</h4>
-                  <p>
-                    Fusce sit amet dui vitae urna tristique imperdiet. Donec
-                    eget sapien euismod, faucibus nibh non, consequat elit.
-                    Praesent sed vehicula.
-                  </p>
+                  <h4 className="dlab-title">Search Engine Advertising</h4>
+                  <Colapsed>
+                    In Search Engine Advertising (SEA) heb je de mogelijkheid om
+                    betaald reclame te maken voor je producten en diensten in de
+                    zoekmachine Google, partnersites van Google en YouTube. De
+                    kracht zit in het presenteren van jouw product of dienst
+                    door middel van een advertentie aan de doelgroepen die daar
+                    al naar op zoek zijn, affiniteit mee hebben of je website al
+                    eerder bezocht hebben. SEA vergroot daarmee jouw relevantie
+                    en vindbaarheid bij je doelgroepen zodat zowel de
+                    naamsbekendheid en uiteindelijk het aantal conversies wordt
+                    vergroot.
+                  </Colapsed>
                 </div>
               </div>
             </div>
@@ -68,17 +75,26 @@ function Service() {
                 onMouseOver={() => setOpen("p2")}
               >
                 <div className="icon-bx-md radius bg-red shadow-red">
-                  <a href="javascript:void(0);" className="icon-cell">
+                  <a href="#" className="icon-cell">
                     <i className="flaticon-website"></i>
                   </a>
                 </div>
                 <div className="icon-content">
-                  <h4 className="dlab-title">Web Development</h4>
-                  <p>
-                    Fusce sit amet dui vitae urna tristique imperdiet. Donec
-                    eget sapien euismod, faucibus nibh non, consequat elit.
-                    Praesent sed vehicula.
-                  </p>
+                  <h4 className="dlab-title">Social Advertising</h4>
+                  <Colapsed>
+                    Bij Social Advertising maak je betaald reclame op social
+                    media zoals Facebook, Instagram en LinkedIn. Dankzij de
+                    grote hoeveelheid bruikbare data op deze platformen, kan je
+                    zeer gericht adverteren op bijvoorbeeld demografie,
+                    geografie en de interesses van jouw doelgroepen. Die data
+                    gebruiken we vervolgens om soortgelijke mensen te vinden,
+                    mensen te retargetten waar je interactie mee hebt gehad en
+                    jouw bereik steeds verder uit te bouwen. Met al deze
+                    factoren kun je een community bouwen, naamsbekendheid
+                    vergroten, social platformen boosten en conversies
+                    vergroten. Hierdoor is social advertising een zeer waardevol
+                    advertentiemiddel.
+                  </Colapsed>
                 </div>
               </div>
             </div>
@@ -96,17 +112,27 @@ function Service() {
                 onMouseOver={() => setOpen("p3")}
               >
                 <div className="icon-bx-md radius bg-green shadow-green">
-                  <a href="javascript:void(0);" className="icon-cell">
+                  <a href="#" className="icon-cell">
                     <i className="flaticon-pie-charts"></i>
                   </a>
                 </div>
                 <div className="icon-content">
-                  <h4 className="dlab-title">Web Solution</h4>
-                  <p>
-                    Fusce sit amet dui vitae urna tristique imperdiet. Donec
-                    eget sapien euismod, faucibus nibh non, consequat elit.
-                    Praesent sed vehicula.
-                  </p>
+                  <h4 className="dlab-title">Branding</h4>
+                  <Colapsed>
+                    Branding is het bewust creëren en versterken van een gewenst
+                    beeld van een product, dienst of merk om een gunstige
+                    positie ten opzichte van concurrenten te realiseren van
+                    datgene dat achter het product, dienst of merk schuilgaat.
+                    De representatie van de persoonlijkheid van je bedrijf is
+                    tegenwoordig erg belangrijk. Hierdoor kunnen mensen een
+                    verbintenis voelen met je bedrijf dat verder gaat dan
+                    interesse in je product of dienst, waardoor je langere
+                    relaties opbouwt en je er meer loyale en meer spenderende
+                    klanten aan over houdt. Dit doe je door het oproepen van de
+                    juiste, positieve en onderscheidende associaties bij de
+                    relevante doelgroepen in je communicatie en visuele
+                    uitingen.
+                  </Colapsed>
                 </div>
               </div>
             </div>

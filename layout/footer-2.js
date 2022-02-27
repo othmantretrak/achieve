@@ -98,19 +98,19 @@ function Footer2() {
                   <h5 className="footer-title">Our links</h5>
                   <ul>
                     <li>
-                      <a href="javascript:void(0);">Home</a>
+                      <a href="#">Home</a>
                     </li>
                     <li>
-                      <a href="javascript:void(0);">About Us</a>
+                      <a href="#">About Us</a>
                     </li>
                     <li>
-                      <a href="javascript:void(0);">Services</a>
+                      <a href="#">Services</a>
                     </li>
                     <li>
-                      <a href="javascript:void(0);">Team</a>
+                      <a href="#">Team</a>
                     </li>
                     <li>
-                      <a href="javascript:void(0);">Blog</a>
+                      <a href="#">Blog</a>
                     </li>
                   </ul>
                 </div>
@@ -124,19 +124,19 @@ function Footer2() {
                   <h5 className="footer-title">Our Services</h5>
                   <ul>
                     <li>
-                      <a href="javascript:void(0);">Strategy & Research</a>
+                      <a href="#">Strategy & Research</a>
                     </li>
                     <li>
-                      <a href="javascript:void(0);">Web Development</a>
+                      <a href="#">Web Development</a>
                     </li>
                     <li>
-                      <a href="javascript:void(0);">Web Solution</a>
+                      <a href="#">Web Solution</a>
                     </li>
                     <li>
-                      <a href="javascript:void(0);">Digital Marketing</a>
+                      <a href="#">Digital Marketing</a>
                     </li>
                     <li>
-                      <a href="javascript:void(0);">App Design </a>
+                      <a href="#">App Design </a>
                     </li>
                   </ul>
                 </div>
@@ -150,19 +150,19 @@ function Footer2() {
                   <h5 className="footer-title">Other links</h5>
                   <ul>
                     <li>
-                      <a href="javascript:void(0);">FAQ</a>
+                      <a href="#">FAQ</a>
                     </li>
                     <li>
-                      <a href="javascript:void(0);">Portfolio</a>
+                      <a href="#">Portfolio</a>
                     </li>
                     <li>
-                      <a href="javascript:void(0);">Privacy Policy</a>
+                      <a href="#">Privacy Policy</a>
                     </li>
                     <li>
-                      <a href="javascript:void(0);">Terms & Conditions</a>
+                      <a href="#">Terms & Conditions</a>
                     </li>
                     <li>
-                      <a href="javascript:void(0);">Support </a>
+                      <a href="#">Support </a>
                     </li>
                   </ul>
                 </div>

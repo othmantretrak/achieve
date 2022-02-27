@@ -27,7 +27,7 @@ function Footer({ sitInfo }) {
                 <div className="col-xl-3 col-md-4 col-sm-6">
                   <div className="icon-bx-wraper left m-b10">
                     <div className="icon-lg">
-                      <a href="javascript:void(0);" className="icon-cell">
+                      <a href="#" className="icon-cell">
                         <i className="flaticon-email"></i>
                       </a>
                     </div>
@@ -43,7 +43,7 @@ function Footer({ sitInfo }) {
                 <div className="col-xl-3 col-md-4 col-sm-6">
                   <div className="icon-bx-wraper left m-b10">
                     <div className="icon-lg">
-                      <a href="javascript:void(0);" className="icon-cell">
+                      <a href="#" className="icon-cell">
                         <i className="flaticon-location"></i>
                       </a>
                     </div>
@@ -135,21 +135,19 @@ function Footer({ sitInfo }) {
                   <h5 className="footer-title">Onze diensten</h5>
                   <ul>
                     <li>
-                      <a href="javascript:void(0);">Branding</a>
+                      <a href="#">Branding</a>
                     </li>
                     <li>
-                      <a href="javascript:void(0);">Web Development</a>
+                      <a href="#">Web Development</a>
                     </li>
                     <li>
-                      <a href="javascript:void(0);">Email Marketing</a>
+                      <a href="#">Email Marketing</a>
                     </li>
                     <li>
-                      <a href="javascript:void(0);">Social Advertising </a>
+                      <a href="#">Social Advertising </a>
                     </li>
                     <li>
-                      <a href="javascript:void(0);">
-                        Search Engine Advertising
-                      </a>
+                      <a href="#">Search Engine Advertising</a>
                     </li>
                   </ul>
                 </div>
@@ -163,16 +161,16 @@ function Footer({ sitInfo }) {
                   <h5 className="footer-title">Over Achieve</h5>
                   <ul>
                     <li>
-                      <a href="javascript:void(0);">FAQ</a>
+                      <a href="#">FAQ</a>
                     </li>
                     <li>
-                      <a href="javascript:void(0);">Contact</a>
+                      <a href="#">Contact</a>
                     </li>
                     <li>
-                      <a href="javascript:void(0);">Privacy</a>
+                      <a href="#">Privacy</a>
                     </li>
                     <li>
-                      <a href="javascript:void(0);">Algemene voorwaarden</a>
+                      <a href="#">Algemene voorwaarden</a>
                     </li>
                   </ul>
                 </div>

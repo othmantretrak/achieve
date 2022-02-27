@@ -98,7 +98,7 @@ function Header() {
                     <Link href="https://twitter.com/">
                       <a className="fa-brands fa-twitter"></a>
                     </Link>
-                    <Link href="www.instagram.com/achieve.nl/">
+                    <Link href="https://www.instagram.com/achieve.nl/">
                       <a className="fa-brands fa-instagram"></a>
                     </Link>
                   </ul>

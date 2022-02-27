@@ -41,13 +41,13 @@ function Accordion_sm({ faqs }) {
       <div
         className="dlab-accordion accordion-sm"
         id="accordionFaq"
-        defaultActiveKey="0"
+        //defaultActiveKey="0"
       >
         {faqs &&
           faqs.map((d, i) => (
             <div className="card" key={i}>
               <div
-                eventKey={`${i}`}
+                // eventKey={`${i}`}
                 className="card-header"
                 onClick={() => setActiveDefault(activeDefault === i ? -1 : i)}
               >
@@ -72,7 +72,7 @@ function Accordion_sm({ faqs }) {
                 className={`${
                   activeDefault === i ? "collapsed show" : "collapsed"
                 }`}
-                eventKey={`${i}`}
+                //eventKey={`${i}`}
                 onClick={() => setActiveDefault(activeDefault === i ? -1 : i)}
               >
                 <div className="card-body">

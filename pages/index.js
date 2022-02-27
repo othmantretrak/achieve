@@ -63,8 +63,8 @@ function Home({ testimonials, faqs, sitInfo, categories, cases }) {
         {/*  <Slider2 />
         <Slider3 /> */}
         <Clients />
-        {/* <Service /> */}
         <AboutUs />
+        <Service />
         {/* <Counter /> */}
         {/* <Features /> */}
         <Projects3 categories={categories} cases={cases} />

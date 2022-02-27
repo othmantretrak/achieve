@@ -100,21 +100,19 @@ function Footer3({ sitInfo }) {
                   <h5 className="footer-title">Onze diensten</h5>
                   <ul>
                     <li>
-                      <a href="javascript:void(0);">Branding</a>
+                      <a href="#">Branding</a>
                     </li>
                     <li>
-                      <a href="javascript:void(0);">Web Development</a>
+                      <a href="#">Web Development</a>
                     </li>
                     <li>
-                      <a href="javascript:void(0);">Email Marketing</a>
+                      <a href="#">Email Marketing</a>
                     </li>
                     <li>
-                      <a href="javascript:void(0);">Social Advertising </a>
+                      <a href="#">Social Advertising </a>
                     </li>
                     <li>
-                      <a href="javascript:void(0);">
-                        Search Engine Advertising
-                      </a>
+                      <a href="#">Search Engine Advertising</a>
                     </li>
                   </ul>
                 </div>
