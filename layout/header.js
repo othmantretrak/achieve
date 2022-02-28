@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import Fire from "../component/iconCompenents/Fire";
+import Hot from "../component/iconCompenents/Hot";
 function Header() {
   const [show, setShow] = useState(false);
   const [open, setOpen] = useState("home");
@@ -39,7 +40,7 @@ function Header() {
                 <div className="extra-cell">
                   <Link href="/contact-us-3">
                     <a className="btn btn-corner  btn-primary">
-                      <Fire />
+                      <Hot />
                       Gratis intake
                     </a>
                   </Link>

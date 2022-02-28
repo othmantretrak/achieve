@@ -8,42 +8,19 @@ import Tabs from "../component/Tabs";
 import PricingT4 from "../component/pricingTable-4";
 import Footer from "../layout/footer";
 import { getAllSiteInfo } from "../lib/api";
+import Banner from "../element/banner";
+import Banner2 from "../element/banner2";
+import Header from "../layout/header";
 
 function PricingTable3({ sitInfo }) {
   const [open, setOpen] = useState("p2");
 
   return (
     <>
-      <Header3 />
+      <Header />
       <div className="page-content bg-gray">
         {/* <!-- Banner  --> */}
-        <div
-          className="dlab-bnr-inr style-1 bg-primary"
-          style={{
-            backgroundImage: "url(images/banner/bnr2.png), var(--gradient-sec)",
-            backgroundSize: "cover, 200%",
-          }}
-        >
-          <div className="container">
-            <div className="dlab-bnr-inr-entry">
-              <h1>Pricing Table</h1>
-              {/* <!-- Breadcrumb Row --> */}
-              <nav aria-label="breadcrumb" className="breadcrumb-row style-1">
-                <ul className="breadcrumb">
-                  <li className="breadcrumb-item">
-                    <Link href="/">
-                      <a>Home</a>
-                    </Link>
-                  </li>
-                  <li className="breadcrumb-item active" aria-current="page">
-                    Pricing Table
-                  </li>
-                </ul>
-              </nav>
-              {/* <!-- Breadcrumb Row End --> */}
-            </div>
-          </div>
-        </div>
+        <Banner2 name="Over Ons" />
         {/* <!-- Banner End --> */}
         <PricingT4 />
       </div>

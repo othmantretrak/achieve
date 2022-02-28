@@ -7,38 +7,17 @@ import Testimonial from "../element/testimonial";
 import Link from "next/link";
 import Quote from "../element/quote";
 import { getAllSiteInfo } from "../lib/api";
+import Banner2 from "../element/banner2";
+import Header from "../layout/header";
 
 function Services1({ sitInfo }) {
   const [open, setOpen] = useState("p2");
   return (
     <>
-      <Header3 />
+      <Header />
       <div className="page-content bg-white">
         {/* <!-- Banner  --> */}
-        <div
-          className="dlab-bnr-inr overlay-primary-dark"
-          style={{ backgroundImage: "url(images/banner/bnr1.jpg)" }}
-        >
-          <div className="container">
-            <div className="dlab-bnr-inr-entry">
-              <h1>Onze diensten</h1>
-              {/* <!-- Breadcrumb Row --> */}
-              <nav aria-label="breadcrumb" className="breadcrumb-row">
-                <ul className="breadcrumb">
-                  <li className="breadcrumb-item">
-                    <Link href="/">
-                      <a>Home</a>
-                    </Link>
-                  </li>
-                  <li className="breadcrumb-item active" aria-current="page">
-                    Onze diensten
-                  </li>
-                </ul>
-              </nav>
-              {/* <!-- Breadcrumb Row End --> */}
-            </div>
-          </div>
-        </div>
+        <Banner2 name="Onze Diensten" />
         {/* <!-- Banner End --> */}
 
         {/* <!-- Services --> */}

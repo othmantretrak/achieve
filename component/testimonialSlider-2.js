@@ -60,7 +60,7 @@ function TestimonialSlider2({ testimonials }) {
                               {t.fullName}
                             </strong>
                             <span className="testimonial-position text-primary m-b20">
-                              CEO & Founder{" "}
+                              {t.profession}
                             </span>
                             <p>{t.message}</p>
                           </div>

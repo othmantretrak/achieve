@@ -1,6 +1,6 @@
 import { useState } from "react";
 //import ModalVideo from 'react-modal-video';
-import Header from "../layout/header-3";
+import Header from "../layout/header";
 import Footer from "./../layout/footer";
 import Counter from "./../element/counter";
 import TeamSlider from "../component/teamSlider";
@@ -11,6 +11,7 @@ import Quote from "../element/quote";
 import Quote3 from "../element/quote-3";
 import Testimonial2 from "../element/testimonial-2";
 import { getAllSiteInfo, getAllTeams, getAllTestimonials } from "../lib/api";
+import Banner2 from "../element/banner2";
 
 function AboutUs1({ sitInfo, team, testimonials }) {
   const [isOpen, setOpen] = useState(false);
@@ -19,30 +20,7 @@ function AboutUs1({ sitInfo, team, testimonials }) {
       <Header />
       <div className="page-content bg-white">
         {/* <!-- Banner  --> */}
-        <div
-          className="dlab-bnr-inr overlay-primary-dark"
-          style={{ backgroundImage: "url(images/banner/bnr1.jpg)" }}
-        >
-          <div className="container">
-            <div className="dlab-bnr-inr-entry">
-              <h1>Over ons</h1>
-              {/* <!-- Breadcrumb Row --> */}
-              <nav aria-label="breadcrumb" className="breadcrumb-row">
-                <ul className="breadcrumb">
-                  <li className="breadcrumb-item">
-                    <Link href="/">
-                      <a>Home</a>
-                    </Link>
-                  </li>
-                  <li className="breadcrumb-item active" aria-current="page">
-                    Over ons
-                  </li>
-                </ul>
-              </nav>
-              {/* <!-- Breadcrumb Row End --> */}
-            </div>
-          </div>
-        </div>
+        <Banner2 name="Over Ons" />
         {/* <!-- Banner End --> */}
 
         {/* <!-- About Us --> */}

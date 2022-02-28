@@ -5,6 +5,7 @@ import { useState } from "react";
 import AllServices from "../element/all-services";
 import Link from "next/link";
 import { getAllSiteInfo } from "../lib/api";
+import Banner from "../element/banner";
 
 function ServicesDetails1({ sitInfo }) {
   const [isOpen, setOpen] = useState(false);
@@ -13,30 +14,7 @@ function ServicesDetails1({ sitInfo }) {
       <Header />
       <div className="page-content bg-white">
         {/* <!-- Banner  --> */}
-        <div
-          className="dlab-bnr-inr overlay-primary-dark"
-          style={{ backgroundImage: "url(images/banner/bnr1.jpg)" }}
-        >
-          <div className="container">
-            <div className="dlab-bnr-inr-entry">
-              <h1>Services Details 1</h1>
-              {/* <!-- Breadcrumb Row --> */}
-              <nav aria-label="breadcrumb" className="breadcrumb-row">
-                <ul className="breadcrumb">
-                  <li className="breadcrumb-item">
-                    <Link href="/">
-                      <a>Home</a>
-                    </Link>
-                  </li>
-                  <li className="breadcrumb-item active" aria-current="page">
-                    Services Details
-                  </li>
-                </ul>
-              </nav>
-              {/* <!-- Breadcrumb Row End --> */}
-            </div>
-          </div>
-        </div>
+        <Banner name="Over Ons" />
         {/* <!-- Banner End --> */}
 
         {/* <!-- Services Details --> */}
