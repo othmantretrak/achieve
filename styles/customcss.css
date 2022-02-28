@@ -352,3 +352,6 @@ sup {
 .active:before {
   pointer-events: none !important;
 }
+.extra-nav .btn-corner {
+  border-radius: 15px;
+}
