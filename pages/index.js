@@ -53,6 +53,7 @@ function Home({ testimonials, faqs, sitInfo, categories, cases }) {
     <>
       <Head>
         {/* <link rel="stylesheet" href="/assets/css/style.css" /> */}
+        {/* <link rel="stylesheet" href="/assets/css/style.css" /> */}
         <title>
           Achieve – Groeien op basis van data en de kracht van creativiteit.
         </title>
