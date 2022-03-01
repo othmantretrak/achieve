@@ -1,7 +1,22 @@
 import React from "react";
 import CustomBtn from "../element/CustomBtn";
 
-function PriceCard({ name, price, btnColor, arry }) {
+function PriceCard({ name, price, btnColor, service }) {
+  const basicCheck = name === "Basic";
+  const standardCheck = name === "Standard";
+  const PremiumCheck = name === "Premium";
+  const Allservices = [
+    service[0].service1,
+    service[0].service2,
+    service[0].service3,
+    service[0].service4,
+    service[0].service5,
+    service[0].service6,
+    service[0].service7,
+  ];
+
+  console.log({ Allservices });
+
   return (
     <div className="col-lg-4 col-sm-6">
       <div className="single-pricing-table left-align">
@@ -9,14 +24,52 @@ function PriceCard({ name, price, btnColor, arry }) {
           <h3>{name}</h3>
         </div>
         <div className="price">
-          <sup>$</sup>
+          <sup>€</sup>
           {price} <sub>/ monthly</sub>
         </div>
         <ul className="pricing-features">
-          <li className="">
+          {Allservices.map((serv) => {
+            console.log({ serv });
+            if (serv) {
+              return (
+                <li key={serv.title} className="">
+                  {basicCheck && serv.seb && (
+                    <i className="fa-solid fa-circle-check"></i>
+                  )}
+                  {basicCheck && !serv.seb && (
+                    <i
+                      style={{ color: "#c41354" }}
+                      className="fa-solid fa-circle-xmark"
+                    ></i>
+                  )}
+                  {standardCheck && serv.ses && (
+                    <i className="fa-solid fa-circle-check"></i>
+                  )}
+                  {standardCheck && !serv.ses && (
+                    <i
+                      style={{ color: "#c41354" }}
+                      className="fa-solid fa-circle-xmark"
+                    ></i>
+                  )}
+                  {PremiumCheck && serv.sep && (
+                    <i className="fa-solid fa-circle-check"></i>
+                  )}
+                  {PremiumCheck && !serv.sep && (
+                    <i
+                      style={{ color: "#c41354" }}
+                      className="fa-solid fa-circle-xmark"
+                    ></i>
+                  )}
+
+                  {serv.title}
+                </li>
+              );
+            }
+          })}
+          {/* <li className="">
             <i className="fa-solid fa-circle-check"></i>Soort advertentie
           </li>
-          <li className="">
+           <li className="">
             <i className="fa-solid fa-circle-check"></i>Advertentiegroepen
           </li>
           <li className="">
@@ -54,7 +107,7 @@ function PriceCard({ name, price, btnColor, arry }) {
               className="fa-solid fa-circle-xmark"
             ></i>{" "}
             Google Analytics
-          </li>
+          </li> */}
         </ul>
         <CustomBtn />
       </div>
