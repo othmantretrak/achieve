@@ -30,61 +30,77 @@ function PricingT4({ prices }) {
           <Tabs onclickTab={handleClick} tab={tab} />
           {tab === 1 && (
             <div className="row">
-              <PriceCard service={tab1} name="Basic" price={tab1[0].b_price} />
+              <PriceCard
+                service={tab1}
+                name="Basic"
+                price={tab1[0] && tab1[0].b_price}
+              />
               <PriceCard
                 service={tab1}
                 name="Standard"
-                price={tab1[0].s_price}
+                price={tab1[0] && tab1[0].s_price}
               />
               <PriceCard
                 service={tab1}
                 name="Premium"
-                price={tab1[0].p_price}
+                price={tab1[0] && tab1[0].p_price}
               />
             </div>
           )}
           {tab === 2 && (
             <div className="row">
-              <PriceCard service={tab2} name="Basic" price={tab2[0].b_price} />
+              <PriceCard
+                service={tab2}
+                name="Basic"
+                price={tab2[0] && tab2[0].b_price}
+              />
               <PriceCard
                 service={tab2}
                 name="Standard"
-                price={tab2[0].s_price}
+                price={tab2[0] && tab2[0].s_price}
               />
               <PriceCard
                 service={tab2}
                 name="Premium"
-                price={tab2[0].p_price}
+                price={tab2[0] && tab2[0].p_price}
               />
             </div>
           )}
           {tab === 3 && (
             <div className="row">
-              <PriceCard service={tab3} name="Basic" price={tab3[0].b_price} />
+              <PriceCard
+                service={tab3}
+                name="Basic"
+                price={tab3[0] && tab3[0].b_price}
+              />
               <PriceCard
                 service={tab3}
                 name="Standard"
-                price={tab3[0].s_price}
+                price={tab3[0] && tab3[0].s_price}
               />
               <PriceCard
                 service={tab3}
                 name="Premium"
-                price={tab3[0].p_price}
+                price={tab3[0] && tab3[0].p_price}
               />
             </div>
           )}
           {tab === 4 && (
             <div className="row">
-              <PriceCard service={tab4} name="Basic" price={tab4[0].b_price} />
+              <PriceCard
+                service={tab4}
+                name="Basic"
+                price={tab4[0] && tab4[0].b_price}
+              />
               <PriceCard
                 service={tab4}
                 name="Standard"
-                price={tab4[0].s_price}
+                price={tab4[0] && tab4[0].s_price}
               />
               <PriceCard
                 service={tab4}
                 name="Premium"
-                price={tab4[0].p_price}
+                price={tab4[0] && tab4[0].p_price}
               />
             </div>
           )}
