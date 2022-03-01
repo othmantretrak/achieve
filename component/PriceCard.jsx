@@ -6,13 +6,13 @@ function PriceCard({ name, price, btnColor, service }) {
   const standardCheck = name === "Standard";
   const PremiumCheck = name === "Premium";
   const Allservices = [
-    service[0].service1,
-    service[0].service2,
-    service[0].service3,
-    service[0].service4,
-    service[0].service5,
-    service[0].service6,
-    service[0].service7,
+    service[0]?.service1,
+    service[0]?.service2,
+    service[0]?.service3,
+    service[0]?.service4,
+    service[0]?.service5,
+    service[0]?.service6,
+    service[0]?.service7,
   ];
 
   console.log({ Allservices });
