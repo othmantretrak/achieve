@@ -35,11 +35,12 @@ import {
   getAllCategories,
   getAllFaq,
   getAllPostsForHome,
+  getAllPrice,
   getAllSiteInfo,
   getAllTeams,
   getAllTestimonials,
 } from "../lib/api";
-function Home({ testimonials, faqs, sitInfo, categories, cases }) {
+function Home({ testimonials, faqs, sitInfo, categories, cases, prices }) {
   useEffect(() => {
     document.querySelector("body").setAttribute("color", "color_1");
   }, []);
@@ -71,7 +72,7 @@ function Home({ testimonials, faqs, sitInfo, categories, cases }) {
         <Projects3 categories={categories} cases={cases} />
         {/* <Team /> */}
         {/* <Pricing /> */}
-        <PricingT4 />
+        <PricingT4 prices={prices} />
         {/* <Newsletter /> */}
         <Testimonial2 testimonials={testimonials} />
         <div className="container">
@@ -88,13 +89,14 @@ function Home({ testimonials, faqs, sitInfo, categories, cases }) {
 export async function getStaticProps({ preview = false }) {
   const testimonials = await getAllTestimonials(preview);
   const faqs = await getAllFaq(preview);
+  const prices = await getAllPrice(preview);
   const sitInfo = await getAllSiteInfo(preview);
   const categories = await getAllCategories(preview);
   const cases = await getAllCases(preview);
   const team = await getAllTeams(preview);
   //console.log({ team });
   return {
-    props: { testimonials, preview, faqs, sitInfo, categories, cases },
+    props: { testimonials, preview, faqs, sitInfo, categories, cases, prices },
     revalidate: 1,
   };
 }

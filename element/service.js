@@ -23,7 +23,7 @@ function Service() {
             <h6 className="sub-title bgl-primary m-b20 text-primary">
               Services
             </h6>
-            <h2 className="title">Provide Awesome Service To You</h2>
+            <h2 className="title">Onze diensten</h2>
           </div>
           <div className="row">
             <div

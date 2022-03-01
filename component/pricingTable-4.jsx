@@ -2,12 +2,13 @@ import { useState } from "react";
 import Fire from "./iconCompenents/Fire";
 import PriceCard from "./PriceCard";
 import Tabs from "./Tabs";
-function PricingT4() {
+function PricingT4({ prices }) {
   const [tab, setTab] = useState(1);
   const handleClick = (p) => {
     console.log(p);
     setTab(p);
   };
+  console.log(prices);
   return (
     <>
       {/* <!-- Pricing Table --> */}

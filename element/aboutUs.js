@@ -37,8 +37,8 @@ function AboutUs() {
                 hebben gemaakt. Dit is wat we leuk vinden en daarom zijn we er
                 ook goed in.
               </p>
-              <img src="images/sign.png" alt="" />
-              <h4 className="m-b30">CEO Kareem</h4>
+              {/* <img src="images/sign.png" alt="" />
+              <h4 className="m-b30">CEO Kareem</h4> */}
               <Link href="/about-us-1">
                 <a className="btn btn-link d-inline-flex align-items-center">
                   <i className="fa fa-angle-right m-r10"></i>Lees Meer…

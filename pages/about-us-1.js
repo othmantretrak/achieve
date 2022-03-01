@@ -12,6 +12,7 @@ import Quote3 from "../element/quote-3";
 import Testimonial2 from "../element/testimonial-2";
 import { getAllSiteInfo, getAllTeams, getAllTestimonials } from "../lib/api";
 import Banner2 from "../element/banner2";
+import Cta from "../element/cta";
 
 function AboutUs1({ sitInfo, team, testimonials }) {
   const [isOpen, setOpen] = useState(false);
@@ -107,7 +108,8 @@ function AboutUs1({ sitInfo, team, testimonials }) {
         {/* <Counter /> */}
 
         {/* <!-- About Us --> */}
-        <section className="content-inner-2">
+
+        {/*  <section className="content-inner-2">
           <div className="container">
             <div className="row align-items-center">
               <div
@@ -179,14 +181,14 @@ function AboutUs1({ sitInfo, team, testimonials }) {
                     </a>
                   </div>
                 </div>
-                {/* <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="UpolBSznWp0" onClose={() => setOpen(false)} /> */}
+                {/* <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="UpolBSznWp0" onClose={() => setOpen(false)} /> 
               </div>
             </div>
           </div>
-        </section>
+        </section>*/}
 
         {/* <!-- Team --> */}
-        <section className="content-inner">
+        {/*    <section className="content-inner">
           <div className="container">
             <div className="section-head style-1 text-center">
               <h6 className="sub-title bgl-primary m-b20 text-primary">Team</h6>
@@ -198,16 +200,16 @@ function AboutUs1({ sitInfo, team, testimonials }) {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* <!-- Testimonials --> */}
-        <Testimonial2 testimonials={testimonials} />
+        {/* <Testimonial2 testimonials={testimonials} /> */}
 
         {/* <!-- Blog --> */}
         {/* <Blog /> */}
 
         {/* <!-- Get A Quote --> */}
-        <Quote3 />
+        {/* <Cta /> */}
 
         {/* <!-- Call To Action --> */}
         {/*  <section

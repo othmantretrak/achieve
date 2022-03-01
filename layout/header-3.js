@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import Hot from "../component/iconCompenents/Hot";
+import PremaryBtn from "../component/PremaryBtn";
 function Header3() {
   const [show, setShow] = useState(false);
   const [open, setOpen] = useState("home");
@@ -44,16 +45,7 @@ function Header3() {
                 <span></span>
               </button>
               {/* <!-- Extra Nav --> */}
-              <div className="extra-nav">
-                <div className="extra-cell">
-                  <Link href="/contact-us-3">
-                    <a className="btn btn-corner btn-primary">
-                      <Hot />
-                      Gratis intake
-                    </a>
-                  </Link>
-                </div>
-              </div>
+              <PremaryBtn title="Gratis intake" />
               <div
                 className={`header-nav navbar-collapse collapse justify-content-end ${
                   show ? "show" : ""

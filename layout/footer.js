@@ -70,22 +70,26 @@ function Footer({ sitInfo }) {
                     <ul>
                       <li>
                         <a
+                          target="_blank"
+                          rel="noreferrer"
                           className="fa-brands fa-facebook"
                           href={sitInfo[0].facebook}
                         ></a>
                       </li>
                       <li>
                         <a
+                          target="_blank"
+                          rel="noreferrer"
                           className="fa-brands fa-instagram"
                           href={sitInfo[0].instagram}
                         ></a>
                       </li>
-                      <li>
+                      {/*  <li>
                         <a
                           className="fa-brands fa-twitter"
                           href={sitInfo[0].twitter}
                         ></a>
-                      </li>
+                      </li> */}
                     </ul>
                   </div>
                 </div>
@@ -139,6 +143,9 @@ function Footer({ sitInfo }) {
                     </li>
                     <li>
                       <a href="#">Web Development</a>
+                    </li>
+                    <li>
+                      <a href="#">Content Creation</a>
                     </li>
                     <li>
                       <a href="#">Email Marketing</a>

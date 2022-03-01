@@ -14,7 +14,7 @@ function ContactUs1({ sitInfo }) {
       <Header />
       <div className="page-content bg-white">
         {/* <!-- Banner  --> */}
-        <Banner2 name="Contact Us" />
+        <Banner2 name="Contact" />
         {/* <!-- Banner End --> */}
 
         {/* <!-- Get A Quote --> */}

@@ -1,4 +1,5 @@
 import Slider from "react-slick";
+import Stars from "../element/stars";
 
 function TestimonialSlider2({ testimonials }) {
   const settings = {
@@ -59,9 +60,10 @@ function TestimonialSlider2({ testimonials }) {
                             <strong className="testimonial-name">
                               {t.fullName}
                             </strong>
-                            <span className="testimonial-position text-primary m-b20">
+                            <span className="testimonial-position text-primary ">
                               {t.profession}
                             </span>
+                            <Stars />
                             <p>{t.message}</p>
                           </div>
                         </div>
