@@ -9,16 +9,16 @@ function PricingT4({ prices }) {
     setTab(p);
   };
   //console.log(prices);
-  const tab1 = prices.filter(
+  const tab1 = prices?.filter(
     (p) => p._id === "5ca77eb8-669c-42fa-9f45-65b742d420c0"
   );
-  const tab2 = prices.filter(
+  const tab2 = prices?.filter(
     (p) => p._id === "336ea946-3412-4f19-bedf-966dace4b6b4"
   );
-  const tab3 = prices.filter(
+  const tab3 = prices?.filter(
     (p) => p._id === "e57740b4-82d2-4f46-a1b8-860a62beea67"
   );
-  const tab4 = prices.filter(
+  const tab4 = prices?.filter(
     (p) => p._id === "8524dc60-fb73-4207-b987-238a7103f83f"
   );
   console.log(tab1);
