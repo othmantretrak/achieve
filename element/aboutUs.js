@@ -21,9 +21,9 @@ function AboutUs() {
               data-wow-delay="0.4s"
             >
               <div className="section-head style-1 mb-4">
-                <h6 className="sub-title bgl-primary m-b20 text-primary">
+                {/* <h6 className="sub-title bgl-primary m-b20 text-primary">
                   About Us
-                </h6>
+                </h6> */}
                 <h2 className="title">Hallo! wij zijn achieve.</h2>
               </div>
               <p>

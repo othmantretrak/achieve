@@ -1,10 +1,12 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useState } from "react";
 import Fire from "../component/iconCompenents/Fire";
 import Hot from "../component/iconCompenents/Hot";
 function Header() {
   const [show, setShow] = useState(false);
   const [open, setOpen] = useState("home");
+  const router = useRouter();
   return (
     <>
       {/* <!-- Header --> */}
@@ -62,32 +64,64 @@ function Header() {
                 <ul className="nav navbar-nav navbar">
                   <li>
                     <Link href="/">
-                      <a>Home</a>
+                      <a className={router.pathname == "/" ? "active" : ""}>
+                        Home
+                      </a>
                     </Link>
                   </li>
                   <li className={`${open === "services" ? "open" : ""}`}>
                     <Link href="/about-us-1">
-                      <a>Over ons</a>
+                      <a
+                        className={
+                          router.pathname == "/about-us-1" ? "active" : ""
+                        }
+                      >
+                        Over ons
+                      </a>
                     </Link>
                   </li>
                   <li className={`${open === "services" ? "open" : ""}`}>
                     <Link href="/services-1">
-                      <a>Diensten </a>
+                      <a
+                        className={
+                          router.pathname == "/services-1" ? "active" : ""
+                        }
+                      >
+                        Diensten{" "}
+                      </a>
                     </Link>
                   </li>
                   <li className={`${open === "services" ? "open" : ""}`}>
                     <Link href="/pricing-table-3">
-                      <a>Tarieven</a>
+                      <a
+                        className={
+                          router.pathname == "/pricing-table-3" ? "active" : ""
+                        }
+                      >
+                        Tarieven
+                      </a>
                     </Link>
                   </li>
                   <li className={`${open === "services" ? "open" : ""}`}>
                     <Link href="/projects">
-                      <a>Cases </a>
+                      <a
+                        className={
+                          router.pathname == "/projects" ? "active" : ""
+                        }
+                      >
+                        Cases{" "}
+                      </a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/contact-us-3">
-                      <a>Contact</a>
+                      <a
+                        className={
+                          router.pathname == "/contact-us-3" ? "active" : ""
+                        }
+                      >
+                        Contact
+                      </a>
                     </Link>
                   </li>
                 </ul>

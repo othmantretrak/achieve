@@ -20,9 +20,9 @@ function Service() {
       >
         <div className="container">
           <div className="section-head style-1 text-center">
-            <h6 className="sub-title bgl-primary m-b20 text-primary">
+            {/* <h6 className="sub-title bgl-primary m-b20 text-primary">
               Services
-            </h6>
+            </h6> */}
             <h2 className="title">Onze diensten</h2>
           </div>
           <div className="row">

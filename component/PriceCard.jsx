@@ -25,7 +25,7 @@ function PriceCard({ name, price, btnColor, service }) {
         </div>
         <div className="price">
           <sup>€</sup>
-          {price} <sub>/ monthly</sub>
+          {price} <sub>/ Maandelijks</sub>
         </div>
         <ul className="pricing-features">
           {Allservices.map((serv) => {

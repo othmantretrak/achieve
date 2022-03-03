@@ -17,12 +17,12 @@ function Cta() {
               data-wow-duration="2s"
               data-wow-delay="0.2s"
             >
-              <div className="section-head style-1">
-                <h6 className="sub-title bgl-primary m-b20 text-primary">
-                  More With Us
-                </h6>
+              <div
+                style={{ marginBottom: "0px" }}
+                className="section-head style-1"
+              >
                 <h2 className="title">
-                  You Want To Showcase Your Website In Top Join With Us
+                  Benieuwd wat wij voor jou onderneming kunnen betekenen?
                 </h2>
               </div>
             </div>

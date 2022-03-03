@@ -364,5 +364,19 @@ sup {
   color: #1f2471;
 }
 .stars i {
-  color: #fea500;
+  color: #ffe435;
+  margin-right: 5px;
+}
+.header-nav .nav > li > a {
+  text-transform: unset !important;
+}
+.text-black .header-nav .nav > li > a.active {
+  color: #8639fa;
+}
+.header-transparent .is-fixed .nav > li > a.active,
+.header-transparent .is-fixed .nav > li > a:hover {
+  color: #8639fa;
+}
+.header-nav .nav > li > a:hover {
+  color: #8639fa;
 }

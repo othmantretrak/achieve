@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 function Accordion_sm({ faqs }) {
-  const [activeDefault, setActiveDefault] = useState(0);
+  const [activeDefault, setActiveDefault] = useState(1000);
   const defaultAccordion = [
     {
       title:

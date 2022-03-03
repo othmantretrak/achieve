@@ -40,6 +40,7 @@ import {
   getAllTeams,
   getAllTestimonials,
 } from "../lib/api";
+import googleMap from "../component/googleMap";
 function Home({ testimonials, faqs, sitInfo, categories, cases, prices }) {
   useEffect(() => {
     document.querySelector("body").setAttribute("color", "color_1");
@@ -79,9 +80,14 @@ function Home({ testimonials, faqs, sitInfo, categories, cases, prices }) {
           <Accordion_sm faqs={faqs} />
         </div>
         {/* <Blog /> */}
-        <Quote3 />
+        {/* <Quote3 /> */}
         <Cta />
       </div>
+      {/* <googleMap isMarkerShown /> */}
+      {/*  <googleMap
+        containerElement={<div style={{ height: `400px` }} />}
+        mapElement={<div style={{ height: `100%` }} />}
+      /> */}
       <Footer sitInfo={sitInfo} />
     </>
   );

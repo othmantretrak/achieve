@@ -18,7 +18,7 @@ function Testimonial2({ testimonials }) {
             <h6 className="sub-title text-primary bgl-primary m-b15">
               TESTIMONIAL
             </h6>
-            <h2 className="title">See What Our Clients Say’s</h2>
+            <h2 className="title">Zij gingen je voor</h2>
           </div>
           <div className="row">
             <div className="col-md-12">

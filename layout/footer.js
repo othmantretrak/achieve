@@ -195,7 +195,7 @@ function Footer({ sitInfo }) {
             <div className="row">
               <div className="col-sm-12 text-center">
                 <span className="copyright-text">
-                  Copyright © 2021 <a>ACHIEVE</a>. All rights reserved.
+                  Copyright © 2022 <a>Achieve</a>. All rights reserved.
                 </span>
               </div>
             </div>
