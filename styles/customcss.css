@@ -178,9 +178,16 @@
   text-align: center;
   background-color: #fff;
   padding-bottom: 30px;
+  color: #505489;
   border-radius: 5px;
   transition: 0.5s;
   box-shadow: 0px 0 10px rgb(31 66 135 / 30%);
+}
+.table.single-pricing-table tr th {
+  color: #505489;
+}
+.single-pricing-table i {
+  color: #13c4a1;
 }
 .single-pricing-table.left-align .price,
 .single-pricing-table.left-align .pricing-header {
@@ -203,7 +210,7 @@
   border-top: 2px dashed #f4f5fe;
   border-bottom: 2px dashed #f4f5fe;
   font-weight: 600;
-  font-size: 40px;
+  font-size: 28px;
 }
 .single-pricing-table .price sup {
   top: -18px;
@@ -230,10 +237,10 @@ sup {
   margin-right: 40px;
 }
 .single-pricing-table .pricing-features {
-  padding-left: 0;
+  /* padding-left: 0;
   text-align: left;
+  margin: 30px 50px 0; */
   list-style-type: none;
-  margin: 30px 50px 0;
 }
 .single-pricing-table .pricing-features li {
   margin-bottom: 10px;

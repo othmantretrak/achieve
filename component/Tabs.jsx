@@ -25,7 +25,7 @@ function Tabs({ onclickTab, tab }) {
           className={`${tab === 3 ? "current" : ""}`}
         >
           <span>
-            <i className="bx bxs-calendar-check"></i> SEO + Social Advertising
+            <i className="bx bxs-calendar-check"></i> Website
           </span>
         </li>
         <li

@@ -7,12 +7,12 @@ import PriceCard from "../component/PriceCard";
 import Tabs from "../component/Tabs";
 import PricingT4 from "../component/pricingTable-4";
 import Footer from "../layout/footer";
-import { getAllSiteInfo } from "../lib/api";
+import { getAllPrice, getAllSiteInfo } from "../lib/api";
 import Banner from "../element/banner";
 import Banner2 from "../element/banner2";
 import Header from "../layout/header";
 
-function PricingTable3({ sitInfo }) {
+function PricingTable3({ sitInfo, prices }) {
   const [open, setOpen] = useState("p2");
 
   return (
@@ -22,7 +22,7 @@ function PricingTable3({ sitInfo }) {
         {/* <!-- Banner  --> */}
         <Banner2 name="Over Ons" />
         {/* <!-- Banner End --> */}
-        <PricingT4 />
+        <PricingT4 prices={prices} />
       </div>
       <Footer sitInfo={sitInfo} />
     </>
@@ -30,9 +30,11 @@ function PricingTable3({ sitInfo }) {
 }
 export async function getStaticProps({ preview = false }) {
   const sitInfo = await getAllSiteInfo(preview);
+
+  const prices = await getAllPrice(preview);
   //console.log({ cases });
   return {
-    props: { sitInfo },
+    props: { sitInfo, prices },
     revalidate: 1,
   };
 }
