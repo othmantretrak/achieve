@@ -387,3 +387,19 @@ sup {
 .header-nav .nav > li > a:hover {
   color: #8639fa;
 }
+.our-promises {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+}
+.our-promises svg {
+  width: 5em;
+}
+.our-promises .col-md {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}

@@ -13,6 +13,7 @@ import Testimonial2 from "../element/testimonial-2";
 import { getAllSiteInfo, getAllTeams, getAllTestimonials } from "../lib/api";
 import Banner2 from "../element/banner2";
 import Cta from "../element/cta";
+import OurPromises from "../component/OurPromises";
 
 function AboutUs1({ sitInfo, team, testimonials }) {
   const [isOpen, setOpen] = useState(false);
@@ -249,6 +250,7 @@ function AboutUs1({ sitInfo, team, testimonials }) {
           </div>
         </section> */}
       </div>
+      <OurPromises />
       <Footer sitInfo={sitInfo} />
     </>
   );
