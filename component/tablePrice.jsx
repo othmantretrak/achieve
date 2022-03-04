@@ -4,13 +4,18 @@ import CustomBtn from "../element/CustomBtn";
 function TablePrice({ service }) {
   console.log({ service });
   const Allservices = [
-    service[0]?.service1,
-    service[0]?.service2,
-    service[0]?.service3,
-    service[0]?.service4,
-    service[0]?.service5,
-    service[0]?.service6,
-    service[0]?.service7,
+    service?.service1,
+    service?.service2,
+    service?.service3,
+    service?.service4,
+    service?.service5,
+    service?.service6,
+    service?.service7,
+    service?.service8,
+    service?.service9,
+    service?.service10,
+    service?.service11,
+    service?.service12,
   ];
   const printText = (s) => {
     if (s === "yes") {
@@ -41,7 +46,7 @@ function TablePrice({ service }) {
                 </div>
                 <div className="price">
                   <sup>€</sup>
-                  {service[0].b_price} <sub>/ Maandelijks</sub>
+                  {service?.b_price} <sub>/ Maandelijks</sub>
                 </div>
               </th>
               <th className="pricing-features" scope="col">
@@ -51,7 +56,7 @@ function TablePrice({ service }) {
                 </div>
                 <div className="price">
                   <sup>€</sup>
-                  {service[0].s_price} <sub>/ Maandelijks</sub>
+                  {service?.s_price} <sub>/ Maandelijks</sub>
                 </div>
               </th>
               <th className="pricing-features" scope="col">
@@ -60,7 +65,7 @@ function TablePrice({ service }) {
                 </div>
                 <div className="price">
                   <sup>€</sup>
-                  {service[0].p_price} <sub>/ Maandelijks</sub>
+                  {service?.p_price} <sub>/ Maandelijks</sub>
                 </div>
               </th>
             </tr>

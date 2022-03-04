@@ -4,12 +4,12 @@ import PriceCard from "./PriceCard";
 import TablePrice from "./tablePrice";
 import Tabs from "./Tabs";
 function PricingT4({ prices }) {
-  const [tab, setTab] = useState(1);
+  const [tab, setTab] = useState(prices[0]._id);
   const handleClick = (p) => {
     //console.log(p);
     setTab(p);
   };
-  //console.log({ prices });
+  console.log({ prices });
   const tab1 = prices?.filter(
     (p) => p._id === "5ca77eb8-669c-42fa-9f45-65b742d420c0"
   );
@@ -28,27 +28,12 @@ function PricingT4({ prices }) {
       {/* <!-- Pricing Table --> */}
       <section className="content-inner bg-gray">
         <div className="container">
-          <Tabs onclickTab={handleClick} tab={tab} />
-          {tab === 1 && tab1 && (
-            <div className="row">
-              <TablePrice service={tab1} />
+          <Tabs onclickTab={handleClick} tab={tab} prices={prices} />
+          {prices?.map((p) => (
+            <div key={p._id} className="row">
+              {tab === p._id && <TablePrice service={p} />}
             </div>
-          )}
-          {tab === 2 && tab2 && (
-            <div className="row">
-              <TablePrice service={tab2} />
-            </div>
-          )}
-          {tab === 3 && tab3 && (
-            <div className="row">
-              <TablePrice service={tab3} />
-            </div>
-          )}
-          {tab === 4 && tab4 && (
-            <div className="row">
-              <TablePrice service={tab4} />
-            </div>
-          )}
+          ))}
         </div>
       </section>
     </>
