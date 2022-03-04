@@ -26,7 +26,7 @@ function PricingT4({ prices }) {
   return (
     <>
       {/* <!-- Pricing Table --> */}
-      <section className="content-inner">
+      <section className="content-inner bg-gray">
         <div className="container">
           <Tabs onclickTab={handleClick} tab={tab} />
           {tab === 1 && tab1 && (

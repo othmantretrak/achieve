@@ -18,9 +18,9 @@ function PricingTable3({ sitInfo, prices }) {
   return (
     <>
       <Header />
-      <div className="page-content bg-gray">
+      <div className="page-content bg-gray pricing-tablee">
         {/* <!-- Banner  --> */}
-        <Banner2 name="Over Ons" />
+        <Banner2 name="Tarieven" />
         {/* <!-- Banner End --> */}
         <PricingT4 prices={prices} />
       </div>

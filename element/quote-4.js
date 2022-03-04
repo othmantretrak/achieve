@@ -1,0 +1,151 @@
+import Fire from "../component/iconCompenents/Fire";
+
+function onChange(value) {
+  console.log("Captcha value:", value);
+}
+
+function Quote4() {
+  return (
+    <>
+      <div className="content-inner">
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-12 col-lg-5 m-b30 wow fadeInLeft">
+              <div className="section-heading text-center mb-3">
+                <h2>Let&apos;s connect!</h2>
+                <p className="d-none d-sm-block mt-4">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Laborum obcaecati dignissimos quae quo ad iste ipsum officiis
+                  deleniti asperiores sit.
+                </p>
+                <p className="d-block d-sm-none mt-4">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Laborum obcaecati.
+                </p>
+              </div>
+              <div className="contact-us">
+                <ul>
+                  <li className="contact-info color-1 bg-hover active hover-bottom text-center p-5 m-3">
+                    <span>
+                      <i
+                        style={{ color: "#8639fa" }}
+                        className="fas fa-mobile-alt fa-3x"
+                      ></i>
+                    </span>
+                    <a className="d-block my-2" href="#">
+                      <h3>+89 (0) 2354 5470091</h3>
+                    </a>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </p>
+                  </li>
+                  <li className="contact-info color-3 bg-hover active hover-bottom text-center p-5 m-3">
+                    <span>
+                      <i
+                        style={{ color: "#fc573b" }}
+                        className="fas fa-envelope-open-text fa-3x"
+                      ></i>
+                    </span>
+                    <a className="d-block my-2" href="#">
+                      <h3>mail@company.com</h3>
+                    </a>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div
+              className=" m-b30 wow fadeInRight col-12 col-lg-6 pt-4 pt-lg-0"
+              data-wow-duration="2s"
+              data-wow-delay="0.4s"
+            >
+              <form className="dlab-form dzForm">
+                <div className="dzFormMsg"></div>
+                <input
+                  type="hidden"
+                  className="form-control"
+                  name="dzToDo"
+                  value="Contact"
+                />
+                <div className="row">
+                  <div className="col-sm-12">
+                    <div className="input-group">
+                      <input
+                        name="dzName"
+                        required
+                        type="text"
+                        className="form-control"
+                        placeholder="Naam"
+                      />
+                    </div>
+                  </div>
+                  <div className="col-sm-12">
+                    <div className="input-group">
+                      <input
+                        name="dzOther[last_name"
+                        required
+                        type="text"
+                        className="form-control"
+                        placeholder="Bedrijfsnaam"
+                      />
+                    </div>
+                  </div>
+                  <div className="col-sm-12">
+                    <div className="input-group">
+                      <input
+                        name="dzEmail"
+                        required
+                        type="text"
+                        className="form-control"
+                        placeholder="E-mailadres"
+                      />
+                    </div>
+                  </div>
+                  <div className="col-sm-12">
+                    <div className="input-group">
+                      <input
+                        name="dzOther[phone]"
+                        required
+                        type="text"
+                        className="form-control"
+                        placeholder="Telefoonnummer"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="col-sm-12">
+                    <div className="input-group">
+                      <textarea
+                        name="dzMessage"
+                        required
+                        className="form-control"
+                        placeholder="Opmerking"
+                      ></textarea>
+                    </div>
+                  </div>
+
+                  <div className="col-sm-12">
+                    <button
+                      name="submit"
+                      type="submit"
+                      value="Submit"
+                      className="btn btn-corner gradient btn-primary"
+                    >
+                      <i className="fa-solid fa-paper-plane"></i>
+                      Submit Now
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default Quote4;

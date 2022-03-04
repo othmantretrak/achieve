@@ -403,3 +403,67 @@ sup {
   align-items: center;
   text-align: center;
 }
+.our-promises .col-md h4 {
+  margin: 20px;
+}
+.input-group > .form-control {
+  border: none;
+}
+.dzForm .row .col-sm-12 button.btn-primary {
+  width: 100%;
+}
+.dzForm .row .col-sm-12 button.btn-primary i {
+  margin-right: 10px;
+}
+.contact-info {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400;
+  box-sizing: border-box;
+  list-style: none;
+  margin: 1rem !important;
+  padding: 3rem !important;
+  text-align: center !important;
+  /* color: #be63f9; */
+  position: relative;
+  box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+  transition: all 0.3s ease 0s;
+  overflow: hidden;
+}
+.color-1.bg-hover:hover::after,
+.color-1.bg-hover.active::after {
+  background-color: #be63f9;
+}
+.bg-hover.hover-bottom::after {
+  bottom: 0;
+}
+
+.bg-hover::after {
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 100%;
+  left: 0;
+  -webkit-transition: background-color 0.3s ease 0s;
+  transition: background-color 0.3s ease 0s;
+}
+.color-3.bg-hover:hover::after,
+.color-3.bg-hover.active::after {
+  background-color: #fc573b;
+}
+.bg-hover.hover-bottom::after {
+  bottom: 0;
+}
+.bg-hover::after {
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 100%;
+  left: 0;
+  -webkit-transition: background-color 0.3s ease 0s;
+  transition: background-color 0.3s ease 0s;
+}
+.pricing-tablee .table-responsive {
+  box-shadow: 0px 0 10px rgb(31 66 135 / 31%);
+}

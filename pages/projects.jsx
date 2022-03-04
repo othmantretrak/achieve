@@ -12,7 +12,7 @@ function projects() {
     <div>
       <Header />
       {/* <!-- Banner  --> */}
-      <Banner2 name="Over Ons" />
+      <Banner2 name="Cases" />
       {/* <!-- Banner End --> */}
 
       <Projects2 />

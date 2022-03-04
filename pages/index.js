@@ -61,7 +61,7 @@ function Home({ testimonials, faqs, sitInfo, categories, cases, prices }) {
         </title>
       </Head>
       <Header />
-      <div className="page-content bg-white" id="top">
+      <div className="page-content bg-gray" id="top">
         <Slider1 />
         {/*  <Slider2 />
         <Slider3 /> */}
@@ -76,7 +76,7 @@ function Home({ testimonials, faqs, sitInfo, categories, cases, prices }) {
         <PricingT4 prices={prices} />
         {/* <Newsletter /> */}
         <Testimonial2 testimonials={testimonials} />
-        <div className="container">
+        <div className="container bg-gray">
           <Accordion_sm faqs={faqs} />
         </div>
         {/* <Blog /> */}
