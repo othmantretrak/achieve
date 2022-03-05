@@ -6,12 +6,13 @@ import Team from "../element/team";
 import Testimonial from "../element/testimonial";
 import Link from "next/link";
 import Quote from "../element/quote";
-import { getAllSiteInfo } from "../lib/api";
+import { getAllFaq, getAllServices, getAllSiteInfo } from "../lib/api";
 import Banner2 from "../element/banner2";
 import Header from "../layout/header";
 import Cta from "../element/cta";
+import Accordion_sm from "../element/accordion_sm";
 
-function Services1({ sitInfo }) {
+function Services1({ sitInfo, faqs, services }) {
   const [open, setOpen] = useState("p2");
   return (
     <>
@@ -22,7 +23,7 @@ function Services1({ sitInfo }) {
         {/* <!-- Banner End --> */}
 
         {/* <!-- Services --> */}
-        <AllServices />
+        <AllServices services={services} />
 
         {/* <!-- Team --> */}
         {/* <Team /> */}
@@ -36,15 +37,20 @@ function Services1({ sitInfo }) {
         {/* <!-- Call To action --> */}
         {/* <Cta /> */}
       </div>
+      <div className="container bg-gray">
+        <Accordion_sm faqs={faqs} />
+      </div>
       <Footer sitInfo={sitInfo} />
     </>
   );
 }
 export async function getStaticProps({ preview = false }) {
   const sitInfo = await getAllSiteInfo(preview);
-  //console.log({ cases });
+  const faqs = await getAllFaq(preview);
+  const services = await getAllServices(preview);
+  console.log({ services });
   return {
-    props: { sitInfo },
+    props: { sitInfo, faqs, services },
     revalidate: 1,
   };
 }

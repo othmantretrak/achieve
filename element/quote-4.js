@@ -14,9 +14,7 @@ function Quote4() {
               <div className="section-heading text-center mb-3">
                 <h2>Let&apos;s connect!</h2>
                 <p className="d-none d-sm-block mt-4">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Laborum obcaecati dignissimos quae quo ad iste ipsum officiis
-                  deleniti asperiores sit.
+                  LVragen en/of opmerkingen? We helpen je graag verder.
                 </p>
                 <p className="d-block d-sm-none mt-4">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -33,11 +31,11 @@ function Quote4() {
                       ></i>
                     </span>
                     <a className="d-block my-2" href="#">
-                      <h3>+89 (0) 2354 5470091</h3>
+                      <h3>+31 (0) 85 4016590</h3>
                     </a>
-                    <p>
+                    {/*  <p>
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    </p>
+                    </p> */}
                   </li>
                   <li className="contact-info color-3 bg-hover active hover-bottom text-center p-5 m-3">
                     <span>
@@ -47,11 +45,11 @@ function Quote4() {
                       ></i>
                     </span>
                     <a className="d-block my-2" href="#">
-                      <h3>mail@company.com</h3>
+                      <h3>info@achieve.nl</h3>
                     </a>
-                    <p>
+                    {/* <p>
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    </p>
+                    </p> */}
                   </li>
                 </ul>
               </div>

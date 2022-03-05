@@ -1,8 +1,8 @@
 import { useState } from "react";
 //import ModalVideo from 'react-modal-video';
 import Header from "../layout/header";
-import Footer from "./../layout/footer";
-import Counter from "./../element/counter";
+import Footer from "../layout/footer";
+import Counter from "../element/counter";
 import TeamSlider from "../component/teamSlider";
 import Testimonial from "../element/testimonial";
 import Blog from "../element/blog";
@@ -15,6 +15,8 @@ import Banner2 from "../element/banner2";
 import Cta from "../element/cta";
 import OurPromises from "../component/OurPromises";
 import Team from "../element/team";
+import Team3 from "../element/team-3";
+import TeamFinal from "../element/teamFinal";
 
 function AboutUs1({ sitInfo, team, testimonials }) {
   const [isOpen, setOpen] = useState(false);
@@ -89,7 +91,9 @@ function AboutUs1({ sitInfo, team, testimonials }) {
         </section>
       </div>
       <OurPromises />
-      <Team />
+      {/* <Team team={team} /> */}
+      <TeamFinal team={team} />
+      <Testimonial2 testimonials={testimonials} />
       <Footer sitInfo={sitInfo} />
     </>
   );

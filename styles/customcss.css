@@ -411,6 +411,7 @@ sup {
 }
 .dzForm .row .col-sm-12 button.btn-primary {
   width: 100%;
+  border-radius: 5px;
 }
 .dzForm .row .col-sm-12 button.btn-primary i {
   margin-right: 10px;
@@ -466,4 +467,15 @@ sup {
 }
 .pricing-tablee .table-responsive {
   box-shadow: 0px 0 10px rgb(31 66 135 / 31%);
+}
+.table.single-pricing-table tr td,
+.table tr th {
+  padding: 15px;
+  max-width: 200px;
+}
+.icon-bx-md .icon-cell img {
+  height: 100%;
+}
+.container .action-box.style-1 {
+  padding: 30px 0 30px;
 }

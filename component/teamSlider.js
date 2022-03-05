@@ -1,6 +1,7 @@
 import Slider from "react-slick";
+import { imageBuilder } from "../lib/sanity";
 
-function TeamSlider() {
+function TeamSlider({ team }) {
   const settings = {
     dots: true,
     infinite: true,
@@ -45,46 +46,50 @@ function TeamSlider() {
         {...settings}
         className="team-carousel1 owl owl-carousel owl-none owl-theme owl-dots-primary-full"
       >
-        {/* {team && team.map(t=>())} */}
-        <div
-          className="item wow fadeInUp"
-          data-wow-duration="2s"
-          data-wow-delay="0.1s"
-        >
-          <div className="dlab-team style-1 m-b10">
-            <div className="dlab-media">
-              <img
-                src="https://achieve.nl/wp-content/uploads/2022/02/Karim-01.jpg"
-                alt=""
-              />
-            </div>
-            <div className="dlab-content">
-              <div className="clearfix">
-                <h4 className="dlab-name">
-                  <a>Karim Saber</a>
-                </h4>
-                <span className="dlab-position">Digital creative</span>
+        {team &&
+          team.map((t) => (
+            <div
+              key={t._id}
+              className="item wow fadeInUp"
+              data-wow-duration="2s"
+              data-wow-delay="0.1s"
+            >
+              <div className="dlab-team style-1 m-b10">
+                <div className="dlab-media">
+                  <img
+                    src={imageBuilder(t.coverImage)
+                      .width(337)
+                      .height(337)
+                      .url()}
+                    alt={t.name}
+                  />
+                </div>
+                <div className="dlab-content">
+                  <div className="clearfix">
+                    <h4 className="dlab-name">
+                      <a>{t.name}</a>
+                    </h4>
+                    <span className="dlab-position">{t.profession}</span>
+                  </div>
+                  <ul className="dlab-social-icon primary-light">
+                    <li>
+                      <a href={t.email} className="fa fa-envelope"></a>
+                    </li>
+                    <li>
+                      <a
+                        href={t.instagram}
+                        className="fa-brands fa-instagram"
+                      ></a>
+                    </li>
+                    <li>
+                      <a href={t.twitter} className="fa-brands fa-twitter"></a>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <ul className="dlab-social-icon primary-light">
-                <li>
-                  <a href="karim@achieve.nl" className="fa fa-envelope"></a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.instagram.com/"
-                    className="fa-brands fa-instagram"
-                  ></a>
-                </li>
-                <li>
-                  <a
-                    href="https://twitter.com/login?lang=en"
-                    className="fa-brands fa-twitter"
-                  ></a>
-                </li>
-              </ul>
             </div>
-          </div>
-        </div>
+          ))}
+        {/* 
         <div
           className="item wow fadeInUp"
           data-wow-duration="2s"
@@ -318,7 +323,7 @@ function TeamSlider() {
               </ul>
             </div>
           </div>
-        </div>
+        </div> */}
       </Slider>
     </>
   );

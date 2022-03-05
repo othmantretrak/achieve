@@ -2,7 +2,7 @@ import React from "react";
 import CustomBtn from "../element/CustomBtn";
 
 function TablePrice({ service }) {
-  console.log({ service });
+  //console.log({ service });
   const Allservices = [
     service?.service1,
     service?.service2,
@@ -46,7 +46,12 @@ function TablePrice({ service }) {
                 </div>
                 <div className="price">
                   <sup>€</sup>
-                  {service?.b_price} <sub>/ Maandelijks</sub>
+                  {service?.b_price}{" "}
+                  <sub>
+                    {service?._id === "8524dc60-fb73-4207-b987-238a7103f83f"
+                      ? "/ EENMALIG"
+                      : "/ Maandelijks"}
+                  </sub>
                 </div>
               </th>
               <th className="pricing-features" scope="col">
@@ -56,7 +61,12 @@ function TablePrice({ service }) {
                 </div>
                 <div className="price">
                   <sup>€</sup>
-                  {service?.s_price} <sub>/ Maandelijks</sub>
+                  {service?.s_price}{" "}
+                  <sub>
+                    {service?._id === "8524dc60-fb73-4207-b987-238a7103f83f"
+                      ? "/ EENMALIG"
+                      : "/ Maandelijks"}
+                  </sub>
                 </div>
               </th>
               <th className="pricing-features" scope="col">
@@ -65,7 +75,12 @@ function TablePrice({ service }) {
                 </div>
                 <div className="price">
                   <sup>€</sup>
-                  {service?.p_price} <sub>/ Maandelijks</sub>
+                  {service?.p_price}{" "}
+                  <sub>
+                    {service?._id === "8524dc60-fb73-4207-b987-238a7103f83f"
+                      ? "/ EENMALIG"
+                      : "/ Maandelijks"}
+                  </sub>
                 </div>
               </th>
             </tr>

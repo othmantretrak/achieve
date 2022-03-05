@@ -9,7 +9,7 @@ function PricingT4({ prices }) {
     //console.log(p);
     setTab(p);
   };
-  console.log({ prices });
+  //console.log({ prices });
   const tab1 = prices?.filter(
     (p) => p._id === "5ca77eb8-669c-42fa-9f45-65b742d420c0"
   );

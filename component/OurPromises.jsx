@@ -12,7 +12,7 @@ function OurPromises() {
 
         <div className="dlab-separator style-2 bg-primary"></div>
       </div>
-      <h4>De kernwaarden van Achieve op een rijtje.</h4>
+      {/*   <h4>De kernwaarden van Achieve op een rijtje.</h4> */}
       <div className="row">
         <div className="col-md">
           <Communication />

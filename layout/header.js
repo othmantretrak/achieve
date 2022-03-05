@@ -70,10 +70,10 @@ function Header() {
                     </Link>
                   </li>
                   <li className={`${open === "services" ? "open" : ""}`}>
-                    <Link href="/about-us-1">
+                    <Link href="/over-ons">
                       <a
                         className={
-                          router.pathname == "/about-us-1" ? "active" : ""
+                          router.pathname == "/over-ons" ? "active" : ""
                         }
                       >
                         Over ons
@@ -81,10 +81,10 @@ function Header() {
                     </Link>
                   </li>
                   <li className={`${open === "services" ? "open" : ""}`}>
-                    <Link href="/services-1">
+                    <Link href="/diensten">
                       <a
                         className={
-                          router.pathname == "/services-1" ? "active" : ""
+                          router.pathname == "/diensten" ? "active" : ""
                         }
                       >
                         Diensten{" "}
@@ -92,10 +92,10 @@ function Header() {
                     </Link>
                   </li>
                   <li className={`${open === "services" ? "open" : ""}`}>
-                    <Link href="/pricing-table-3">
+                    <Link href="/tarieven">
                       <a
                         className={
-                          router.pathname == "/pricing-table-3" ? "active" : ""
+                          router.pathname == "/tarieven" ? "active" : ""
                         }
                       >
                         Tarieven
@@ -103,21 +103,19 @@ function Header() {
                     </Link>
                   </li>
                   <li className={`${open === "services" ? "open" : ""}`}>
-                    <Link href="/projects">
+                    <Link href="/cases">
                       <a
-                        className={
-                          router.pathname == "/projects" ? "active" : ""
-                        }
+                        className={router.pathname == "/cases" ? "active" : ""}
                       >
                         Cases{" "}
                       </a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/contact-us-3">
+                    <Link href="/contact">
                       <a
                         className={
-                          router.pathname == "/contact-us-3" ? "active" : ""
+                          router.pathname == "/contact" ? "active" : ""
                         }
                       >
                         Contact

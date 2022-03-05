@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 function Footer({ sitInfo }) {
+  const sitInfo2 = sitInfo[0].address.split(",");
   return (
     <>
       {/* <!-- Footer --> */}
@@ -48,7 +49,10 @@ function Footer({ sitInfo }) {
                       </a>
                     </div>
                     <div className="icon-content">
-                      <p>{sitInfo[0].address}</p>
+                      <p style={{ marginBottom: "0" }}>{sitInfo2[0]}</p>
+                      <p>
+                        {sitInfo2[1]} {sitInfo2[2]}
+                      </p>
                     </div>
                   </div>
                 </div>

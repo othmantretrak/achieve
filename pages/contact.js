@@ -22,7 +22,7 @@ function ContactUs1({ sitInfo }) {
         {/* <!-- Banner End --> */}
         {/* <!-- Get A Quote --> */}
         <Quote4 />
-        <div className="mapouter">
+        <div className="mapouter " style={{ marginBottom: "-7px" }}>
           <div className="gmap_canvas">
             <iframe
               width="100%"

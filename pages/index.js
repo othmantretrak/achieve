@@ -36,12 +36,22 @@ import {
   getAllFaq,
   getAllPostsForHome,
   getAllPrice,
+  getAllServices,
   getAllSiteInfo,
   getAllTeams,
   getAllTestimonials,
 } from "../lib/api";
 import googleMap from "../component/googleMap";
-function Home({ testimonials, faqs, sitInfo, categories, cases, prices }) {
+import Services from "../element/service";
+function Home({
+  testimonials,
+  faqs,
+  sitInfo,
+  categories,
+  cases,
+  prices,
+  services,
+}) {
   useEffect(() => {
     document.querySelector("body").setAttribute("color", "color_1");
   }, []);
@@ -67,7 +77,7 @@ function Home({ testimonials, faqs, sitInfo, categories, cases, prices }) {
         <Slider3 /> */}
         <Clients />
         <AboutUs />
-        <Service />
+        <Service services={services} />
         {/* <Counter /> */}
         {/* <Features /> */}
         <Projects3 categories={categories} cases={cases} />
@@ -100,9 +110,19 @@ export async function getStaticProps({ preview = false }) {
   const categories = await getAllCategories(preview);
   const cases = await getAllCases(preview);
   const team = await getAllTeams(preview);
+  const services = await getAllServices(preview);
   //console.log({ team });
   return {
-    props: { testimonials, preview, faqs, sitInfo, categories, cases, prices },
+    props: {
+      testimonials,
+      preview,
+      faqs,
+      sitInfo,
+      categories,
+      cases,
+      prices,
+      services,
+    },
     revalidate: 1,
   };
 }
