@@ -8,7 +8,7 @@ function AllServices({ services }) {
     <>
       {/* <!-- Service --> */}
       <section
-        className="content-inner wow fadeInU"
+        className="content-inner pt-100px wow fadeInU"
         style={{ backgroundImage: "url(images/background/bg1.png)" }}
       >
         <div className="container">

@@ -35,8 +35,11 @@ function Footer({ sitInfo }) {
                     <div className="icon-content">
                       <p>
                         {sitInfo[0].phone}
+                        <a href={`tel: 0031854016590`}> {sitInfo[0].phone}</a>
                         <br />
-                        {sitInfo[0].email}
+                        <a href={`mailto: ${sitInfo[0].email}`}>
+                          {sitInfo[0].email}
+                        </a>
                       </p>
                     </div>
                   </div>
@@ -143,22 +146,34 @@ function Footer({ sitInfo }) {
                   <h5 className="footer-title">Onze diensten</h5>
                   <ul>
                     <li>
-                      <a href="#">Branding</a>
+                      <Link href="/diensten">
+                        <a>Branding</a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="#">Web Development</a>
+                      <Link href="/diensten">
+                        <a>Web Development</a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="#">Content Creation</a>
+                      <Link href="/diensten">
+                        <a>Content Creation</a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="#">Email Marketing</a>
+                      <Link href="/diensten">
+                        <a>Email Marketing</a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="#">Social Advertising </a>
+                      <Link href="/diensten">
+                        <a>Social Advertising </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="#">Search Engine Advertising</a>
+                      <Link href="/diensten">
+                        <a>Search Engine Advertising</a>
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -172,16 +187,24 @@ function Footer({ sitInfo }) {
                   <h5 className="footer-title">Over Achieve</h5>
                   <ul>
                     <li>
-                      <a href="#">FAQ</a>
+                      <Link href="/faq-1">
+                        <a>Veelgestelde vragen</a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="#">Contact</a>
+                      <Link href="/contact">
+                        <a>Contact</a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="#">Privacy</a>
+                      <Link href="/privacy-policy">
+                        <a>Privacy policy</a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="#">Algemene voorwaarden</a>
+                      <Link href="/algemene-voorwaarden">
+                        <a>Algemene voorwaarden</a>
+                      </Link>
                     </li>
                   </ul>
                 </div>

@@ -45,7 +45,7 @@ function Slider1() {
                     als resultaat meer bezoekers, kwalitatieve leads en keiharde
                     omzet.
                   </p>
-                  <Link href="/services-1">
+                  <Link href="/diensten">
                     <a
                       data-wow-duration="1.6s"
                       data-wow-delay="2s"

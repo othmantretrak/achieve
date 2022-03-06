@@ -10,24 +10,16 @@ function PricingT4({ prices }) {
     setTab(p);
   };
   //console.log({ prices });
-  const tab1 = prices?.filter(
-    (p) => p._id === "5ca77eb8-669c-42fa-9f45-65b742d420c0"
-  );
-  const tab2 = prices?.filter(
-    (p) => p._id === "336ea946-3412-4f19-bedf-966dace4b6b4"
-  );
-  const tab3 = prices?.filter(
-    (p) => p._id === "e57740b4-82d2-4f46-a1b8-860a62beea67"
-  );
-  const tab4 = prices?.filter(
-    (p) => p._id === "8524dc60-fb73-4207-b987-238a7103f83f"
-  );
 
   return (
     <>
       {/* <!-- Pricing Table --> */}
-      <section className="content-inner bg-gray">
+      <section className="content-inner pt-100px bg-gray">
         <div className="container">
+          <div className="section-head style-3 text-center">
+            <h2 className="title">Onze diensten in de vorm van pakketten</h2>
+            <div className="dlab-separator style-2 bg-primary"></div>
+          </div>
           <Tabs onclickTab={handleClick} tab={tab} prices={prices} />
           {prices?.map((p) => (
             <div key={p._id} className="row">

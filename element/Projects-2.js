@@ -1,11 +1,12 @@
 import Portfolio2 from "../component/portfolio-2";
+import Footer from "../layout/footer";
 
 function Projects2() {
   return (
     <>
       {/* <!-- Projects --> */}
       <section
-        className="content-inner-2"
+        className="content-inner pt-100px"
         style={{
           backgroundImage: "url(images/background/bg17.png)",
           backgroundSize: "cover",

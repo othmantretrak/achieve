@@ -33,6 +33,7 @@ import PricingT4 from "../component/pricingTable-4";
 import {
   getAllCases,
   getAllCategories,
+  getAllCompanies,
   getAllFaq,
   getAllPostsForHome,
   getAllPrice,
@@ -51,6 +52,7 @@ function Home({
   cases,
   prices,
   services,
+  companies,
 }) {
   useEffect(() => {
     document.querySelector("body").setAttribute("color", "color_1");
@@ -75,7 +77,7 @@ function Home({
         <Slider1 />
         {/*  <Slider2 />
         <Slider3 /> */}
-        <Clients />
+        <Clients companies={companies} />
         <AboutUs />
         <Service services={services} />
         {/* <Counter /> */}
@@ -86,7 +88,11 @@ function Home({
         <PricingT4 prices={prices} />
         {/* <Newsletter /> */}
         <Testimonial2 testimonials={testimonials} />
-        <div className="container bg-gray">
+        <div className="container  bg-gray">
+          <div className="section-head style-3 text-center">
+            <h2 className="title">Veelgestelde vragen</h2>
+            <div className="dlab-separator style-2 bg-primary"></div>
+          </div>
           <Accordion_sm faqs={faqs} />
         </div>
         {/* <Blog /> */}
@@ -111,6 +117,7 @@ export async function getStaticProps({ preview = false }) {
   const cases = await getAllCases(preview);
   const team = await getAllTeams(preview);
   const services = await getAllServices(preview);
+  const companies = await getAllCompanies(preview);
   //console.log({ team });
   return {
     props: {
@@ -122,6 +129,7 @@ export async function getStaticProps({ preview = false }) {
       cases,
       prices,
       services,
+      companies,
     },
     revalidate: 1,
   };

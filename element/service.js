@@ -13,6 +13,12 @@ function Service({ services }) {
         style={{ backgroundImage: "url(images/background/bg1.png)" }}
       >
         <div className="container">
+          <div className="section-head style-3 text-center">
+            <h2 className="title">
+              In 3 stappen lossen we al je problemen op!
+            </h2>
+            <div className="dlab-separator style-2 bg-primary"></div>
+          </div>
           <div className="row">
             {services &&
               services.map((s) => (

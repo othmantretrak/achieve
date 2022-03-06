@@ -92,6 +92,15 @@ function Header() {
                     </Link>
                   </li>
                   <li className={`${open === "services" ? "open" : ""}`}>
+                    <Link href="/cases">
+                      <a
+                        className={router.pathname == "/cases" ? "active" : ""}
+                      >
+                        Cases
+                      </a>
+                    </Link>
+                  </li>
+                  <li className={`${open === "services" ? "open" : ""}`}>
                     <Link href="/tarieven">
                       <a
                         className={
@@ -102,15 +111,7 @@ function Header() {
                       </a>
                     </Link>
                   </li>
-                  <li className={`${open === "services" ? "open" : ""}`}>
-                    <Link href="/cases">
-                      <a
-                        className={router.pathname == "/cases" ? "active" : ""}
-                      >
-                        Cases{" "}
-                      </a>
-                    </Link>
-                  </li>
+
                   <li>
                     <Link href="/contact">
                       <a

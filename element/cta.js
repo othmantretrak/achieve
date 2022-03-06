@@ -22,7 +22,7 @@ function Cta() {
                 className="section-head style-1"
               >
                 <h2 className="title">
-                  Benieuwd wat wij voor jou onderneming kunnen betekenen?
+                  Benieuwd wat wij voor jouw onderneming kunnen betekenen?
                 </h2>
               </div>
             </div>

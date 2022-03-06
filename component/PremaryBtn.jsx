@@ -6,7 +6,7 @@ function PremaryBtn({ title }) {
   return (
     <div className="extra-nav">
       <div className="extra-cell">
-        <Link href="/contact-us-3">
+        <Link href="/tarieven">
           <a className="btn btn-corner btn-primary">
             <Hot />
 

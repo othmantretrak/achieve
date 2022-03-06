@@ -7,14 +7,14 @@ function onChange(value) {
 function Quote4() {
   return (
     <>
-      <div className="content-inner">
+      <div className="content-inner pt-100px">
         <div className="container">
           <div className="row align-items-center">
             <div className="col-12 col-lg-5 m-b30 wow fadeInLeft">
               <div className="section-heading text-center mb-3">
                 <h2>Let&apos;s connect!</h2>
                 <p className="d-none d-sm-block mt-4">
-                  LVragen en/of opmerkingen? We helpen je graag verder.
+                  Vragen en/of opmerkingen? We helpen je graag verder.
                 </p>
                 <p className="d-block d-sm-none mt-4">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -30,7 +30,7 @@ function Quote4() {
                         className="fas fa-mobile-alt fa-3x"
                       ></i>
                     </span>
-                    <a className="d-block my-2" href="#">
+                    <a className="d-block my-2" href="tel: 0031854016590">
                       <h3>+31 (0) 85 4016590</h3>
                     </a>
                     {/*  <p>
@@ -44,7 +44,10 @@ function Quote4() {
                         className="fas fa-envelope-open-text fa-3x"
                       ></i>
                     </span>
-                    <a className="d-block my-2" href="#">
+                    <a
+                      className="d-block my-2"
+                      href={`mailto: info@achieve.nl`}
+                    >
                       <h3>info@achieve.nl</h3>
                     </a>
                     {/* <p>
@@ -133,7 +136,7 @@ function Quote4() {
                       className="btn btn-corner gradient btn-primary"
                     >
                       <i className="fa-solid fa-paper-plane"></i>
-                      Submit Now
+                      Verzenden
                     </button>
                   </div>
                 </div>

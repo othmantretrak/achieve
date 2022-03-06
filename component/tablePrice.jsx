@@ -17,6 +17,10 @@ function TablePrice({ service }) {
     service?.service11,
     service?.service12,
   ];
+  /* let ff =
+    (service?.periodb.eenmalig && "EENMALIG") ||
+    (service?.periodb.maandelijks && "Maandelijks");
+  console.log({ ff }); */
   const printText = (s) => {
     if (s === "yes") {
       return <i className="fa-solid fa-circle-check"></i>;
@@ -48,9 +52,11 @@ function TablePrice({ service }) {
                   <sup>€</sup>
                   {service?.b_price}{" "}
                   <sub>
-                    {service?._id === "8524dc60-fb73-4207-b987-238a7103f83f"
+                    {(service?.periodb.eenmalig && "/ EENMALIG") ||
+                      (service?.periodb.maandelijks && "/ Maandelijks")}
+                    {/*   {service?._id === "8524dc60-fb73-4207-b987-238a7103f83f"
                       ? "/ EENMALIG"
-                      : "/ Maandelijks"}
+                      : "/ Maandelijks"} */}
                   </sub>
                 </div>
               </th>
@@ -63,9 +69,8 @@ function TablePrice({ service }) {
                   <sup>€</sup>
                   {service?.s_price}{" "}
                   <sub>
-                    {service?._id === "8524dc60-fb73-4207-b987-238a7103f83f"
-                      ? "/ EENMALIG"
-                      : "/ Maandelijks"}
+                    {(service?.periods.eenmalig && "/ EENMALIG") ||
+                      (service?.periods.maandelijks && "/ Maandelijks")}
                   </sub>
                 </div>
               </th>
@@ -77,9 +82,8 @@ function TablePrice({ service }) {
                   <sup>€</sup>
                   {service?.p_price}{" "}
                   <sub>
-                    {service?._id === "8524dc60-fb73-4207-b987-238a7103f83f"
-                      ? "/ EENMALIG"
-                      : "/ Maandelijks"}
+                    {(service?.periodp.eenmalig && "/ EENMALIG") ||
+                      (service?.periodp.maandelijks && "/ Maandelijks")}
                   </sub>
                 </div>
               </th>

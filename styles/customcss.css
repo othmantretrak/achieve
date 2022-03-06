@@ -479,3 +479,15 @@ sup {
 .container .action-box.style-1 {
   padding: 30px 0 30px;
 }
+.page-wraper .content-inner,
+.page-wraper .content-inner-2 {
+  padding-top: 0px;
+  padding-bottom: 70px;
+}
+.content-inner.pt-100px {
+  padding-top: 130px;
+}
+.content-inner.prt-accordion {
+  padding-right: 100px;
+  padding-left: 100px;
+}

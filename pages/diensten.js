@@ -37,7 +37,11 @@ function Services1({ sitInfo, faqs, services }) {
         {/* <!-- Call To action --> */}
         {/* <Cta /> */}
       </div>
-      <div className="container bg-gray">
+      <div className="content-inner prt-accordion pt-100px bg-gray">
+        <div className="section-head style-3 text-center">
+          <h2 className="title">Veelgestelde vragen</h2>
+          <div className="dlab-separator style-2 bg-primary"></div>
+        </div>
         <Accordion_sm faqs={faqs} />
       </div>
       <Footer sitInfo={sitInfo} />
