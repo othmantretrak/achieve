@@ -63,7 +63,11 @@ function Quote4() {
               data-wow-duration="2s"
               data-wow-delay="0.4s"
             >
-              <form className="dlab-form dzForm">
+              <form
+                className="dlab-form dzForm"
+                action="https://formsubmit.co/3trak10@gmail.com"
+                method="POST"
+              >
                 <div className="dzFormMsg"></div>
                 <input
                   type="hidden"
@@ -75,7 +79,7 @@ function Quote4() {
                   <div className="col-sm-12">
                     <div className="input-group">
                       <input
-                        name="dzName"
+                        name="Naam"
                         required
                         type="text"
                         className="form-control"
@@ -86,7 +90,7 @@ function Quote4() {
                   <div className="col-sm-12">
                     <div className="input-group">
                       <input
-                        name="dzOther[last_name"
+                        name="Bedrijfsnaam"
                         required
                         type="text"
                         className="form-control"
@@ -94,10 +98,11 @@ function Quote4() {
                       />
                     </div>
                   </div>
+                  <input type="hidden" name="_next" value="/thankyou"></input>
                   <div className="col-sm-12">
                     <div className="input-group">
                       <input
-                        name="dzEmail"
+                        name="E-mailadres"
                         required
                         type="text"
                         className="form-control"
@@ -108,7 +113,7 @@ function Quote4() {
                   <div className="col-sm-12">
                     <div className="input-group">
                       <input
-                        name="dzOther[phone]"
+                        name="Telefoonnummer"
                         required
                         type="text"
                         className="form-control"
@@ -120,7 +125,7 @@ function Quote4() {
                   <div className="col-sm-12">
                     <div className="input-group">
                       <textarea
-                        name="dzMessage"
+                        name="Opmerking"
                         required
                         className="form-control"
                         placeholder="Opmerking"
