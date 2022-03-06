@@ -98,7 +98,11 @@ function Quote4() {
                       />
                     </div>
                   </div>
-                  <input type="hidden" name="_next" value="/thankyou"></input>
+                  <input
+                    type="hidden"
+                    name="_next"
+                    value="https://achieve-mauve.vercel.app/thankyou"
+                  ></input>
                   <div className="col-sm-12">
                     <div className="input-group">
                       <input
