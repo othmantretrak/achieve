@@ -22,7 +22,7 @@ function Header() {
               <div className="logo-header mostion logo-dark">
                 <Link href="/">
                   <a>
-                    <img src="images/achieve-logo2.png" alt="" />
+                    <img src="images/Achieve-Logo.png" alt="" />
                   </a>
                 </Link>
               </div>
@@ -57,7 +57,7 @@ function Header() {
                 <div className="logo-header">
                   <Link href="/">
                     <a>
-                      <img src="images/achieve-logo2.png" alt="" />
+                      <img src="images/Achieve-Logo.png" alt="" />
                     </a>
                   </Link>
                 </div>
