@@ -5,8 +5,9 @@
 .markdown p,
 .markdown ul,
 .markdown ol,
+.markdown li,
 .markdown blockquote {
-  @apply my-6;
+  padding: 8px 5px 8px 35px;
 }
 
 .markdown h2 {
