@@ -34,10 +34,15 @@ function Footer({ sitInfo }) {
                     </div>
                     <div className="icon-content">
                       <p>
-                        {sitInfo[0].phone}
-                        <a href={`tel: 0031854016590`}> {sitInfo[0].phone}</a>
+                        <a className="text-white" href={`tel: 0031854016590`}>
+                          {" "}
+                          {sitInfo[0].phone}
+                        </a>
                         <br />
-                        <a href={`mailto: ${sitInfo[0].email}`}>
+                        <a
+                          className="text-white"
+                          href={`mailto: ${sitInfo[0].email}`}
+                        >
                           {sitInfo[0].email}
                         </a>
                       </p>
@@ -187,7 +192,7 @@ function Footer({ sitInfo }) {
                   <h5 className="footer-title">Over Achieve</h5>
                   <ul>
                     <li>
-                      <Link href="/faq-1">
+                      <Link href="/veelgestelde-vragen">
                         <a>Veelgestelde vragen</a>
                       </Link>
                     </li>

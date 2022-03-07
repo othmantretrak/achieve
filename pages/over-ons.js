@@ -93,7 +93,9 @@ function AboutUs1({ sitInfo, team, testimonials }) {
       <OurPromises />
       {/* <Team team={team} /> */}
       <TeamFinal team={team} />
+      {/* <Team team={team} /> */}
       <Testimonial2 testimonials={testimonials} />
+      <Cta />
       <Footer sitInfo={sitInfo} />
     </>
   );

@@ -52,7 +52,7 @@ function TablePrice({ service }) {
                   <sup>€</sup>
                   {service?.b_price}{" "}
                   <sub>
-                    {(service?.periodb.eenmalig && "/ EENMALIG") ||
+                    {(service?.periodb.eenmalig && "/ Eenmalig") ||
                       (service?.periodb.maandelijks && "/ Maandelijks")}
                     {/*   {service?._id === "8524dc60-fb73-4207-b987-238a7103f83f"
                       ? "/ EENMALIG"

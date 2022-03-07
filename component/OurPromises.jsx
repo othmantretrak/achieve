@@ -7,11 +7,11 @@ import Transparantie from "./iconCompenents/Transparantie";
 function OurPromises() {
   return (
     <div className="container our-promises">
-      <div>
+      <div className="section-head style-3 text-center">
         <h2 className="title">Onze beloftes aan jou</h2>
-
         <div className="dlab-separator style-2 bg-primary"></div>
       </div>
+
       {/*   <h4>De kernwaarden van Achieve op een rijtje.</h4> */}
       <div className="row">
         <div className="col-md">

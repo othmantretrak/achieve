@@ -11,6 +11,7 @@ import Quote from "../element/quote";
 import { getAllPrivacy, getAllSiteInfo } from "../lib/api";
 import Banner2 from "../element/banner2";
 import PostBody from "../component/post-body";
+import Cta from "../element/cta";
 
 function PrivacyPolicy({ sitInfo, privacy }) {
   const [isOpen, setOpen] = useState(false);
@@ -20,7 +21,7 @@ function PrivacyPolicy({ sitInfo, privacy }) {
       <Header />
       <div className="page-content bg-white">
         {/* <!-- Banner  --> */}
-        <Banner2 name="Over ons" />
+        <Banner2 name="Privacy policy" />
         {/* <!-- About Us --> */}
         <section className="content-inner pt-100px">
           <div className="container">
@@ -43,6 +44,7 @@ function PrivacyPolicy({ sitInfo, privacy }) {
           </div>
         </section>
       </div>
+      <Cta />
       <Footer sitInfo={sitInfo} />
     </>
   );

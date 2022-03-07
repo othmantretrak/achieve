@@ -1,39 +1,15 @@
 import Footer from "../layout/footer";
-import Header from "../layout/header-3";
 import Link from "next/link";
 import { getAllSiteInfo } from "../lib/api";
+import Header from "../layout/header";
+import Banner2 from "../element/banner2";
 
 function Error404({ sitInfo }) {
   return (
     <>
       <Header />
       <div className="page-content bg-white">
-        {/* <!-- Banner  --> */}
-        <div
-          className="dlab-bnr-inr overlay-primary-dark"
-          style={{ backgroundImage: "url(images/banner/bnr1.jpg)" }}
-        >
-          <div className="container">
-            <div className="dlab-bnr-inr-entry">
-              <h1>404</h1>
-              {/* <!-- Breadcrumb Row --> */}
-              <nav aria-label="breadcrumb" className="breadcrumb-row">
-                <ul className="breadcrumb">
-                  <li className="breadcrumb-item">
-                    <Link href="/">
-                      <a>Home</a>
-                    </Link>
-                  </li>
-                  <li className="breadcrumb-item active" aria-current="page">
-                    404
-                  </li>
-                </ul>
-              </nav>
-              {/* <!-- Breadcrumb Row End --> */}
-            </div>
-          </div>
-        </div>
-        {/* <!-- Banner End --> */}
+        <Banner2 name="404" />
 
         {/* <!-- Error Page --> */}
         <div

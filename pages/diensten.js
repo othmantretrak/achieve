@@ -44,6 +44,7 @@ function Services1({ sitInfo, faqs, services }) {
         </div>
         <Accordion_sm faqs={faqs} />
       </div>
+      <Cta />
       <Footer sitInfo={sitInfo} />
     </>
   );

@@ -11,6 +11,7 @@ import { getAllPrice, getAllSiteInfo } from "../lib/api";
 import Banner from "../element/banner";
 import Banner2 from "../element/banner2";
 import Header from "../layout/header";
+import Cta from "../element/cta";
 
 function PricingTable3({ sitInfo, prices }) {
   const [open, setOpen] = useState("p2");
@@ -24,6 +25,7 @@ function PricingTable3({ sitInfo, prices }) {
         {/* <!-- Banner End --> */}
         <PricingT4 prices={prices} />
       </div>
+      <Cta />
       <Footer sitInfo={sitInfo} />
     </>
   );

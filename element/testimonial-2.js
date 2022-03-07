@@ -15,10 +15,8 @@ function Testimonial2({ testimonials }) {
       >
         <div className="container">
           <div className="section-head style-3 text-center">
-            {/* <h6 className="sub-title text-primary bgl-primary m-b15">
-              TESTIMONIAL
-            </h6> */}
             <h2 className="title">Zij gingen je voor</h2>
+            <div className="dlab-separator style-2 bg-primary"></div>
           </div>
           <div className="row">
             <div className="col-md-12">

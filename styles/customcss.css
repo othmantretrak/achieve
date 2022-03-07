@@ -497,3 +497,30 @@ sup {
     padding-bottom: 31px;
   }
 }
+.container .dlab-team.style-1 .dlab-content {
+  margin-left: 20px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container .dlab-team.style-1 .dlab-media {
+  margin-right: 0px;
+}
+.team-row {
+  margin-right: 0;
+  margin-left: 0;
+  align-items: center;
+  gap: 16px;
+  justify-content: center;
+}
+.container .dlab-team.style-1 .dlab-media img,
+.dlab-post-media img {
+  max-width: 337px;
+}
+.container .dlab-team.style-1 .dlab-content .clearfix {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

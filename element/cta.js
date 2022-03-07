@@ -9,6 +9,7 @@ function Cta() {
           backgroundImage: "url(images/background/bg5.jpg)",
           backgroundSize: "cover",
         }}
+        className="content-inner pt-5"
       >
         <div className="container">
           <div className="row action-box style-1 justify-content-around align-items-center">

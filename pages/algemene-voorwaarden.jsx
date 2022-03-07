@@ -11,6 +11,7 @@ import Quote from "../element/quote";
 import { getAllPrivacy, getAllSiteInfo, getAllTerms } from "../lib/api";
 import Banner2 from "../element/banner2";
 import PostBody from "../component/post-body";
+import Cta from "../element/cta";
 
 function TermOfUse({ sitInfo, terms }) {
   const [isOpen, setOpen] = useState(false);
@@ -20,7 +21,7 @@ function TermOfUse({ sitInfo, terms }) {
       <Header />
       <div className="page-content bg-white">
         {/* <!-- Banner  --> */}
-        <Banner2 name="Over ons" />
+        <Banner2 name="Algemene voorwaarden" />
         {/* <!-- About Us --> */}
         <section className="content-inner pt-100px">
           <div className="container">
@@ -43,6 +44,7 @@ function TermOfUse({ sitInfo, terms }) {
           </div>
         </section>
       </div>
+      <Cta />
       <Footer sitInfo={sitInfo} />
     </>
   );

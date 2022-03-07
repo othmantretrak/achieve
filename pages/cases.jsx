@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 import Banner from "../element/banner";
 import Banner2 from "../element/banner2";
+import Cta from "../element/cta";
 import Projects2 from "../element/Projects-2";
 import Footer from "../layout/footer";
 import Header from "../layout/header";
@@ -18,6 +19,7 @@ function projects({ sitInfo }) {
       {/* <!-- Banner End --> */}
 
       <Projects2 />
+      <Cta />
       <Footer sitInfo={sitInfo} />
     </div>
   );
