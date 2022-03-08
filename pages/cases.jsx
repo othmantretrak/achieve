@@ -4,13 +4,14 @@ import Banner from "../element/banner";
 import Banner2 from "../element/banner2";
 import Cta from "../element/cta";
 import Projects2 from "../element/Projects-2";
+import Testimonial2 from "../element/testimonial-2";
 import Footer from "../layout/footer";
 import Header from "../layout/header";
 import Header2 from "../layout/header-2";
 import Header3 from "../layout/header-3";
-import { getAllSiteInfo } from "../lib/api";
+import { getAllSiteInfo, getAllTestimonials } from "../lib/api";
 
-function projects({ sitInfo }) {
+function projects({ sitInfo, testimonials }) {
   return (
     <div>
       <Header />
@@ -19,6 +20,7 @@ function projects({ sitInfo }) {
       {/* <!-- Banner End --> */}
 
       <Projects2 />
+      <Testimonial2 testimonials={testimonials} />
       <Cta />
       <Footer sitInfo={sitInfo} />
     </div>
@@ -26,9 +28,10 @@ function projects({ sitInfo }) {
 }
 export async function getStaticProps({ preview = false }) {
   const sitInfo = await getAllSiteInfo(preview);
+  const testimonials = await getAllTestimonials(preview);
   //console.log({ services });
   return {
-    props: { sitInfo },
+    props: { sitInfo, testimonials },
     revalidate: 1,
   };
 }
