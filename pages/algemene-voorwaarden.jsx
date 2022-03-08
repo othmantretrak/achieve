@@ -31,11 +31,11 @@ function TermOfUse({ sitInfo, terms }) {
                 data-wow-duration="2s"
                 data-wow-delay="0.4s"
               >
-                <div className="section-head style-1 mb-4">
+                {/* <div className="section-head style-1 mb-4">
                   <h6 className="sub-title bgl-primary m-b20 text-primary">
                     {terms && terms[0]?.title}
                   </h6>
-                </div>
+                </div> */}
                 <div className={markdownStyles.markdown}>
                   <PostBody content={terms && terms[0]?.body} />
                 </div>

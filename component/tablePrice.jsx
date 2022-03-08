@@ -37,7 +37,7 @@ function TablePrice({ service }) {
   };
   return (
     <>
-      <div className="table-responsive">
+      <div className="table-responsive rounded-md">
         <table className=" single-pricing-table table">
           <thead>
             <tr className="">

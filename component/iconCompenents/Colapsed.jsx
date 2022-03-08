@@ -27,7 +27,7 @@ function Colapsed({ children }) {
         }}
         onClick={() => toggleAction()}
       >
-        {collapse ? "Lees minder" : "Lees Meer…"}
+        {collapse ? "Lees minder" : "Lees meer…"}
       </div>
     </div>
   );
