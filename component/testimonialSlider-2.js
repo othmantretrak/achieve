@@ -50,7 +50,7 @@ function TestimonialSlider2({ testimonials }) {
             </div> */}
 
             <div className="swiper-container testimonial-content">
-              <div className="swiper-wrapper">
+              <div className="swiper-drapper">
                 <Slider {...settings}>
                   {testimonials &&
                     testimonials.map((t) => (

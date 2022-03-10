@@ -4,6 +4,7 @@ import SimpleMap from "../component/googleMap";
 import googleMap from "../component/googleMap";
 import Banner from "../element/banner";
 import Banner2 from "../element/banner2";
+import Cta from "../element/cta";
 import Quote3 from "../element/quote-3";
 import Quote4 from "../element/quote-4";
 import Footer from "../layout/footer";
@@ -39,6 +40,7 @@ function ContactUs1({ sitInfo }) {
 
         {/* <SimpleMap /> */}
       </div>
+      <Cta />
       <Footer sitInfo={sitInfo} />
     </>
   );

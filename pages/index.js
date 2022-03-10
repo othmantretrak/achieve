@@ -30,6 +30,7 @@ import Slider3 from "../element/slider-3";
 import Slider2 from "../element/slider-2";
 import PricingT3 from "../component/pricingTable-3";
 import PricingT4 from "../component/pricingTable-4";
+//import Works1 from "../components/Works1";
 import {
   getAllCases,
   getAllCategories,
@@ -44,6 +45,7 @@ import {
 } from "../lib/api";
 import googleMap from "../component/googleMap";
 import Services from "../element/service";
+import Works from "../component/works";
 function Home({
   testimonials,
   faqs,
@@ -82,7 +84,8 @@ function Home({
         <Service services={services} />
         {/* <Counter /> */}
         {/* <Features /> */}
-        <Projects3 categories={categories} cases={cases} />
+        <Works />
+        {/*  <Projects3 categories={categories} cases={cases} /> */}
         {/* <Team /> */}
         {/* <Pricing /> */}
         <PricingT4 prices={prices} />

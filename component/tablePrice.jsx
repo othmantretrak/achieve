@@ -37,7 +37,7 @@ function TablePrice({ service }) {
   };
   return (
     <>
-      <div className="table-responsive rounded-md">
+      <div className="table-responsive shadow-none rounded-md">
         <table className=" single-pricing-table table">
           <thead>
             <tr className="">
@@ -69,7 +69,7 @@ function TablePrice({ service }) {
                   <sup>€</sup>
                   {service?.s_price}{" "}
                   <sub>
-                    {(service?.periods.eenmalig && "/ EENMALIG") ||
+                    {(service?.periods.eenmalig && "/ Eenmalig") ||
                       (service?.periods.maandelijks && "/ Maandelijks")}
                   </sub>
                 </div>
@@ -82,7 +82,7 @@ function TablePrice({ service }) {
                   <sup>€</sup>
                   {service?.p_price}{" "}
                   <sub>
-                    {(service?.periodp.eenmalig && "/ EENMALIG") ||
+                    {(service?.periodp.eenmalig && "/ Eenmalig") ||
                       (service?.periodp.maandelijks && "/ Maandelijks")}
                   </sub>
                 </div>

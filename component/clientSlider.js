@@ -10,6 +10,7 @@ function ClientSlider({ companies }) {
     autoplay: true,
     speed: 2000,
     arrows: false,
+    adaptiveHeight: true,
     responsive: [
       {
         breakpoint: 1200,
@@ -41,8 +42,11 @@ function ClientSlider({ companies }) {
         {companies &&
           companies[0]?.imagesGallery?.map((c, i) => (
             <div key={i} className="item">
-              <div className="clients-logo">
-                <img src={imageBuilder(c).width(150).height(50).url()} alt="" />
+              <div className="clients-logo" style={{ width: "200px" }}>
+                <img
+                  src={imageBuilder(c).width(300).height(100).url()}
+                  alt=""
+                />
               </div>
             </div>
           ))}

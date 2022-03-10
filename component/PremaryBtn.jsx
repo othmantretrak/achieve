@@ -4,7 +4,7 @@ import Hot from "../component/iconCompenents/Hot";
 
 function PremaryBtn({ title }) {
   return (
-    <div className="extra-nav">
+    <div className="extra-nav cta">
       <div className="extra-cell">
         <Link href="/tarieven">
           <a className="btn btn-corner btn-primary">

@@ -64,18 +64,22 @@ function TeamFinal({ team }) {
                       <li>
                         <a href={t.email} className="fa fa-envelope"></a>
                       </li>
-                      <li>
-                        <a
-                          href={t.instagram}
-                          className="fa-brands fa-instagram"
-                        ></a>
-                      </li>
-                      <li>
-                        <a
-                          href={t.twitter}
-                          className="fa-brands fa-twitter"
-                        ></a>
-                      </li>
+                      {t.instagram && (
+                        <li>
+                          <a
+                            href={t.instagram}
+                            className="fa-brands fa-instagram"
+                          ></a>
+                        </li>
+                      )}
+                      {t.twitter && (
+                        <li>
+                          <a
+                            href={t.twitter}
+                            className="fa-brands fa-twitter"
+                          ></a>
+                        </li>
+                      )}
                     </ul>
                   </div>
 

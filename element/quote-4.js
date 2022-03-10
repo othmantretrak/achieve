@@ -138,15 +138,17 @@ function Quote4() {
                   </div>
 
                   <div className="col-sm-12">
-                    <button
-                      name="submit"
-                      type="submit"
-                      value="Submit"
-                      className="btn btn-corner gradient btn-primary"
-                    >
-                      <i className="fa-solid fa-paper-plane"></i>
-                      Verzenden
-                    </button>
+                    <div className="contact-btn extra-cell">
+                      <button
+                        name="submit"
+                        type="submit"
+                        value="Submit"
+                        className="btn btn-corner  btn-primary"
+                      >
+                        <i className="fa-solid fa-paper-plane"></i>
+                        Verzenden
+                      </button>
+                    </div>
                   </div>
                 </div>
               </form>

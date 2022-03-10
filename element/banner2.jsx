@@ -8,7 +8,7 @@ function Banner2({ name }) {
         className="banner-one"
         style={{
           backgroundImage: "url(images/main-slider/slider1/pic2.png)",
-          height: "200px",
+          height: "210px",
         }}
       >
         <div className="container">
