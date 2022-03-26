@@ -1,5 +1,4 @@
 import { imageBuilder } from "../lib/sanity";
-import TeamSlider from "./../component/teamSlider";
 
 function TeamFinal({ team }) {
   return (

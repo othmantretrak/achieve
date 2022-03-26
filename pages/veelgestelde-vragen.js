@@ -1,7 +1,5 @@
-import Accordion1 from "../element/accordion";
 import Footer from "../layout/footer";
 import Header from "../layout/header";
-import Link from "next/link";
 import Accordion_sm from "../element/accordion_sm";
 import { getAllFaq, getAllSiteInfo } from "../lib/api";
 import Banner2 from "../element/banner2";
@@ -20,10 +18,6 @@ function FAQ1({ sitInfo, faqs }) {
           style={{ backgroundImage: "url(images/background/bg1.png)" }}
         >
           <div className="container  bg-gray">
-            {/*  <div className="section-head style-3 text-center">
-              <h2 className="title">Veelgestelde vragen</h2>
-              <div className="dlab-separator style-2 bg-primary"></div>
-            </div> */}
             <Accordion_sm faqs={faqs} />
           </div>
         </section>

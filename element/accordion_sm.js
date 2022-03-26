@@ -2,40 +2,7 @@ import { useState } from "react";
 
 function Accordion_sm({ faqs }) {
   const [activeDefault, setActiveDefault] = useState(1000);
-  const defaultAccordion = [
-    {
-      title:
-        "Fusce sem ligula, imperdiet sed nisi sit amet, euismod posuere dolor ?",
-      text: "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.",
-      bg: "primary",
-    },
-    {
-      title:
-        "Maecenas aliquet quam sed tellus cursus, eget sodales elit luctus ?",
-      text: "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.",
 
-      bg: "info",
-    },
-    {
-      title: "Proin blandit sed arcu sed ultricies ?",
-      text: "Donec suscipit porta lorem eget condimentum. Morbi vitae mauris in leo venenatis varius. Aliquam nunc enim, egestas ac dui in, aliquam vulputate erat. Curabitur porttitor ante ut odio vestibulum, et iaculis arcu scelerisque.Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.",
-
-      bg: "success",
-    },
-    {
-      title: "Proin cursus massa ipsum, at lacinia erat elementum sit amet ?",
-      text: "Donec suscipit porta lorem eget condimentum. Morbi vitae mauris in leo venenatis varius. Aliquam nunc enim, egestas ac dui in, aliquam vulputate erat. Curabitur porttitor ante ut odio vestibulum, et iaculis arcu scelerisque.Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.",
-
-      bg: "success",
-    },
-    {
-      title:
-        "Quisque sem tortor, convallis in arcu eu, accumsan finibus massa ?",
-      text: "Donec suscipit porta lorem eget condimentum. Morbi vitae mauris in leo venenatis varius. Aliquam nunc enim, egestas ac dui in, aliquam vulputate erat. Curabitur porttitor ante ut odio vestibulum, et iaculis arcu scelerisque.Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.",
-
-      bg: "success",
-    },
-  ];
   return (
     <>
       <div

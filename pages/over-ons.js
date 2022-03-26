@@ -2,20 +2,11 @@ import { useState } from "react";
 //import ModalVideo from 'react-modal-video';
 import Header from "../layout/header";
 import Footer from "../layout/footer";
-import Counter from "../element/counter";
-import TeamSlider from "../component/teamSlider";
-import Testimonial from "../element/testimonial";
-import Blog from "../element/blog";
-import Link from "next/link";
-import Quote from "../element/quote";
-import Quote3 from "../element/quote-3";
 import Testimonial2 from "../element/testimonial-2";
 import { getAllSiteInfo, getAllTeams, getAllTestimonials } from "../lib/api";
 import Banner2 from "../element/banner2";
 import Cta from "../element/cta";
 import OurPromises from "../component/OurPromises";
-import Team from "../element/team";
-import Team3 from "../element/team-3";
 import TeamFinal from "../element/teamFinal";
 
 function AboutUs1({ sitInfo, team, testimonials }) {

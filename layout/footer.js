@@ -120,22 +120,22 @@ function Footer({ sitInfo }) {
                       </Link>
                     </li>
                     <li>
-                      <Link href="/about-us-1">
+                      <Link href="/over-ons">
                         <a>Over ons</a>
                       </Link>
                     </li>
                     <li>
-                      <Link href="/services-1">
+                      <Link href="/diensten">
                         <a>Diensten</a>
                       </Link>
                     </li>
                     <li>
-                      <Link href="/pricing-table-3">
+                      <Link href="/tarieven">
                         <a>Tarieven</a>
                       </Link>
                     </li>
                     <li>
-                      <Link href="/projects">
+                      <Link href="/cases">
                         <a>Cases</a>
                       </Link>
                     </li>
@@ -196,11 +196,7 @@ function Footer({ sitInfo }) {
                         <a>Veelgestelde vragen</a>
                       </Link>
                     </li>
-                    <li>
-                      <Link href="/contact">
-                        <a>Contact</a>
-                      </Link>
-                    </li>
+
                     <li>
                       <Link href="/privacy-policy">
                         <a>Privacy policy</a>
@@ -209,6 +205,11 @@ function Footer({ sitInfo }) {
                     <li>
                       <Link href="/algemene-voorwaarden">
                         <a>Algemene voorwaarden</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/contact">
+                        <a>Contact</a>
                       </Link>
                     </li>
                   </ul>

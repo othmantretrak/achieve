@@ -1,16 +1,8 @@
-import Link from "next/link";
-import GoogleMaps from "../component/googleMap";
-import SimpleMap from "../component/googleMap";
-import googleMap from "../component/googleMap";
-import Banner from "../element/banner";
 import Banner2 from "../element/banner2";
 import Cta from "../element/cta";
-import Quote3 from "../element/quote-3";
 import Quote4 from "../element/quote-4";
 import Footer from "../layout/footer";
-import Footer3 from "../layout/footer-3";
 import Header from "../layout/header";
-import Header3 from "../layout/header-3";
 import { getAllSiteInfo } from "../lib/api";
 
 function ContactUs1({ sitInfo }) {
@@ -37,8 +29,6 @@ function ContactUs1({ sitInfo }) {
             ></iframe>
           </div>
         </div>
-
-        {/* <SimpleMap /> */}
       </div>
       <Cta />
       <Footer sitInfo={sitInfo} />
