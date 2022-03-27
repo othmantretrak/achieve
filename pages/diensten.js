@@ -1,12 +1,18 @@
 import Footer from "../layout/footer";
 import AllServices from "../element/all-services";
-import { getAllFaq, getAllServices, getAllSiteInfo } from "../lib/api";
+import {
+  getAllFaq,
+  getAllFaqCategories,
+  getAllServices,
+  getAllSiteInfo,
+} from "../lib/api";
 import Banner2 from "../element/banner2";
 import Header from "../layout/header";
 import Cta from "../element/cta";
 import Accordion_sm from "../element/accordion_sm";
+import Faq3 from "../component/faq3";
 
-function Services1({ sitInfo, faqs, services }) {
+function Services1({ sitInfo, faqs, services, faqCategories }) {
   return (
     <>
       <Header />
@@ -19,7 +25,8 @@ function Services1({ sitInfo, faqs, services }) {
           <h2 className="title">Veelgestelde vragen</h2>
           <div className="dlab-separator style-2 bg-primary"></div>
         </div>
-        <Accordion_sm faqs={faqs} />
+        <Faq3 categories={faqCategories} faqs={faqs} />
+        {/* <Accordion_sm faqs={faqs} />  */}
       </div>
       <Cta />
       <Footer sitInfo={sitInfo} />
@@ -29,10 +36,11 @@ function Services1({ sitInfo, faqs, services }) {
 export async function getStaticProps({ preview = false }) {
   const sitInfo = await getAllSiteInfo(preview);
   const faqs = await getAllFaq(preview);
+  const faqCategories = await getAllFaqCategories(preview);
   const services = await getAllServices(preview);
   console.log({ services });
   return {
-    props: { sitInfo, faqs, services },
+    props: { sitInfo, faqCategories, faqs, services },
     revalidate: 1,
   };
 }

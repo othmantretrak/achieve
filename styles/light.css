@@ -312,6 +312,7 @@
   position: relative;
   line-height: 0;
   height: 100%;
+  border-radius: 10px;
 }
 
 .work-carousel2 .content .img:after {

@@ -7,6 +7,10 @@ function Header() {
   const [show, setShow] = useState(false);
   const [open, setOpen] = useState("home");
   const router = useRouter();
+  const handleIntake = () => {
+    Calendly.initPopupWidget({ url: "https://calendly.com/gratisintake" });
+    return false;
+  };
   return (
     <>
       {/* <!-- Header --> */}
@@ -40,12 +44,19 @@ function Header() {
               {/* <!-- Extra Nav --> */}
               <div className="extra-nav">
                 <div className="extra-cell">
-                  <Link href="/contact">
+                  {/* <Link href="/contact">
                     <a className="btn btn-corner  btn-primary">
                       <Hot />
                       Gratis intake
                     </a>
-                  </Link>
+                  </Link> */}
+                  <button
+                    onClick={handleIntake}
+                    className="btn btn-corner  btn-primary"
+                  >
+                    <Hot />
+                    Gratis intake
+                  </button>
                 </div>
               </div>
               <div

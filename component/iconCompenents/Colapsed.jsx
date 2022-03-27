@@ -1,5 +1,7 @@
 import { useState } from "react";
 import Collapse from "@kunukn/react-collapse";
+import PremaryBtn from "../PremaryBtn";
+import RespBtn from "../RespBtn";
 
 function Colapsed({ children }) {
   const [collapse, setCollapse] = useState(false);
@@ -15,6 +17,18 @@ function Colapsed({ children }) {
         isOpen={collapse}
       >
         <div>{children}</div>
+        {collapse && (
+          <div className="less-bottons">
+            <RespBtn title="Gratis intake" width="20" iconH="18" />
+            <RespBtn
+              title="Tarieven"
+              to="/tarieven"
+              callBack={false}
+              width="20"
+              iconH="18"
+            />
+          </div>
+        )}
       </Collapse>
       <div
         style={{

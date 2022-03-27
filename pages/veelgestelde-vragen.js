@@ -1,11 +1,12 @@
 import Footer from "../layout/footer";
 import Header from "../layout/header";
 import Accordion_sm from "../element/accordion_sm";
-import { getAllFaq, getAllSiteInfo } from "../lib/api";
+import { getAllFaq, getAllFaqCategories, getAllSiteInfo } from "../lib/api";
 import Banner2 from "../element/banner2";
 import Cta from "../element/cta";
+import Faq3 from "../component/faq3";
 
-function FAQ1({ sitInfo, faqs }) {
+function FAQ1({ sitInfo, faqCategories, faqs }) {
   return (
     <>
       <Header />
@@ -18,7 +19,7 @@ function FAQ1({ sitInfo, faqs }) {
           style={{ backgroundImage: "url(images/background/bg1.png)" }}
         >
           <div className="container  bg-gray">
-            <Accordion_sm faqs={faqs} />
+            <Faq3 categories={faqCategories} faqs={faqs} />
           </div>
         </section>
       </div>
@@ -30,9 +31,10 @@ function FAQ1({ sitInfo, faqs }) {
 export async function getStaticProps({ preview = false }) {
   const sitInfo = await getAllSiteInfo(preview);
   const faqs = await getAllFaq(preview);
+  const faqCategories = await getAllFaqCategories(preview);
   //console.log({ cases });
   return {
-    props: { sitInfo, faqs },
+    props: { sitInfo, faqs, faqCategories },
     revalidate: 1,
   };
 }

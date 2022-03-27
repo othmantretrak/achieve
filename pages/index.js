@@ -17,6 +17,7 @@ import {
   getAllCategories,
   getAllCompanies,
   getAllFaq,
+  getAllFaqCategories,
   getAllPostsForHome,
   getAllPrice,
   getAllServices,
@@ -25,12 +26,14 @@ import {
   getAllTestimonials,
 } from "../lib/api";
 import Works from "../component/works";
+import Faq3 from "../component/faq3";
 function Home({
   testimonials,
   faqs,
   sitInfo,
   categories,
   cases,
+  faqCategories,
   prices,
   services,
   companies,
@@ -75,7 +78,8 @@ function Home({
             <h2 className="title">Veelgestelde vragen</h2>
             <div className="dlab-separator style-2 bg-primary"></div>
           </div>
-          <Accordion_sm faqs={faqs} />
+          <Faq3 categories={faqCategories} faqs={faqs} />
+          {/* <Accordion_sm faqs={faqs} /> */}
         </div>
         {/* <Blog /> */}
         {/* <Quote3 /> */}
@@ -96,6 +100,7 @@ export async function getStaticProps({ preview = false }) {
   const prices = await getAllPrice(preview);
   const sitInfo = await getAllSiteInfo(preview);
   const categories = await getAllCategories(preview);
+  const faqCategories = await getAllFaqCategories(preview);
   const cases = await getAllCases(preview);
   const team = await getAllTeams(preview);
   const services = await getAllServices(preview);
@@ -108,6 +113,7 @@ export async function getStaticProps({ preview = false }) {
       faqs,
       sitInfo,
       categories,
+      faqCategories,
       cases,
       prices,
       services,

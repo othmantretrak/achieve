@@ -139,6 +139,11 @@ function Footer({ sitInfo }) {
                         <a>Cases</a>
                       </Link>
                     </li>
+                    <li>
+                      <Link href="/contact">
+                        <a>Contact</a>
+                      </Link>
+                    </li>
                   </ul>
                 </div>
               </div>

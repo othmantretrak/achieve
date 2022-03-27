@@ -309,7 +309,8 @@ sup {
 }
 .default-btn span {
   position: absolute;
-
+  top: 26px;
+  left: 90px;
   display: block;
   width: 0;
   height: 0;
@@ -360,7 +361,7 @@ sup {
 }
 .pricing-list-tab .tabs li.current span {
   color: #fff;
-  background-color: #080a3c;
+  background-color: #8639fa;
 }
 /* .pricing-list-tab .tabs li:last-child span {
   border-radius: 0 30px 30px 0;
@@ -512,17 +513,19 @@ sup {
 }
 .container .dlab-team.style-1 .dlab-media {
   margin-right: 0px;
+  padding: 40px;
+  background: white;
 }
 .team-row {
   margin-right: 0;
   margin-left: 0;
   align-items: center;
-  gap: 16px;
+  gap: 76px;
   justify-content: center;
 }
 .container .dlab-team.style-1 .dlab-media img,
 .dlab-post-media img {
-  max-width: 337px;
+  max-width: 235px;
 }
 .container .dlab-team.style-1 .dlab-content .clearfix {
   display: flex;
@@ -598,4 +601,13 @@ span.imgio > img {
 .extra-nav.cta .btn-corner {
   padding: 19px 50px;
   font-size: 20px;
+}
+.less-bottons {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 12px 0px;
+}
+.less-bottons .extra-nav.cta .btn-corner {
+  font-size: 12px;
+  padding: 7px;
 }
