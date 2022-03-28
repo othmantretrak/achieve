@@ -19,7 +19,7 @@ function Faq3({ categories, faqs }) {
     };
   });
 
-  const [filter, setFilter] = useState("all");
+  const [filter, setFilter] = useState(categories[0].slug);
   const [projects, setProjects] = useState([]);
   console.log({ filter });
   console.log({ projects });
@@ -40,9 +40,9 @@ function Faq3({ categories, faqs }) {
     <>
       <div className="site-filters style-3 clearfix center m-b40">
         <ul className="filters">
-          <li className={`btn ${filter === "all" ? "active" : ""}`}>
+          {/*   <li className={`btn ${filter === "all" ? "active" : ""}`}>
             <a onClick={() => setFilter("all")}>All</a>
-          </li>
+          </li> */}
           {categories &&
             categories.map((c) => (
               <li
