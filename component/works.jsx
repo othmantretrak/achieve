@@ -19,7 +19,7 @@ const Works = () => {
           <div className="section-head text-center">
             <div className="row justify-content-center">
               <div className="section-head style-3 text-center">
-                <h2 className="title">Laatst toegevoegde case</h2>
+                <h2 className="title">Laatst toegevoegde cases</h2>
                 <div className="dlab-separator style-2 bg-primary"></div>
               </div>
             </div>
