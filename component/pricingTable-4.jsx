@@ -5,9 +5,11 @@ import TablePrice from "./tablePrice";
 import Tabs from "./Tabs";
 function PricingT4({ prices }) {
   const [tab, setTab] = useState(prices[0]._id);
-  const handleClick = (p) => {
+  const [tabName, setTabName] = useState(prices[0].name);
+  const handleClick = (p, name) => {
     //console.log(p);
     setTab(p);
+    setTabName(name);
   };
   //console.log({ prices });
 
@@ -23,7 +25,7 @@ function PricingT4({ prices }) {
           <Tabs onclickTab={handleClick} tab={tab} prices={prices} />
           {prices?.map((p) => (
             <div key={p._id} className="row">
-              {tab === p._id && <TablePrice service={p} />}
+              {tab === p._id && <TablePrice service={p} tab={tabName} />}
             </div>
           ))}
         </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import CustomBtn from "../element/CustomBtn";
 
-function TablePrice({ service }) {
+function TablePrice({ service, tab }) {
   //console.log({ service });
   const Allservices = [
     service?.service1,
@@ -34,6 +34,13 @@ function TablePrice({ service }) {
     } else {
       return s;
     }
+  };
+  const selectedPlan = (plan, price) => {
+    Calendly.initPopupWidget({
+      url: `https://calendly.com/gratisintake/achieve?a1=${tab}&a2=${plan}&a3=${price}`,
+    });
+    return false;
+    //console.log({ selected: { tab, plan, price } });
   };
   return (
     <>
@@ -106,13 +113,19 @@ function TablePrice({ service }) {
             <tr>
               <th></th>
               <td>
-                <CustomBtn />
+                <CustomBtn
+                  onClick={() => selectedPlan("Basic", service.b_price)}
+                />
               </td>
               <td>
-                <CustomBtn />
+                <CustomBtn
+                  onClick={() => selectedPlan("Standard", service.s_price)}
+                />
               </td>
               <td>
-                <CustomBtn />
+                <CustomBtn
+                  onClick={() => selectedPlan("Premium", service.p_price)}
+                />
               </td>
             </tr>
             {/*  <tr>
