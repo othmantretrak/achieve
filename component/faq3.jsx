@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import Accordion_sm from "../element/accordion_sm";
 
 function Faq3({ categories, faqs }) {
-  console.log({ faqs });
+  //console.log({ faqs });
 
   const portfolio = faqs.map((obj) => {
     const cats = obj.categories
@@ -21,8 +21,8 @@ function Faq3({ categories, faqs }) {
 
   const [filter, setFilter] = useState(categories[0].slug);
   const [projects, setProjects] = useState([]);
-  console.log({ filter });
-  console.log({ projects });
+  //console.log({ filter });
+  //console.log({ projects });
   useEffect(() => {
     setProjects(portfolio);
   }, []);

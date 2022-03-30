@@ -611,3 +611,20 @@ span.imgio > img {
   font-size: 12px;
   padding: 7px;
 }
+.testimonial-text p {
+  -webkit-box-orient: vertical;
+  display: block;
+  display: -webkit-box;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 6;
+}
+.testimonials-wraper-2 .swiper-container.testimonial-content .swiper-drapper {
+  padding-bottom: 0px;
+}
+@media only screen and (max-width: 575px) {
+  .content-inner.prt-accordion {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
