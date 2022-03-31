@@ -21,87 +21,6 @@ function Portfolio3({ categories, cases }) {
       ),
     };
   });
-  //console.log({ test: test[0].category });
-  /* const portfolio = [
-    {
-      title: "Software Landing Page Design",
-      category: ["all", "search-engine-advertising", "branding"],
-      img: (
-        <Image
-          src="/images/projects/project-1/pic1.jpg"
-          layout="responsive"
-          width={370}
-          height={370}
-        />
-      ),
-      author: "Jhone Doe",
-    },
-    {
-      title: "Software Landing Page Design",
-      category: ["all", "web_development", "branding"],
-      img: (
-        <Image
-          src="/images/projects/project-1/pic2.jpg"
-          layout="responsive"
-          width={370}
-          height={370}
-        />
-      ),
-      author: "Jhone Doe",
-    },
-    {
-      title: "Software Landing Page Design",
-      category: ["all", "web_design", "seo"],
-      img: (
-        <Image
-          src="/images/projects/project-1/pic3.jpg"
-          layout="responsive"
-          width={370}
-          height={370}
-        />
-      ),
-      author: "Jhone Doe",
-    },
-    {
-      title: "Software Landing Page Design",
-      category: ["all", "web_design", "branding"],
-      img: (
-        <Image
-          src="/images/projects/project-1/pic4.jpg"
-          layout="responsive"
-          width={370}
-          height={370}
-        />
-      ),
-      author: "Jhone Doe",
-    },
-    {
-      title: "Software Landing Page Design",
-      category: ["all", "web_development", "seo"],
-      img: (
-        <Image
-          src="/images/projects/project-1/pic5.jpg"
-          layout="responsive"
-          width={370}
-          height={370}
-        />
-      ),
-      author: "Jhone Doe",
-    },
-    {
-      title: "Software Landing Page Design",
-      category: ["all", "mobile_app", "branding"],
-      img: (
-        <Image
-          src="/images/projects/project-1/pic6.jpg"
-          layout="responsive"
-          width={370}
-          height={370}
-        />
-      ),
-      author: "Jhone Doe",
-    },
-  ]; */
 
   const [filter, setFilter] = useState("all");
   const [projects, setProjects] = useState([]);
@@ -121,7 +40,7 @@ function Portfolio3({ categories, cases }) {
   }, [filter]);
   return (
     <>
-      <div className="site-filters style-3 clearfix center m-b40">
+      {/* <div className="site-filters style-3 clearfix center m-b40">
         <ul className="filters">
           <li className={`btn ${filter === "all" ? "active" : ""}`}>
             <a onClick={() => setFilter("all")}>All</a>
@@ -141,37 +60,9 @@ function Portfolio3({ categories, cases }) {
               </li>
             ))}
 
-          {/* <li className={`btn ${filter === "web_development" ? "active" : ""}`}>
-            <a
-              active={filter === "web_development"}
-              onClick={() => setFilter("web_development")}
-            >
-              Web Development
-            </a>
-          </li>
-          <li className={`btn ${filter === "mobile_app" ? "active" : ""}`}>
-            <a
-              active={filter === "mobile_app"}
-              onClick={() => setFilter("mobile_app")}
-            >
-              E-mail marketing
-            </a>
-          </li>
-          <li className={`btn ${filter === "seo" ? "active" : ""}`}>
-            <a active={filter === "seo"} onClick={() => setFilter("seo")}>
-              Content creation
-            </a>
-          </li>
-          <li className={`btn ${filter === "web_design" ? "active" : ""}`}>
-            <a
-              active={filter === "web_design"}
-              onClick={() => setFilter("web_design")}
-            >
-              Advertising
-            </a>
-          </li> */}
+        
         </ul>
-      </div>
+      </div> */}
 
       <div className="clearfix">
         <ul id="masonry" className="row" data-column-width="3">

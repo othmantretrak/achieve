@@ -6,7 +6,8 @@ function CustomBtn({ onClick }) {
     <div className="custom-box">
       <button onClick={onClick} className="default-btn" href="/login/">
         <Hot />
-        Aanvragen <span></span>
+        <p>Meer informatie</p>
+        <span></span>
       </button>
     </div>
   );
