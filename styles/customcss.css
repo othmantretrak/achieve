@@ -637,3 +637,38 @@ span.imgio > img {
     padding-left: 10px;
   }
 }
+.tooltips {
+  margin-left: 11px;
+  position: relative;
+}
+.tooltips .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #1f2471;
+  color: #fff;
+  text-align: center;
+  line-height: 17px;
+  font-size: 12px;
+  font-family: "Poppins";
+  border-radius: 6px;
+  padding: 5px 8px;
+  font-weight: normal;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+  position: absolute;
+  z-index: 1;
+}
+.tooltips:hover .tooltiptext {
+  visibility: visible;
+}
+.tooltips .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #1f2471 transparent transparent transparent;
+}

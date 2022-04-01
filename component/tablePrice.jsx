@@ -53,7 +53,7 @@ function TablePrice({ service, tab }) {
               </th>
               <th className="pricing-features" scope="col">
                 <div className="pricing-header">
-                  <h3>Basic</h3>
+                  <h3>{service?.b_name}</h3>
                 </div>
                 <div className="price">
                   <sup>€</sup>
@@ -70,7 +70,7 @@ function TablePrice({ service, tab }) {
               <th className="pricing-features" scope="col">
                 {" "}
                 <div className="pricing-header">
-                  <h3>Standard</h3>
+                  <h3>{service?.s_name}</h3>
                 </div>
                 <div className="price">
                   <sup>€</sup>
@@ -83,7 +83,7 @@ function TablePrice({ service, tab }) {
               </th>
               <th className="pricing-features" scope="col">
                 <div className="pricing-header">
-                  <h3>Premium</h3>
+                  <h3>{service?.p_name}</h3>
                 </div>
                 <div className="price">
                   <sup>€</sup>
@@ -102,7 +102,12 @@ function TablePrice({ service, tab }) {
                 s && (
                   <tr key={s?.title}>
                     <th className="pricing-features" scope="row">
-                      {s?.title}
+                      <span>{s?.title}</span>
+                      {s?.info && (
+                        <div className="tooltips fa-solid fa-circle-info">
+                          <span className="tooltiptext ">{s?.info}</span>
+                        </div>
+                      )}
                     </th>
                     <td>{s && printText(s?.seb)}</td>
                     <td>{s && printText(s?.ses)}</td>
