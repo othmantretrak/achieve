@@ -764,3 +764,56 @@ span.imgio > img {
     clip-path: polygon(150% -1%, 200% -1%, 150% 101%, 100% 101%);
   }
 }
+/* =========== tarievien mobile ========== */
+@media only screen and (max-width: 600px) {
+  .pricing-list-tab .tabs li {
+    display: block;
+    margin-top: 5px;
+  }
+  .single-pricing-table h3 {
+    font-size: 1rem;
+  }
+  .single-pricing-table span {
+    font-size: 0.8rem;
+  }
+  .single-pricing-table .price {
+    font-size: 1rem;
+  }
+  .single-pricing-table .price sub {
+    font-size: 0.8rem;
+  }
+  .single-pricing-table .price sup {
+    top: -10px;
+    left: 1px;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  .single-pricing-table .pricing-header {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .table.single-pricing-table tr td {
+    padding: 15px 0px;
+    max-width: 98px;
+    font-size: 0.8rem;
+  }
+  .single-pricing-table .custom-box .default-btn {
+    font-size: 0.7rem;
+    padding: 2px 2px;
+    width: 70px;
+    height: 59px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .single-pricing-table .wrap-service svg {
+    width: 15px;
+    height: 15px;
+    padding: 0px;
+    margin-right: 3px;
+  }
+  .single-pricing-table .custom-box .default-btn p {
+    white-space: inherit;
+    margin-bottom: 0;
+    text-align: center;
+  }
+}
