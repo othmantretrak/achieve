@@ -15,7 +15,7 @@ import {
 
 function projects({ sitInfo, testimonials, cases, categories }) {
   return (
-    <div>
+    <div className="cases">
       <Header />
       {/* <!-- Banner  --> */}
       <Banner2 name="Cases" />

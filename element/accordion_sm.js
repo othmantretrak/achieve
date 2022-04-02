@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { PortableText } from "@portabletext/react";
 
 function Accordion_sm({ faqs }) {
   const [activeDefault, setActiveDefault] = useState(1000);
@@ -44,7 +45,8 @@ function Accordion_sm({ faqs }) {
                   onClick={() => setActiveDefault(activeDefault === i ? -1 : i)}
                 >
                   <div className="card-body">
-                    <p className="m-b0">{d.answer}</p>
+                    {/* <p className="m-b0">{d.answer}</p> */}
+                    <PortableText value={d.answer} />
                   </div>
                 </div>
               </div>

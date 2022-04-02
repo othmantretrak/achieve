@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Slider from "react-slick";
+import TypewriterComponent from "typewriter-effect";
 
 function Slider1() {
   return (
@@ -33,7 +34,15 @@ function Slider1() {
                   >
                     Groeien op basis van{" "}
                     <span className="text-primary">data</span> en de kracht van{" "}
-                    <span className="text-primary">creativiteit.</span>
+                    <span className="text-primary">
+                      <TypewriterComponent
+                        options={{
+                          strings: ["creativiteit."],
+                          autoStart: true,
+                          loop: true,
+                        }}
+                      />
+                    </span>
                   </h1>
                   <p
                     data-wow-duration="1.4s"

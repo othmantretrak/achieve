@@ -129,15 +129,16 @@ function Footer({ sitInfo }) {
                       </Link>
                     </li>
                     <li>
-                      <Link href="/tarieven">
-                        <a>Tarieven</a>
-                      </Link>
-                    </li>
-                    <li>
                       <Link href="/cases">
                         <a>Cases</a>
                       </Link>
                     </li>
+                    <li>
+                      <Link href="/tarieven">
+                        <a>Tarieven</a>
+                      </Link>
+                    </li>
+
                     <li>
                       <Link href="/contact">
                         <a>Contact</a>
