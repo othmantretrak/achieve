@@ -15,7 +15,7 @@ function PriceCard({ name, price, btnColor, service }) {
     service[0]?.service7,
   ];
 
-  console.log({ Allservices });
+  //console.log({ Allservices });
 
   return (
     <div className="col-lg-4 col-sm-6">
@@ -29,7 +29,7 @@ function PriceCard({ name, price, btnColor, service }) {
         </div>
         <ul className="pricing-features">
           {Allservices.map((serv) => {
-            console.log({ serv });
+            //console.log({ serv });
             if (serv) {
               return (
                 <li key={serv.title} className="">

@@ -40,7 +40,7 @@ function MyApp({ Component, pageProps }) {
   };
 
   const onChange = (value) => {
-    console.log({ window });
+    //console.log({ window });
     window.scrollTo(0, 0);
   };
 

@@ -1,7 +1,7 @@
 import Fire from "../component/iconCompenents/Fire";
 
 function onChange(value) {
-  console.log("Captcha value:", value);
+  //console.log("Captcha value:", value);
 }
 
 function Quote4() {
@@ -13,12 +13,8 @@ function Quote4() {
             <div className="col-12 col-lg-5 m-b30 wow fadeInLeft">
               <div className="section-heading text-center mb-3">
                 <h2>Let&apos;s connect!</h2>
-                <p className="d-none d-sm-block mt-4">
+                <p className="d-sm-block mt-4">
                   Vragen en/of opmerkingen? We helpen je graag verder.
-                </p>
-                <p className="d-block d-sm-none mt-4">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Laborum obcaecati.
                 </p>
               </div>
               <div className="contact-us">

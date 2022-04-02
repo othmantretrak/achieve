@@ -95,7 +95,7 @@ export async function getStaticProps({ preview = false }) {
   const sitInfo = await getAllSiteInfo(preview);
   const team = await getAllTeams(preview);
   const testimonials = await getAllTestimonials(preview);
-  console.log({ team });
+  //console.log({ team });
   return {
     props: { sitInfo, team, testimonials },
     revalidate: 1,

@@ -26,7 +26,9 @@
   color: #8639fa;
   background-color: white;
 }
-
+.contact-info h3 {
+  font-size: 1.2rem;
+}
 .hideX #preloader,
 .hideX .pace {
   display: none !important;
@@ -693,30 +695,21 @@ span.imgio > img {
 
 .main-bar .extra-cell:before {
   content: "";
-  background: linear-gradient(
-    45deg,
-    #ff0000,
-    #ff7300,
-    #fffb00,
-    #48ff00,
-    #00ffd5,
-    #002bff,
-    #7a00ff,
-    #ff00c8,
-    #ff0000
-  );
+  background: linear-gradient(45deg, #ffffff, transparent);
+
   position: absolute;
   top: -2px;
   left: -2px;
   background-size: 400%;
-  z-index: -1;
+  z-index: 1;
   filter: blur(5px);
   width: calc(100% + 4px);
   height: calc(100% + 4px);
-  animation: glowing 5s linear infinite;
+  animation: wipe 10s linear infinite;
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
   border-radius: 10px;
+  pointer-events: none;
 }
 
 .main-bar .extra-cell:active {
@@ -746,11 +739,28 @@ span.imgio > img {
 @keyframes glowing {
   0% {
     background-position: 0 0;
+    opacity: 0;
   }
-  50% {
+  10% {
     background-position: 400% 0;
+    opacity: 1;
   }
-  60% {
+  11% {
     background-position: 0 0;
+    opacity: 0;
+  }
+  100% {
+    background-position: 0 0;
+    opacity: 0;
+  }
+}
+
+@keyframes wipe {
+  0% {
+    clip-path: polygon(-50% -1%, 0% -1%, -50% 101%, -100% 101%);
+  }
+  20%,
+  100% {
+    clip-path: polygon(150% -1%, 200% -1%, 150% 101%, 100% 101%);
   }
 }

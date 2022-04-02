@@ -38,7 +38,7 @@ export async function getStaticProps({ preview = false }) {
   const faqs = await getAllFaq(preview);
   const faqCategories = await getAllFaqCategories(preview);
   const services = await getAllServices(preview);
-  console.log({ services });
+  //console.log({ services });
   return {
     props: { sitInfo, faqCategories, faqs, services },
     revalidate: 1,

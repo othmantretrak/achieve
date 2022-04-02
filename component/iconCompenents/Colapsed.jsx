@@ -6,7 +6,7 @@ import RespBtn from "../RespBtn";
 function Colapsed({ children }) {
   const [collapse, setCollapse] = useState(false);
   const toggleAction = () => {
-    console.log("clicked", collapse);
+    //console.log("clicked", collapse);
     setCollapse(!collapse);
   };
   return (

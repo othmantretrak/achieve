@@ -9,7 +9,7 @@ const LoadingScreen = () => {
   //const [showLoading, setShowLoading] = useLoader();
   const { showLoading } = useLoader();
 
-  console.log(showLoading);
+  //console.log(showLoading);
   useEffect(() => {
     //const showLoading = getCookie("showLoading");
     let bodyEl = document.querySelector("body");

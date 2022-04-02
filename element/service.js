@@ -4,7 +4,7 @@ import { imageBuilder } from "../lib/sanity";
 
 function Service({ services }) {
   const [open, setOpen] = useState("p2");
-  console.log({ services });
+  //console.log({ services });
   return (
     <>
       {/* <!-- Service --> */}

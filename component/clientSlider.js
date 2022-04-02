@@ -35,7 +35,7 @@ function ClientSlider({ companies }) {
       },
     ],
   };
-  console.log(companies?.imagesGallery);
+  //console.log(companies?.imagesGallery);
   return (
     <>
       <Slider {...settings}>

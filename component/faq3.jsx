@@ -11,7 +11,7 @@ function Faq3({ categories, faqs }) {
     const cats = obj.categories
       ? [...obj.categories?.map((c) => c.catslug)]
       : [];
-    console.log({ cats });
+    //console.log({ cats });
     return {
       question: obj.question,
       answer: obj.answer,
