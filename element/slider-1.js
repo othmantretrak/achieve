@@ -40,6 +40,7 @@ function Slider1() {
                           strings: ["creativiteit."],
                           autoStart: true,
                           loop: true,
+                          pauseFor: 9000,
                         }}
                       />
                     </span>

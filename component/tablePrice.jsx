@@ -57,14 +57,8 @@ function TablePrice({ service, tab }) {
                 </div>
                 <div className="price">
                   <sup>€</sup>
-                  {service?.b_price}{" "}
-                  <sub>
-                    {(service?.periodb.eenmalig && "/ Eenmalig") ||
-                      (service?.periodb.maandelijks && "/ Maandelijks")}
-                    {/*   {service?._id === "8524dc60-fb73-4207-b987-238a7103f83f"
-                      ? "/ EENMALIG"
-                      : "/ Maandelijks"} */}
-                  </sub>
+                  {service?.b_price.split("/")[0]}
+                  <sub>{"/" + service?.b_price.split("/")[1]}</sub>
                 </div>
               </th>
               <th className="pricing-features" scope="col">
@@ -74,11 +68,8 @@ function TablePrice({ service, tab }) {
                 </div>
                 <div className="price">
                   <sup>€</sup>
-                  {service?.s_price}{" "}
-                  <sub>
-                    {(service?.periods.eenmalig && "/ Eenmalig") ||
-                      (service?.periods.maandelijks && "/ Maandelijks")}
-                  </sub>
+                  {service?.s_price.split("/")[0]}
+                  <sub>{"/" + service?.p_price.split("/")[1]}</sub>
                 </div>
               </th>
               <th className="pricing-features" scope="col">
@@ -87,11 +78,8 @@ function TablePrice({ service, tab }) {
                 </div>
                 <div className="price">
                   <sup>€</sup>
-                  {service?.p_price}{" "}
-                  <sub>
-                    {(service?.periodp.eenmalig && "/ Eenmalig") ||
-                      (service?.periodp.maandelijks && "/ Maandelijks")}
-                  </sub>
+                  {service?.p_price.split("/")[0]}
+                  <sub>{"/" + service?.p_price.split("/")[1]}</sub>
                 </div>
               </th>
             </tr>
