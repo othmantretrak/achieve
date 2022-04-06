@@ -44,7 +44,7 @@ function TablePrice({ service, tab }) {
   };
   return (
     <>
-      <div className="table-responsive shadow-none rounded-md">
+      <div className="table-responsive table-price rounded-md">
         <table className=" single-pricing-table table">
           <thead>
             <tr className="">
@@ -107,16 +107,19 @@ function TablePrice({ service, tab }) {
               <th></th>
               <td>
                 <CustomBtn
+                  title="Meer informatie"
                   onClick={() => selectedPlan("Basic", service.b_price)}
                 />
               </td>
               <td>
                 <CustomBtn
+                  title="Meer informatie"
                   onClick={() => selectedPlan("Standard", service.s_price)}
                 />
               </td>
               <td>
                 <CustomBtn
+                  title="Meer informatie"
                   onClick={() => selectedPlan("Premium", service.p_price)}
                 />
               </td>

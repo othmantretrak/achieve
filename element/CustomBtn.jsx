@@ -1,12 +1,12 @@
 import React from "react";
 import Hot from "../component/iconCompenents/Hot";
 
-function CustomBtn({ onClick }) {
+function CustomBtn({ onClick, title }) {
   return (
     <div className="custom-box">
       <button onClick={onClick} className="default-btn" href="/login/">
         <Hot />
-        <p>Meer informatie</p>
+        <p>{title}</p>
         <span></span>
       </button>
     </div>

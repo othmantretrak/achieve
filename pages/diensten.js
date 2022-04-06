@@ -20,7 +20,7 @@ function Services1({ sitInfo, faqs, services, faqCategories }) {
         <Banner2 name="Diensten" />
         <AllServices services={services} />
       </div>
-      <div className="content-inner prt-accordion pt-100px bg-gray">
+      <div className="container diensten-container">
         <div className="section-head style-3 text-center">
           <h2 className="title">Veelgestelde vragen</h2>
           <div className="dlab-separator style-2 bg-primary"></div>

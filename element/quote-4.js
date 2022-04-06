@@ -1,4 +1,5 @@
 import Fire from "../component/iconCompenents/Fire";
+import CustomBtn from "./CustomBtn";
 
 function onChange(value) {
   //console.log("Captcha value:", value);
@@ -134,17 +135,21 @@ function Quote4() {
                   </div>
 
                   <div className="col-sm-12">
-                    <div className="contact-btn extra-cell">
+                    <div className="contact-btn custom-box">
                       <button
                         name="submit"
                         type="submit"
                         value="Submit"
-                        className="btn btn-corner  btn-primary"
+                        className="default-btn"
                       >
-                        <i className="fa-solid fa-paper-plane"></i>
-                        Verzenden
+                        <div>
+                          <i className="fa-solid fa-paper-plane"></i>
+                          <p>Verzenden</p>
+                        </div>
+                        <span></span>
                       </button>
                     </div>
+                    {/* <CustomBtn title="Verzenden" /> */}
                   </div>
                 </div>
               </form>

@@ -57,7 +57,7 @@ function Home({
         </title>
       </Head>
       <Header />
-      <div className="page-content bg-gray" id="top">
+      <div className="page-content homepage-container bg-gray" id="top">
         <Slider1 />
         {/*  <Slider2 />
         <Slider3 /> */}
@@ -73,7 +73,7 @@ function Home({
         <PricingT4 prices={prices} />
         {/* <Newsletter /> */}
         <Testimonial2 testimonials={testimonials} />
-        <div className="container  bg-gray">
+        <div className="container homepagefaq-container bg-gray">
           <div className="section-head style-3 text-center">
             <h2 className="title">Veelgestelde vragen</h2>
             <div className="dlab-separator style-2 bg-primary"></div>
