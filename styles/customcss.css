@@ -855,6 +855,17 @@ span.imgio > img {
 .contact-btn.custom-box {
   padding-left: 0;
 }
+.contact-btn.custom-box button {
+  width: 100%;
+}
+.contact-btn.custom-box .icon-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
 .contact-btn.custom-box span {
   background-color: #8639fa;
   top: 26px;

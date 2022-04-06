@@ -142,7 +142,7 @@ function Quote4() {
                         value="Submit"
                         className="default-btn"
                       >
-                        <div>
+                        <div className="icon-text">
                           <i className="fa-solid fa-paper-plane"></i>
                           <p>Verzenden</p>
                         </div>
