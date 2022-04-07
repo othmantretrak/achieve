@@ -56,9 +56,20 @@ function TablePrice({ service, tab }) {
                   <h3>{service?.b_name}</h3>
                 </div>
                 <div className="price">
-                  <sup>€</sup>
-                  {service?.b_price.split("/")[0]}
-                  <sub>{"/" + service?.b_price.split("/")[1]}</sub>
+                  {!service?.b_price.split("/")[1] ? (
+                    <>
+                      {service?.b_price.split("/")[0]}{" "}
+                      <sup className="partir">€</sup>
+                    </>
+                  ) : (
+                    <>
+                      <sup>€</sup>
+                      {service?.b_price.split("/")[0]}
+                    </>
+                  )}
+                  {service?.b_price.split("/")[1] && (
+                    <sub>{"/" + service?.b_price.split("/")[1]}</sub>
+                  )}
                 </div>
               </th>
               <th className="pricing-features" scope="col">
@@ -67,9 +78,20 @@ function TablePrice({ service, tab }) {
                   <h3>{service?.s_name}</h3>
                 </div>
                 <div className="price">
-                  <sup>€</sup>
-                  {service?.s_price.split("/")[0]}
-                  <sub>{"/" + service?.p_price.split("/")[1]}</sub>
+                  {!service?.s_price.split("/")[1] ? (
+                    <>
+                      {service?.s_price.split("/")[0]}{" "}
+                      <sup className="partir">€</sup>
+                    </>
+                  ) : (
+                    <>
+                      <sup>€</sup>
+                      {service?.s_price.split("/")[0]}
+                    </>
+                  )}
+                  {service?.s_price.split("/")[1] && (
+                    <sub>{"/" + service?.s_price.split("/")[1]}</sub>
+                  )}
                 </div>
               </th>
               <th className="pricing-features" scope="col">
@@ -77,9 +99,20 @@ function TablePrice({ service, tab }) {
                   <h3>{service?.p_name}</h3>
                 </div>
                 <div className="price">
-                  <sup>€</sup>
-                  {service?.p_price.split("/")[0]}
-                  <sub>{"/" + service?.p_price.split("/")[1]}</sub>
+                  {!service?.p_price.split("/")[1] ? (
+                    <>
+                      {service?.p_price.split("/")[0]}{" "}
+                      <sup className="partir">€</sup>
+                    </>
+                  ) : (
+                    <>
+                      <sup>€</sup>
+                      {service?.p_price.split("/")[0]}
+                    </>
+                  )}
+                  {service?.p_price.split("/")[1] && (
+                    <sub>{"/" + service?.p_price.split("/")[1]}</sub>
+                  )}
                 </div>
               </th>
             </tr>
