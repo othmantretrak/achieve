@@ -18,7 +18,7 @@ function FAQ1({ sitInfo, faqCategories, faqs }) {
           className="content-inner pt-100px"
           style={{ backgroundImage: "url(images/background/bg1.png)" }}
         >
-          <div className="container  bg-gray">
+          <div className="container">
             <Faq3 categories={faqCategories} faqs={faqs} />
           </div>
         </section>

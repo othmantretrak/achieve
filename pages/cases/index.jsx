@@ -1,19 +1,19 @@
 import React from "react";
-import Banner2 from "../element/banner2";
-import Cta from "../element/cta";
-import Projects2 from "../element/Projects-2";
-import Projects3 from "../element/Projects-3";
-import Testimonial2 from "../element/testimonial-2";
-import Footer from "../layout/footer";
-import Header from "../layout/header";
+import Banner2 from "../../element/banner2";
+import Cta from "../../element/cta";
+import Projects2 from "../../element/Projects-2";
+import Projects3 from "../../element/Projects-3";
+import Testimonial2 from "../../element/testimonial-2";
+import Footer from "../../layout/footer";
+import Header from "../../layout/header";
 import {
   getAllCases,
   getAllCategories,
   getAllSiteInfo,
   getAllTestimonials,
-} from "../lib/api";
+} from "../../lib/api";
 
-function projects({ sitInfo, testimonials, cases, categories }) {
+function Projects({ sitInfo, testimonials, cases, categories }) {
   return (
     <div className="cases">
       <Header />
@@ -40,4 +40,4 @@ export async function getStaticProps({ preview = false }) {
     revalidate: 1,
   };
 }
-export default projects;
+export default Projects;

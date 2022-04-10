@@ -7,9 +7,12 @@ function Portfolio3({ categories, cases }) {
   //console.log({ cases });
 
   const portfolio = cases.map((obj) => {
+    if (!obj.categories) {
+      return { category: ["all"] };
+    }
     return {
       title: obj.title,
-      category: ["all", ...obj.categories.map((c) => c.catslug)],
+      category: ["all", ...obj.categories?.map((c) => c.catslug)],
       img: (
         <Image
           src={imageBuilder(obj.coverImage).width(370).height(370).url()}

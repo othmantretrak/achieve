@@ -42,6 +42,16 @@ function TablePrice({ service, tab }) {
     return false;
     //console.log({ selected: { tab, plan, price } });
   };
+  //let va = service?.b_price.split("/")[1]
+  let vaB = service?.b_price.split("/")[1];
+  let priceNumberB = service?.b_price.split("/")[0];
+  let vaP = service?.p_price.split("/")[1];
+  let priceNumberP = service?.p_price.split("/")[0];
+  let vaS = service?.s_price.split("/")[1];
+  let priceNumberS = service?.s_price.split("/")[0];
+  let [ab, bb, cb] = priceNumberB.split(".");
+  let [ap, bp, cp] = priceNumberP.split(".");
+  let [as, bs, cs] = priceNumberS.split(".");
   return (
     <>
       <div className="table-responsive table-price rounded-md">
@@ -56,20 +66,19 @@ function TablePrice({ service, tab }) {
                   <h3>{service?.b_name}</h3>
                 </div>
                 <div className="price">
-                  {!service?.b_price.split("/")[1] ? (
+                  {!vaB ? (
                     <>
-                      {service?.b_price.split("/")[0]}{" "}
+                      <sub>{`${ab}.${bb}. `} </sub>
                       <sup className="partir">€</sup>
+                      {cb}
                     </>
                   ) : (
                     <>
                       <sup>€</sup>
-                      {service?.b_price.split("/")[0]}
+                      {priceNumberB}
                     </>
                   )}
-                  {service?.b_price.split("/")[1] && (
-                    <sub>{"/" + service?.b_price.split("/")[1]}</sub>
-                  )}
+                  {vaB && <sub>{"/" + vaB}</sub>}
                 </div>
               </th>
               <th className="pricing-features" scope="col">
@@ -78,20 +87,19 @@ function TablePrice({ service, tab }) {
                   <h3>{service?.s_name}</h3>
                 </div>
                 <div className="price">
-                  {!service?.s_price.split("/")[1] ? (
+                  {!vaS ? (
                     <>
-                      {service?.s_price.split("/")[0]}{" "}
+                      <sub> {`${as}.${bs}. `}</sub>{" "}
                       <sup className="partir">€</sup>
+                      {cs}
                     </>
                   ) : (
                     <>
                       <sup>€</sup>
-                      {service?.s_price.split("/")[0]}
+                      {priceNumberS}
                     </>
                   )}
-                  {service?.s_price.split("/")[1] && (
-                    <sub>{"/" + service?.s_price.split("/")[1]}</sub>
-                  )}
+                  {vaS && <sub>{"/" + vaS}</sub>}
                 </div>
               </th>
               <th className="pricing-features" scope="col">
@@ -99,20 +107,19 @@ function TablePrice({ service, tab }) {
                   <h3>{service?.p_name}</h3>
                 </div>
                 <div className="price">
-                  {!service?.p_price.split("/")[1] ? (
+                  {!vaP ? (
                     <>
-                      {service?.p_price.split("/")[0]}{" "}
+                      <sub>{`${ap}.${bp}. `} </sub>{" "}
                       <sup className="partir">€</sup>
+                      {cp}
                     </>
                   ) : (
                     <>
                       <sup>€</sup>
-                      {service?.p_price.split("/")[0]}
+                      {priceNumberP}
                     </>
                   )}
-                  {service?.p_price.split("/")[1] && (
-                    <sub>{"/" + service?.p_price.split("/")[1]}</sub>
-                  )}
+                  {vaP && <sub>{"/" + vaP}</sub>}
                 </div>
               </th>
             </tr>
