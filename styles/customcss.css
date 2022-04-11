@@ -482,9 +482,9 @@ sup {
   -webkit-transition: background-color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s;
 }
-.pricing-tablee .table-responsive {
+/* .pricing-tablee .table-responsive {
   box-shadow: 0px 0 10px rgb(31 66 135 / 31%);
-}
+} */
 .table.single-pricing-table tr td,
 .table tr th {
   padding: 15px;
