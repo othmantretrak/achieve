@@ -154,9 +154,12 @@ export async function getStaticProps({ params }) {
 export const getStaticPaths = async () => {
   const res = await getAllCases();
   //console.log(res);
-  const paths = res.map((post) => ({
-    params: { slug: post.slug },
-  }));
+  const paths = res.map(
+    (post) =>
+      post.coverImage && {
+        params: { slug: post.slug },
+      }
+  );
   return { paths, fallback: "blocking" };
 };
 export default CaseDetails;

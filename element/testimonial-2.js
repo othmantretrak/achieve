@@ -5,7 +5,7 @@ function Testimonial2({ testimonials }) {
     <>
       {/* <!-- Testimonials --> */}
       <section
-        className="content-inner-2 testimonials bg-gray"
+        className="content-inner-2 pt-100px testimonials bg-gray"
         style={{
           backgroundImage: "url(images/background/bg17.png)",
           backgroundSize: "contain",

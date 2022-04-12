@@ -7,7 +7,7 @@ import { imageBuilder } from "../lib/sanity";
 function Header({ sitInfo }) {
   const [show, setShow] = useState(false);
   const [open, setOpen] = useState("home");
-  console.log(sitInfo);
+  //console.log(sitInfo);
   //console.log(imageBuilder(sitInfo?.blackLogo)?.url());
   const router = useRouter();
   const handleIntake = () => {

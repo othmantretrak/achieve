@@ -505,7 +505,8 @@ sup {
 .page-wraper .projects {
   padding-top: 57px;
 }
-.content-inner.pt-100px {
+.content-inner.pt-100px,
+.content-inner-2.pt-100px {
   padding-top: 130px;
 }
 .content-inner.prt-accordion {
