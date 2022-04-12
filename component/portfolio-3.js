@@ -1,6 +1,7 @@
 // import Image1 from "images/projects/grid/pic1";
 import Image from "next/image";
 import { imageBuilder } from "../lib/sanity";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 function Portfolio3({ categories, cases }) {
@@ -12,6 +13,7 @@ function Portfolio3({ categories, cases }) {
     }
     return {
       title: obj.title,
+      slug: obj.slug,
       category: ["all", ...obj.categories?.map((c) => c.catslug)],
       img: (
         <Image
@@ -83,7 +85,9 @@ function Portfolio3({ categories, cases }) {
                     </div>
                     <div className="dlab-info">
                       <h5 className="title">
-                        <a href="#">{item.title}</a>
+                        <Link href={`/cases/${item.slug}`}>
+                          <a>{item.title}</a>
+                        </Link>
                       </h5>
                       {/* <p className="post-author">
                         By <a href="#">{item.author}</a>

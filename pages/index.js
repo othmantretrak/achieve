@@ -27,6 +27,7 @@ import {
 } from "../lib/api";
 import Works from "../component/works";
 import Faq3 from "../component/faq3";
+import Layout from "../layout/Layout";
 function Home({
   testimonials,
   faqs,
@@ -56,41 +57,41 @@ function Home({
           Achieve – Groeien op basis van data en de kracht van creativiteit.
         </title>
       </Head>
-      <Header />
-      <div className="page-content homepage-container bg-gray" id="top">
-        <Slider1 />
-        {/*  <Slider2 />
+      <Layout>
+        <div className="page-content homepage-container bg-gray" id="top">
+          <Slider1 />
+          {/*  <Slider2 />
         <Slider3 /> */}
-        <Clients companies={companies} />
-        <AboutUs />
-        <Service services={services} />
-        {/* <Counter /> */}
-        {/* <Features /> */}
-        <Works />
-        {/*  <Projects3 categories={categories} cases={cases} /> */}
-        {/* <Team /> */}
-        {/* <Pricing /> */}
-        <PricingT4 prices={prices} />
-        {/* <Newsletter /> */}
-        <Testimonial2 testimonials={testimonials} />
-        <div className="container homepagefaq-container bg-gray">
-          <div className="section-head style-3 text-center">
-            <h2 className="title">Veelgestelde vragen</h2>
-            <div className="dlab-separator style-2 bg-primary"></div>
+          <Clients companies={companies} />
+          <AboutUs />
+          <Service services={services} />
+          {/* <Counter /> */}
+          {/* <Features /> */}
+          <Works />
+          {/*  <Projects3 categories={categories} cases={cases} /> */}
+          {/* <Team /> */}
+          {/* <Pricing /> */}
+          <PricingT4 prices={prices} />
+          {/* <Newsletter /> */}
+          <Testimonial2 testimonials={testimonials} />
+          <div className="container homepagefaq-container bg-gray">
+            <div className="section-head style-3 text-center">
+              <h2 className="title">Veelgestelde vragen</h2>
+              <div className="dlab-separator style-2 bg-primary"></div>
+            </div>
+            <Faq3 categories={faqCategories} faqs={faqs} />
+            {/* <Accordion_sm faqs={faqs} /> */}
           </div>
-          <Faq3 categories={faqCategories} faqs={faqs} />
-          {/* <Accordion_sm faqs={faqs} /> */}
+          {/* <Blog /> */}
+          {/* <Quote3 /> */}
+          <Cta />
         </div>
-        {/* <Blog /> */}
-        {/* <Quote3 /> */}
-        <Cta />
-      </div>
-      {/* <googleMap isMarkerShown /> */}
-      {/*  <googleMap
+        {/* <googleMap isMarkerShown /> */}
+        {/*  <googleMap
         containerElement={<div style={{ height: `400px` }} />}
         mapElement={<div style={{ height: `100%` }} />}
       /> */}
-      <Footer sitInfo={sitInfo} />
+      </Layout>
     </>
   );
 }

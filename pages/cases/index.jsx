@@ -16,16 +16,10 @@ import {
 function Projects({ sitInfo, testimonials, cases, categories }) {
   return (
     <div className="cases">
-      <Header />
-      {/* <!-- Banner  --> */}
       <Banner2 name="Cases" />
-      {/* <!-- Banner End --> */}
-
-      {/* <Projects2 /> */}
       <Projects3 categories={categories} cases={cases} />
       <Testimonial2 testimonials={testimonials} />
       <Cta />
-      <Footer sitInfo={sitInfo} />
     </div>
   );
 }

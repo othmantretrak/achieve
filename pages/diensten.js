@@ -15,7 +15,6 @@ import Faq3 from "../component/faq3";
 function Services1({ sitInfo, faqs, services, faqCategories }) {
   return (
     <>
-      <Header />
       <div className="page-content bg-white">
         <Banner2 name="Diensten" />
         <AllServices services={services} />
@@ -29,7 +28,6 @@ function Services1({ sitInfo, faqs, services, faqCategories }) {
         {/* <Accordion_sm faqs={faqs} />  */}
       </div>
       <Cta />
-      <Footer sitInfo={sitInfo} />
     </>
   );
 }

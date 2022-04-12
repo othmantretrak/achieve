@@ -1,7 +1,12 @@
 import Link from "next/link";
 
+import Image from "next/image";
+import { imageBuilder } from "../lib/sanity";
 function Footer({ sitInfo }) {
-  const sitInfo2 = sitInfo[0].address.split(",");
+  if (!sitInfo) {
+    return <></>;
+  }
+  const sitInfo2 = sitInfo[0]?.address.split(",");
 
   return (
     <>
@@ -9,7 +14,7 @@ function Footer({ sitInfo }) {
       <footer
         className="site-footer style-1"
         id="footer"
-        style={{ backgroundImage: "url(images/background/bg10.png)" }}
+        style={{ backgroundImage: "url(../images/background/bg10.png)" }}
       >
         <div className="footer-top">
           <div className="container">
@@ -22,7 +27,12 @@ function Footer({ sitInfo }) {
                 <div className="col-xl-6 col-md-4">
                   <div className="footer-logo">
                     <a>
-                      <img src="images/Achieve-Logo.png" alt="" />
+                      <Image
+                        src={imageBuilder(sitInfo[0]?.blackLogo)?.url()}
+                        alt="zbbi"
+                        width="376"
+                        height="123"
+                      />
                     </a>
                   </div>
                 </div>

@@ -1,16 +1,22 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
-import Fire from "../component/iconCompenents/Fire";
+import Image from "next/image";
 import Hot from "../component/iconCompenents/Hot";
-function Header() {
+import { imageBuilder } from "../lib/sanity";
+function Header({ sitInfo }) {
   const [show, setShow] = useState(false);
   const [open, setOpen] = useState("home");
+  console.log(sitInfo);
+  //console.log(imageBuilder(sitInfo?.blackLogo)?.url());
   const router = useRouter();
   const handleIntake = () => {
     Calendly.initPopupWidget({ url: "https://calendly.com/gratisintake" });
     return false;
   };
+  if (!sitInfo) {
+    return <></>;
+  }
   return (
     <>
       {/* <!-- Header --> */}
@@ -26,7 +32,12 @@ function Header() {
               <div className="logo-header mostion logo-dark">
                 <Link href="/">
                   <a>
-                    <img src="images/Achieve-Logo.png" alt="" />
+                    <Image
+                      src={imageBuilder(sitInfo[0]?.blackLogo)?.url()}
+                      alt="zbbi"
+                      width="376"
+                      height="123"
+                    />
                   </a>
                 </Link>
               </div>
@@ -44,12 +55,6 @@ function Header() {
               {/* <!-- Extra Nav --> */}
               <div className="extra-nav">
                 <div className="extra-cell">
-                  {/* <Link href="/contact">
-                    <a className="btn btn-corner  btn-primary">
-                      <Hot />
-                      Gratis intake
-                    </a>
-                  </Link> */}
                   <button
                     onClick={handleIntake}
                     className="btn btn-corner  btn-primary"
@@ -68,7 +73,12 @@ function Header() {
                 <div className="logo-header">
                   <Link href="/">
                     <a>
-                      <img src="images/Achieve-Logo.png" alt="" />
+                      <Image
+                        src={imageBuilder(sitInfo[0]?.blackLogo)?.url()}
+                        alt="zbbi"
+                        width="376"
+                        height="123"
+                      />
                     </a>
                   </Link>
                 </div>

@@ -9,7 +9,6 @@ import Faq3 from "../component/faq3";
 function FAQ1({ sitInfo, faqCategories, faqs }) {
   return (
     <>
-      <Header />
       <div className="page-content bg-white">
         <Banner2 name="Veelgestelde vragen" />
 
@@ -24,7 +23,6 @@ function FAQ1({ sitInfo, faqCategories, faqs }) {
         </section>
       </div>
       <Cta />
-      <Footer sitInfo={sitInfo} />
     </>
   );
 }

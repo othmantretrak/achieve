@@ -7,7 +7,6 @@ import { getAllSiteInfo } from "../lib/api";
 function thankyou({ sitInfo }) {
   return (
     <>
-      <Header />
       <div className="page-content bg-white">
         {/* <!-- Banner  --> */}
         <Banner2 name="Thank you" />
@@ -33,7 +32,6 @@ function thankyou({ sitInfo }) {
           </div>
         </section>
       </div>
-      <Footer sitInfo={sitInfo} />
     </>
   );
 }

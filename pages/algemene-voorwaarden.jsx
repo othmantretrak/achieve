@@ -9,7 +9,6 @@ import Cta from "../element/cta";
 function TermOfUse({ sitInfo, terms }) {
   return (
     <>
-      <Header />
       <div className="page-content bg-white">
         {/* <!-- Banner  --> */}
         <Banner2 name="Algemene voorwaarden" />
@@ -31,7 +30,6 @@ function TermOfUse({ sitInfo, terms }) {
         </section>
       </div>
       <Cta />
-      <Footer sitInfo={sitInfo} />
     </>
   );
 }

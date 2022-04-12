@@ -7,7 +7,6 @@ import Banner2 from "../element/banner2";
 function Error404({ sitInfo }) {
   return (
     <>
-      <Header />
       <div className="page-content bg-white">
         <Banner2 name="404" />
 
@@ -30,9 +29,7 @@ function Error404({ sitInfo }) {
             </div>
           </div>
         </div>
-        {/* <!-- Error Page End --> */}
       </div>
-      <Footer sitInfo={sitInfo} />
     </>
   );
 }

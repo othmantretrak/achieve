@@ -10,8 +10,12 @@ import "../css/skin/skin-1.css";
 import "../styles/globals.css";
 import "../styles/switcher.css";
 import { AuthProvider } from "../common/useLoader";
+import Layout from "../layout/Layout";
+import { getAllSiteInfo } from "../lib/api";
 
-function MyApp({ Component, pageProps }) {
+let siteInfo;
+
+function MyApp({ Component, pageProps, navigationProps }) {
   const [toggle1, setToggle1] = useState(false);
   const [body_, setbody_] = useState();
   const [header, setHeader] = useState("fixed");
@@ -48,11 +52,16 @@ function MyApp({ Component, pageProps }) {
     ? header_ && header_[0].classList.add("is-fixed")
     : header_ && header_[0].classList.remove("is-fixed");
 
+  useEffect(() => {
+    siteInfo = navigationProps;
+  }, []);
   return (
     <>
       <div className="page-wraper">
         <AuthProvider>
-          <Component {...pageProps} />
+          <Layout sitInfo={navigationProps}>
+            <Component {...pageProps} />
+          </Layout>
         </AuthProvider>
       </div>
 
@@ -67,5 +76,17 @@ function MyApp({ Component, pageProps }) {
     </>
   );
 }
+MyApp.getInitialProps = async () => {
+  if (siteInfo) {
+    return { navigationProps: siteInfo };
+  }
+
+  //const res = await fetch("http://localhost:3000/api/navigation");
+  const navigationProps = await getAllSiteInfo();
+  //const navigationProps = await res.json()
+  siteInfo = navigationProps;
+
+  return { navigationProps };
+};
 
 export default MyApp;

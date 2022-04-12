@@ -9,7 +9,6 @@ import Cta from "../element/cta";
 function PrivacyPolicy({ sitInfo, privacy }) {
   return (
     <>
-      <Header />
       <div className="page-content bg-white">
         {/* <!-- Banner  --> */}
         <Banner2 name="Privacy policy" />
@@ -31,7 +30,6 @@ function PrivacyPolicy({ sitInfo, privacy }) {
         </section>
       </div>
       <Cta />
-      <Footer sitInfo={sitInfo} />
     </>
   );
 }

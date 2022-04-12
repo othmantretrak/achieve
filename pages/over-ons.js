@@ -13,7 +13,6 @@ function AboutUs1({ sitInfo, team, testimonials }) {
   const [isOpen, setOpen] = useState(false);
   return (
     <>
-      <Header />
       <div className="page-content bg-white">
         {/* <!-- Banner  --> */}
         <Banner2 name="Over ons" />
@@ -87,7 +86,6 @@ function AboutUs1({ sitInfo, team, testimonials }) {
       {/* <Team team={team} /> */}
       <Testimonial2 testimonials={testimonials} />
       <Cta />
-      <Footer sitInfo={sitInfo} />
     </>
   );
 }

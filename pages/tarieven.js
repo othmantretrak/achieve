@@ -9,7 +9,6 @@ import Clients from "../element/clients";
 function PricingTable3({ sitInfo, prices, companies }) {
   return (
     <>
-      <Header />
       <div className="page-content bg-gray pricing-tablee">
         {/* <!-- Banner  --> */}
         <Banner2 name="Tarieven" />
@@ -18,7 +17,6 @@ function PricingTable3({ sitInfo, prices, companies }) {
         <Clients companies={companies} />
       </div>
       <Cta />
-      <Footer sitInfo={sitInfo} />
     </>
   );
 }
