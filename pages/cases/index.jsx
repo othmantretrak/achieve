@@ -1,4 +1,5 @@
 import React from "react";
+import Works from "../../component/works";
 import Banner2 from "../../element/banner2";
 import Cta from "../../element/cta";
 import Projects2 from "../../element/Projects-2";
@@ -17,7 +18,8 @@ function Projects({ sitInfo, testimonials, cases, categories }) {
   return (
     <div className="cases">
       <Banner2 name="Cases" />
-      <Projects3 categories={categories} cases={cases} />
+      {/* <Projects3 categories={categories} cases={cases} /> */}
+      <Works cases={cases} />
       <Testimonial2 testimonials={testimonials} />
       <Cta />
     </div>

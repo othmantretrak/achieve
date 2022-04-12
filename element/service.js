@@ -34,7 +34,7 @@ function Service({ services }) {
                     }`}
                     onMouseOver={() => setOpen(s._id)}
                   >
-                    <div className="icon-bx-md radius bg-yellow shadow-primary">
+                    <div className="icon-bx-md radius  shadow-primary">
                       <a href="#" className="icon-cell">
                         <img
                           src={imageBuilder(s.coverImage)

@@ -71,34 +71,33 @@ function Portfolio3({ categories, cases }) {
 
       <div className="clearfix">
         <ul id="masonry" className="row" data-column-width="3">
-          {projects.map((item) =>
-            item.filtered === true ? (
-              <>
-                <li
-                  className="card-container col-lg-4 col-md-6 col-sm-6 web_design wow fadeInUp"
-                  data-wow-duration="2s"
-                  data-wow-delay="0.1s"
-                >
-                  <div className="dlab-box dlab-overlay-box style-3 m-b30">
-                    <div className="dlab-media dlab-img-overlay1">
-                      {item.img}
-                    </div>
-                    <div className="dlab-info">
-                      <h5 className="title">
-                        <Link href={`/cases/${item.slug}`}>
-                          <a>{item.title}</a>
-                        </Link>
-                      </h5>
-                      {/* <p className="post-author">
+          {projects.map(
+            (item) =>
+              item.filtered === true && (
+                <>
+                  <li
+                    className="card-container col-lg-4 col-md-6 col-sm-6 web_design wow fadeInUp"
+                    data-wow-duration="2s"
+                    data-wow-delay="0.1s"
+                  >
+                    <div className="dlab-box dlab-overlay-box style-3 m-b30">
+                      <div className="dlab-media dlab-img-overlay1">
+                        {item.img}
+                      </div>
+                      <div className="dlab-info">
+                        <h5 className="title">
+                          <Link href={`/cases/${item.slug}`}>
+                            <a>{item.title}</a>
+                          </Link>
+                        </h5>
+                        {/* <p className="post-author">
                         By <a href="#">{item.author}</a>
                       </p> */}
+                      </div>
                     </div>
-                  </div>
-                </li>
-              </>
-            ) : (
-              ""
-            )
+                  </li>
+                </>
+              )
           )}
         </ul>
       </div>

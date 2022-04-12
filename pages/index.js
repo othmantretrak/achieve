@@ -67,7 +67,7 @@ function Home({
           <Service services={services} />
           {/* <Counter /> */}
           {/* <Features /> */}
-          <Works />
+          <Works cases={cases} />
           {/*  <Projects3 categories={categories} cases={cases} /> */}
           {/* <Team /> */}
           {/* <Pricing /> */}

@@ -20,17 +20,12 @@ function CaseDetails({ sitInfo, post }) {
   if (router.isFallback) {
     return <div>Loading...</div>;
   }
-  console.log(post);
+  //console.log(post);
 
   const getIdYoutube = () => {
-    let regExp =
-      /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
-    let match = post[0].youtube.match(regExp);
-    if (match && match[2].length == 11) {
-      return match[2];
-    } else {
-      return null;
-    }
+    let regex =
+      /(youtu.*be.*)\/(watch\?v=|embed\/|v|shorts|)(.*?((?=[&#?])|$))/gm;
+    return regex.exec(post[0].youtube)[3];
   };
 
   console.log({ youtubeId: getIdYoutube(post[0].youtube) });

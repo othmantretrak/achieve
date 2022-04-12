@@ -2,16 +2,20 @@ import React from "react";
 import worksData from "../data/works1.json";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper";
-///import Link from "next/link";
+
+import Image from "next/image";
+import Link from "next/link";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
+import { imageBuilder } from "../lib/sanity";
 
-const Works = () => {
+const Works = ({ cases }) => {
   SwiperCore.use([Autoplay, Pagination, Navigation]);
   const navigationPrevRef = React.useRef(null);
   const navigationNextRef = React.useRef(null);
+  //console.log({ cases });
   return (
     <section className="work-carousel2 metro section-padding dark">
       <div className="container-fluid">
@@ -71,36 +75,47 @@ const Works = () => {
                   },
                 }}
               >
-                {worksData.map((slide) => (
-                  <SwiperSlide key={slide.id} className="swiper-slide">
-                    {/* -----------------ddddd------ */}
+                {cases.map(
+                  (slide) =>
+                    slide.coverImage && (
+                      <SwiperSlide key={slide._id} className="swiper-slide">
+                        {/* -----------------ddddd------ */}
 
-                    <div className="content">
-                      <div className="img">
-                        <span className="imgio">
-                          <span
-                            className="wow cimgio animated"
-                            data-delay="500"
-                            style={{ visibility: "visible" }}
-                          ></span>
-                          <img className="imgzbbi" src={slide.image} alt="" />
-                        </span>
-                      </div>
-                      <div className="cont">
-                        <h6>
-                          <a href="/works3/works3-dark/">{slide.title}</a>
-                        </h6>
-                        <h4>
-                          <a href="/project-details2/project-details2-dark/">
-                            {slide.secTex}
-                          </a>
-                        </h4>
-                      </div>
-                    </div>
+                        <div className="content">
+                          <div className="img">
+                            <span className="imgio">
+                              <span
+                                className="wow cimgio animated"
+                                data-delay="500"
+                                style={{ visibility: "visible" }}
+                              ></span>
+                              <Image
+                                className="imgzbbi"
+                                src={imageBuilder(slide?.coverImage)?.url()}
+                                alt=""
+                                width={1000}
+                                height={600}
+                              />
+                            </span>
+                          </div>
+                          <div className="cont">
+                            <h6>
+                              <Link href={`/cases/${slide.slug}`}>
+                                <a>{slide.title}</a>
+                              </Link>
+                            </h6>
+                            <h4>
+                              <Link href={`/cases/${slide.slug}`}>
+                                <a>{slide.title}</a>
+                              </Link>
+                            </h4>
+                          </div>
+                        </div>
 
-                    {/* -----------------ddddd------ */}
-                  </SwiperSlide>
-                ))}
+                        {/* -----------------ddddd------ */}
+                      </SwiperSlide>
+                    )
+                )}
               </Swiper>
               <div
                 ref={navigationNextRef}
