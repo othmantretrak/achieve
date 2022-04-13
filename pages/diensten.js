@@ -15,7 +15,7 @@ import Faq3 from "../component/faq3";
 function Services1({ sitInfo, faqs, services, faqCategories }) {
   return (
     <>
-      <div className="page-content bg-white">
+      <div className="page-content bg-gray">
         <Banner2 name="Diensten" />
         <AllServices services={services} />
       </div>

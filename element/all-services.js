@@ -29,7 +29,7 @@ function AllServices({ services }) {
                     }`}
                     onMouseOver={() => setOpen(s._id)}
                   >
-                    <div className="icon-bx-md radius bg-yellow shadow-primary">
+                    <div className="icon-bx-md radius ">
                       <a href="#" className="icon-cell">
                         <img
                           src={imageBuilder(s.coverImage)
