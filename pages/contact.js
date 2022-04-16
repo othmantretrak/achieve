@@ -7,7 +7,7 @@ import { getAllSiteInfo } from "../lib/api";
 
 function ContactUs1({ sitInfo }) {
   return (
-    <>
+    <div className="contact-us">
       <div className="page-content bg-white">
         {/* <!-- Banner  --> */}
         <Banner2 name="Contact" />
@@ -30,7 +30,7 @@ function ContactUs1({ sitInfo }) {
         </div>
       </div>
       <Cta />
-    </>
+    </div>
   );
 }
 export async function getStaticProps({ preview = false }) {

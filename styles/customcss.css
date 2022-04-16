@@ -885,18 +885,20 @@ span.imgio > img {
   margin: 0;
 }
 /* ============= cases =========== */
-.case-details {
+.case-details .content-inner-2 {
   margin-top: 100px;
   padding-bottom: 0px;
 }
-.page-wraper .content-inner,
+/* .page-wraper .content-inner,
 .page-wraper .case-details {
   padding-bottom: 0px;
-}
+} */
 @media only screen and (max-width: 767px) {
   .dlab-content .video-bx.style-3 {
     height: auto;
   }
 }
 .diensten-container {
+}
+.contact-us section.content-inner {
 }
