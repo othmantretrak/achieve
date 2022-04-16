@@ -42,7 +42,7 @@ function ClientSlider({ companies }) {
         {companies &&
           companies[0]?.imagesGallery?.map((c, i) => (
             <div key={i} className="item">
-              <div className="clients-logo" style={{ width: "200px" }}>
+              <div className="clients-logo" style={{ width: "230px" }}>
                 <img
                   src={imageBuilder(c).width(300).height(100).url()}
                   alt=""

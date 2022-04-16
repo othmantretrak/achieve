@@ -45,57 +45,30 @@ function Portfolio3({ categories, cases }) {
   }, [filter]);
   return (
     <>
-      {/* <div className="site-filters style-3 clearfix center m-b40">
-        <ul className="filters">
-          <li className={`btn ${filter === "all" ? "active" : ""}`}>
-            <a onClick={() => setFilter("all")}>All</a>
-          </li>
-          {categories &&
-            categories.map((c) => (
-              <li
-                key={c._id}
-                className={`btn ${filter === c.slug ? "active" : ""}`}
-              >
-                <a
-                  //$active={filter === c.slug}
-                  onClick={() => setFilter(c.slug)}
-                >
-                  {c.title}
-                </a>
-              </li>
-            ))}
-
-        
-        </ul>
-      </div> */}
-
       <div className="clearfix">
         <ul id="masonry" className="row" data-column-width="3">
           {projects.map(
             (item) =>
               item.filtered === true && (
                 <>
-                  <li
-                    className="card-container col-lg-4 col-md-6 col-sm-6 web_design wow fadeInUp"
-                    data-wow-duration="2s"
-                    data-wow-delay="0.1s"
-                  >
-                    <div className="dlab-box dlab-overlay-box style-3 m-b30">
-                      <div className="dlab-media dlab-img-overlay1">
-                        {item.img}
-                      </div>
-                      <div className="dlab-info">
-                        <h5 className="title">
-                          <Link href={`/cases/${item.slug}`}>
-                            <a>{item.title}</a>
-                          </Link>
-                        </h5>
-                        {/* <p className="post-author">
-                        By <a href="#">{item.author}</a>
-                      </p> */}
-                      </div>
-                    </div>
-                  </li>
+                  <Link href={`/cases/${item.slug}`}>
+                    <a>
+                      <li
+                        className="card-container col-lg-4 col-md-6 col-sm-6 web_design wow fadeInUp"
+                        data-wow-duration="2s"
+                        data-wow-delay="0.1s"
+                      >
+                        <div className="dlab-box dlab-overlay-box style-3 m-b30">
+                          <div className="dlab-media dlab-img-overlay1">
+                            {item.img}
+                          </div>
+                          <div className="dlab-info">
+                            <h5 className="title">{item.title}</h5>
+                          </div>
+                        </div>
+                      </li>
+                    </a>
+                  </Link>
                 </>
               )
           )}

@@ -31,7 +31,7 @@ function CaseDetails({ sitInfo, post }) {
   console.log({ youtubeId: getIdYoutube(post[0].youtube) });
   return (
     <>
-      <div className="page-content bg-white">
+      <div className="page-content bg-white case-details">
         {/* <!-- Banner  --> */}
         <Banner2 name={post[0].title} />
         {/* <!-- Banner End --> */}

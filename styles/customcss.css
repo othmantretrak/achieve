@@ -902,3 +902,29 @@ span.imgio > img {
 }
 .contact-us section.content-inner {
 }
+.swiper-slide a {
+  color: inherit;
+}
+.swiper-slide .testimonial-4 {
+  box-shadow: none;
+  transition: all 0.5s ease;
+}
+.swiper-slide .testimonial-4:hover {
+  box-shadow: 0 0px 10px 4px rgb(31 66 135 / 10%);
+}
+.clearfix .dlab-accordion .card {
+  box-shadow: none;
+  transition: all 0.5s ease;
+}
+.clearfix .dlab-accordion .card:hover {
+  box-shadow: 0 0px 10px 4px rgb(31 66 135 / 10%);
+}
+footer .widget_about {
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  footer .container > .row div:nth-child(3) {
+    padding-left: 0px;
+  }
+}

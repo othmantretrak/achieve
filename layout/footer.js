@@ -77,15 +77,15 @@ function Footer({ sitInfo }) {
             </div>
             <div className="row">
               <div
-                className="col-xl-3 col-lg-4 col-sm-6 wow fadeIn"
+                className="col-xl-3 col-lg-3 col-sm-6 wow fadeIn"
                 data-wow-duration="2s"
                 data-wow-delay="0.2s"
               >
                 <div className="widget widget_about">
                   {/*  <h5 className="footer-title">About Us</h5> */}
                   <p>
-                    ‘’What the mind can conceive and believe it can achieve.’’ -
-                    Napoleon Hill
+                    ‘’What the mind can conceive and believe it can achieve.’’
+                    <p>- Napoleon Hill</p>
                   </p>
                   <div className="dlab-social-icon">
                     <ul>
@@ -116,7 +116,7 @@ function Footer({ sitInfo }) {
                 </div>
               </div>
               <div
-                className="col-xl-3 col-lg-2 col-sm-6 wow fadeIn"
+                className="col-xl-3 col-lg-3 col-sm-6 wow fadeIn"
                 data-wow-duration="2s"
                 data-wow-delay="0.4s"
               >

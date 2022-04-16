@@ -81,37 +81,32 @@ const Works = ({ cases }) => {
                       <SwiperSlide key={slide._id} className="swiper-slide">
                         {/* -----------------ddddd------ */}
 
-                        <div className="content">
-                          <div className="img">
-                            <span className="imgio">
-                              <span
-                                className="wow cimgio animated"
-                                data-delay="500"
-                                style={{ visibility: "visible" }}
-                              ></span>
-                              <Image
-                                className="imgzbbi"
-                                src={imageBuilder(slide?.coverImage)?.url()}
-                                alt=""
-                                width={1000}
-                                height={600}
-                              />
-                            </span>
-                          </div>
-                          <div className="cont">
-                            <h6>
-                              <Link href={`/cases/${slide.slug}`}>
-                                <a>{slide.title}</a>
-                              </Link>
-                            </h6>
-                            <h4>
-                              <Link href={`/cases/${slide.slug}`}>
-                                <a>{slide.title}</a>
-                              </Link>
-                            </h4>
-                          </div>
-                        </div>
-
+                        <Link href={`/cases/${slide.slug}`}>
+                          <a style={{ color: "none" }}>
+                            <div className="content">
+                              <div className="img">
+                                <span className="imgio">
+                                  <span
+                                    className="wow cimgio animated"
+                                    data-delay="500"
+                                    style={{ visibility: "visible" }}
+                                  ></span>
+                                  <Image
+                                    className="imgzbbi"
+                                    src={imageBuilder(slide?.coverImage)?.url()}
+                                    alt=""
+                                    width={1000}
+                                    height={600}
+                                  />
+                                </span>
+                              </div>
+                              <div className="cont">
+                                <h6>{slide.title}</h6>
+                                <h4>{slide.title}</h4>
+                              </div>
+                            </div>
+                          </a>
+                        </Link>
                         {/* -----------------ddddd------ */}
                       </SwiperSlide>
                     )

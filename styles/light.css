@@ -338,14 +338,14 @@
   transition: all 0.5s;
 }
 
-.work-carousel2 .content .cont {
+.work-carousel2 a .content .cont {
   position: absolute;
   bottom: 40px;
   left: 40px;
   color: #fff;
 }
 
-.work-carousel2 .content .cont h6 {
+.work-carousel2 a .content .cont h6 {
   font-size: 13px;
   font-weight: 500;
   text-transform: uppercase;
@@ -359,14 +359,16 @@
   -webkit-transition: all 0.7s;
   -o-transition: all 0.7s;
   transition: all 0.7s;
+  color: white;
   -webkit-transition-delay: 0.5s;
   -o-transition-delay: 0.5s;
   transition-delay: 0.5s;
 }
 
-.work-carousel2 .content .cont h4 {
+.work-carousel2 a .content .cont h4 {
   font-weight: 600;
   opacity: 0;
+  color: white;
   visibility: hidden;
   -webkit-transform: translateY(20px);
   -ms-transform: translateY(20px);
