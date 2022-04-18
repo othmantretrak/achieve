@@ -18,16 +18,16 @@ function Services1({ sitInfo, faqs, services, faqCategories }) {
       <div className="page-content bg-gray">
         <Banner2 name="Diensten" />
         <AllServices services={services} />
-      </div>
-      <div className="container diensten-container">
-        <div className="section-head style-3 text-center">
-          <h2 className="title">Veelgestelde vragen</h2>
-          <div className="dlab-separator style-2 bg-primary"></div>
+        <div className="container diensten-container">
+          <div className="section-head style-3 text-center">
+            <h2 className="title">Veelgestelde vragen</h2>
+            <div className="dlab-separator style-2 bg-primary"></div>
+          </div>
+          <Faq3 categories={faqCategories} faqs={faqs} />
+          {/* <Accordion_sm faqs={faqs} />  */}
         </div>
-        <Faq3 categories={faqCategories} faqs={faqs} />
-        {/* <Accordion_sm faqs={faqs} />  */}
+        <Cta />
       </div>
-      <Cta />
     </>
   );
 }
