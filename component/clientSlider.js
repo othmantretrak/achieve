@@ -10,6 +10,8 @@ function ClientSlider({ companies }) {
     autoplay: true,
     speed: 2000,
     arrows: false,
+    swipe: true,
+    swipeToSlide: true,
     adaptiveHeight: true,
     responsive: [
       {

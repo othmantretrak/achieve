@@ -1,4 +1,3 @@
-import Footer from "../layout/footer";
 import AllServices from "../element/all-services";
 import {
   getAllFaq,
@@ -7,9 +6,7 @@ import {
   getAllSiteInfo,
 } from "../lib/api";
 import Banner2 from "../element/banner2";
-import Header from "../layout/header";
 import Cta from "../element/cta";
-import Accordion_sm from "../element/accordion_sm";
 import Faq3 from "../component/faq3";
 
 function Services1({ sitInfo, faqs, services, faqCategories }) {
@@ -24,7 +21,6 @@ function Services1({ sitInfo, faqs, services, faqCategories }) {
             <div className="dlab-separator style-2 bg-primary"></div>
           </div>
           <Faq3 categories={faqCategories} faqs={faqs} />
-          {/* <Accordion_sm faqs={faqs} />  */}
         </div>
         <Cta />
       </div>

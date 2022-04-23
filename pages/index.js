@@ -2,23 +2,18 @@ import { useEffect } from "react";
 import AboutUs from "../element/aboutUs";
 import Clients from "../element/clients";
 import Cta from "../element/cta";
-import Accordion_sm from "../element/accordion_sm";
 import Service from "../element/service";
 import Slider1 from "../element/slider-1";
 import Testimonial2 from "../element/testimonial-2";
-import Footer from "../layout/footer";
-import Header from "../layout/header";
 import initIsotope from "../common/initIsotope";
 import Head from "next/head";
 import PricingT4 from "../component/pricingTable-4";
-//import Works1 from "../components/Works1";
 import {
   getAllCases,
   getAllCategories,
   getAllCompanies,
   getAllFaq,
   getAllFaqCategories,
-  getAllPostsForHome,
   getAllPrice,
   getAllServices,
   getAllSiteInfo,
@@ -31,8 +26,6 @@ import Layout from "../layout/Layout";
 function Home({
   testimonials,
   faqs,
-  sitInfo,
-  categories,
   cases,
   faqCategories,
   prices,
@@ -51,8 +44,6 @@ function Home({
   return (
     <>
       <Head>
-        {/* <link rel="stylesheet" href="/assets/css/style.css" /> */}
-        {/* <link rel="stylesheet" href="/assets/css/style.css" /> */}
         <title>
           Achieve – Groeien op basis van data en de kracht van creativiteit.
         </title>
@@ -60,19 +51,11 @@ function Home({
       <Layout>
         <div className="page-content homepage-container bg-gray" id="top">
           <Slider1 />
-          {/*  <Slider2 />
-        <Slider3 /> */}
           <Clients companies={companies} />
           <AboutUs />
           <Service services={services} />
-          {/* <Counter /> */}
-          {/* <Features /> */}
           <Works cases={cases} />
-          {/*  <Projects3 categories={categories} cases={cases} /> */}
-          {/* <Team /> */}
-          {/* <Pricing /> */}
           <PricingT4 prices={prices} />
-          {/* <Newsletter /> */}
           <Testimonial2 testimonials={testimonials} />
           <div className="container homepagefaq-container bg-gray">
             <div className="section-head style-3 text-center">
@@ -80,17 +63,9 @@ function Home({
               <div className="dlab-separator style-2 bg-primary"></div>
             </div>
             <Faq3 categories={faqCategories} faqs={faqs} />
-            {/* <Accordion_sm faqs={faqs} /> */}
           </div>
-          {/* <Blog /> */}
-          {/* <Quote3 /> */}
           <Cta />
         </div>
-        {/* <googleMap isMarkerShown /> */}
-        {/*  <googleMap
-        containerElement={<div style={{ height: `400px` }} />}
-        mapElement={<div style={{ height: `100%` }} />}
-      /> */}
       </Layout>
     </>
   );
@@ -106,7 +81,6 @@ export async function getStaticProps({ preview = false }) {
   const team = await getAllTeams(preview);
   const services = await getAllServices(preview);
   const companies = await getAllCompanies(preview);
-  //console.log({ team });
   return {
     props: {
       testimonials,
