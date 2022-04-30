@@ -24,7 +24,7 @@ function AboutUs() {
                 {/* <h6 className="sub-title bgl-primary m-b20 text-primary">
                   About Us
                 </h6> */}
-                <h2 className="title">Hallo! wij zijn Achieve.</h2>
+                <h2 className="title">Hallo! Wij zijn Achieve.</h2>
               </div>
               <p>
                 Achieve is een digital agency bestaande uit een kleine groep

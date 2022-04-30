@@ -40,7 +40,7 @@ function AboutUs1({ sitInfo, team, testimonials }) {
                   {/* <h6 className="sub-title bgl-primary m-b20 text-primary">
                     Over ons
                   </h6> */}
-                  <h2 className="title">Hallo! wij zijn achieve.</h2>
+                  <h2 className="title">Hallo! Wij zijn Achieve.</h2>
                 </div>
                 <p>
                   Achieve is een digital agency bestaande uit een kleine groep

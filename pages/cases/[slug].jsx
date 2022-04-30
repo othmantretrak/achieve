@@ -53,11 +53,14 @@ function CaseDetails({ sitInfo, post }) {
                   />
                 </div>
                 <div className="dlab-content">
-                  <div className="m-b40">
-                    <PostBody content={post?.body} />
-                  </div>
+                  {/* <div className="m-b40">
+                    <PostBody content={post[0]?.body} />
+                  </div> */}
                   <div className="row">
                     <div className="col-lg-6">
+                      <PostBody content={post[0]?.body} />
+                    </div>
+                    {/* <div className="col-lg-6">
                       <h3>How You Start Web Development ?</h3>
                       <p>
                         Lorem Ipsum is simply dummy text of the printing and
@@ -90,7 +93,7 @@ function CaseDetails({ sitInfo, post }) {
                           industry.
                         </li>
                       </ul>
-                    </div>
+                    </div> */}
                     <div className="col-lg-6">
                       <div className="video-bx style-3">
                         <Image
@@ -139,7 +142,7 @@ export async function getStaticProps({ params }) {
   const sitInfo = await getAllSiteInfo();
   const post = await getOneCase(params?.slug);
   //console.log(`Building slug: ${params?.slug}`);
-  //console.log(`Building case: ${post}`);
+  console.log(`Building case: ${post}`);
 
   if (!post) {
     return {
