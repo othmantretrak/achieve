@@ -1,7 +1,8 @@
 .extra-nav .btn-corner {
   border-radius: 10px;
   color: white;
-  background-color: #8639fa;
+  /* background-color: #8639fa; */
+  background-image: var(--gradient);
   vertical-align: middle;
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
@@ -18,11 +19,13 @@
 .extra-nav .btn-corner:hover,
 .extra-nav .btn-corner:active {
   color: #8639fa;
+  background-image: none;
   background-color: white;
   transform: scale(1.1);
   transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
 }
 .contact-btn .btn-corner:hover {
+  /* background-image: none; */
   color: #8639fa;
   background-color: white;
 }
@@ -308,7 +311,7 @@ sup {
   color: #080a3c;
 }
 .single-pricing-table .custom-box .default-btn {
-  background-color: #8639fa;
+  background-image: var(--gradient);
   display: flex;
   width: 200px;
   margin-left: -50px;
@@ -373,7 +376,7 @@ sup {
 }
 .pricing-list-tab .tabs li.current span {
   color: #fff;
-  background-color: #8639fa;
+  background-image: var(--gradient);
 }
 /* .pricing-list-tab .tabs li:last-child span {
   border-radius: 0 30px 30px 0;
@@ -452,7 +455,7 @@ sup {
 }
 .color-1.bg-hover:hover::after,
 .color-1.bg-hover.active::after {
-  background-color: #be63f9;
+  background-image: var(--gradient);
 }
 .bg-hover.hover-bottom::after {
   bottom: 0;
@@ -869,7 +872,7 @@ span.imgio > img {
 }
 
 .contact-btn.custom-box span {
-  background-color: #8639fa;
+  background-image: var(--gradient);
   top: 26px;
   left: 250px;
 }
