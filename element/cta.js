@@ -6,7 +6,8 @@ function Cta() {
     <>
       <section
         style={{
-          backgroundImage: "url(images/background/bg5.jpg)",
+          backgroundImage:
+            "url(https://res.cloudinary.com/tretrak/image/upload/v1651464694/achieve/bg5_wxvbja.jpg)",
           backgroundSize: "cover",
         }}
         className="content-inner pt-5"

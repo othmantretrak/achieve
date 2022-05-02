@@ -9,17 +9,24 @@ function Banner2({ name }) {
       <div
         className="banner-one"
         style={{
-          backgroundImage: "url(../images/main-slider/slider1/pic2.png)",
+          backgroundImage:
+            "url(https://res.cloudinary.com/tretrak/image/upload/v1651464605/achieve/pic2_eyr13d.png)",
           height: "210px",
         }}
       >
         <div className="container">
           <div className="banner-inner">
             <div className="img1">
-              <img src="../images/main-slider/slider1/pic3.png" alt="" />
+              <img
+                src="https://res.cloudinary.com/tretrak/image/upload/v1651464604/achieve/pic3_dcdbdc.png"
+                alt=""
+              />
             </div>
             <div className="img2">
-              <img src="../images/main-slider/slider1/pic4.png" alt="" />
+              <img
+                src="https://res.cloudinary.com/tretrak/image/upload/v1651464604/achieve/pic4_x8fin9.png"
+                alt=""
+              />
             </div>
             <div className="dlab-bnr-inr-entry">
               <h1>{name}</h1>
@@ -42,10 +49,16 @@ function Banner2({ name }) {
         </div>
 
         <div className="shape19">
-          <img src="../images/shape/shape18.png" alt="image" />
+          <img
+            src="https://res.cloudinary.com/tretrak/image/upload/v1651464334/achieve/shape18_xykoos.png"
+            alt="image"
+          />
         </div>
         <div className="shape22">
-          <img src="../images/shape/shape21.png" alt="image" />
+          <img
+            src="https://res.cloudinary.com/tretrak/image/upload/v1651464334/achieve/shape21_l90uqd.png"
+            alt="image"
+          />
         </div>
         <div className="shape23">
           <img
@@ -54,10 +67,16 @@ function Banner2({ name }) {
           />
         </div>
         <div className="shape24">
-          <img src="/images/shape/shape23.png" alt="image" />
+          <img
+            src="https://res.cloudinary.com/tretrak/image/upload/v1651464334/achieve/shape23_ygdtix.png"
+            alt="image"
+          />
         </div>
         <div className="shape26">
-          <img src="/images/shape/shape25.png" alt="image" />
+          <img
+            src="https://res.cloudinary.com/tretrak/image/upload/v1651464334/achieve/shape25_k6db7h.png"
+            alt="image"
+          />
         </div>
       </div>
     </>

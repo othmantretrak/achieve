@@ -14,7 +14,10 @@ function Footer({ sitInfo }) {
       <footer
         className="site-footer style-1"
         id="footer"
-        style={{ backgroundImage: "url(../images/background/bg10.png)" }}
+        style={{
+          backgroundImage:
+            "url(https://res.cloudinary.com/tretrak/image/upload/v1651468026/achieve/bg10_qtoqh2.png)",
+        }}
       >
         <div className="footer-top">
           <div className="container">

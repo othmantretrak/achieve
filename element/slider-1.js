@@ -7,15 +7,24 @@ function Slider1() {
     <>
       <div
         className="banner-one"
-        style={{ backgroundImage: "url(images/main-slider/slider1/pic2.png)" }}
+        style={{
+          backgroundImage:
+            "url(https://res.cloudinary.com/tretrak/image/upload/v1651464605/achieve/pic2_eyr13d.png)",
+        }}
       >
         <div className="container">
           <div className="banner-inner">
             <div className="img1">
-              <img src="images/main-slider/slider1/pic3.png" alt="" />
+              <img
+                src="https://res.cloudinary.com/tretrak/image/upload/v1651464604/achieve/pic3_dcdbdc.png"
+                alt=""
+              />
             </div>
             <div className="img2">
-              <img src="images/main-slider/slider1/pic4.png" alt="" />
+              <img
+                src="https://res.cloudinary.com/tretrak/image/upload/v1651464604/achieve/pic4_x8fin9.png"
+                alt=""
+              />
             </div>
             <div className="row align-items-center">
               <div className="col-md-6">
@@ -72,8 +81,16 @@ function Slider1() {
                   data-wow-duration="1.6s"
                   data-wow-delay="0.8s"
                 >
-                  <img className="move-1" src="images/move/pic1.png" alt="" />
-                  <img className="move-2" src="images/move/pic2.png" alt="" />
+                  <img
+                    className="move-1"
+                    src="https://res.cloudinary.com/tretrak/image/upload/v1651464519/achieve/pic1_gbggfi.png"
+                    alt=""
+                  />
+                  <img
+                    className="move-2"
+                    src="https://res.cloudinary.com/tretrak/image/upload/v1651464519/achieve/pic2_n14ugc.png"
+                    alt=""
+                  />
                 </div>
               </div>
             </div>
@@ -81,10 +98,16 @@ function Slider1() {
         </div>
 
         <div className="shape19">
-          <img src="/images/shape/shape18.png" alt="image" />
+          <img
+            src="https://res.cloudinary.com/tretrak/image/upload/v1651464334/achieve/shape18_xykoos.png"
+            alt="image"
+          />
         </div>
         <div className="shape22">
-          <img src="/images/shape/shape21.png" alt="image" />
+          <img
+            src="https://res.cloudinary.com/tretrak/image/upload/v1651464334/achieve/shape21_l90uqd.png"
+            alt="image"
+          />
         </div>
         <div className="shape23">
           <img
@@ -93,10 +116,16 @@ function Slider1() {
           />
         </div>
         <div className="shape24">
-          <img src="/images/shape/shape23.png" alt="image" />
+          <img
+            src="https://res.cloudinary.com/tretrak/image/upload/v1651464334/achieve/shape23_ygdtix.png"
+            alt="image"
+          />
         </div>
         <div className="shape26">
-          <img src="/images/shape/shape25.png" alt="image" />
+          <img
+            src="https://res.cloudinary.com/tretrak/image/upload/v1651464334/achieve/shape25_k6db7h.png"
+            alt="image"
+          />
         </div>
       </div>
     </>

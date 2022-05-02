@@ -22,13 +22,13 @@ function CaseDetails({ sitInfo, post }) {
   }
   //console.log(post);
 
-  const getIdYoutube = () => {
+  const getIdYoutube = (ytb) => {
     let regex =
       /(youtu.*be.*)\/(watch\?v=|embed\/|v|shorts|)(.*?((?=[&#?])|$))/gm;
-    return regex.exec(post[0].youtube)[3];
+    return regex.exec(ytb)[3];
   };
 
-  console.log({ youtubeId: getIdYoutube(post[0].youtube) });
+  //console.log({ youtubeId: getIdYoutube(post[0].youtube) });
   return (
     <>
       <div className="page-content bg-white case-details">
@@ -39,7 +39,10 @@ function CaseDetails({ sitInfo, post }) {
         {/* <!-- Services Details --> */}
         <section
           className="content-inner-2 case-details"
-          style={{ backgroundImage: "url(../images/background/bg1.png)" }}
+          style={{
+            backgroundImage:
+              "url(https://res.cloudinary.com/tretrak/image/upload/v1651468156/achieve/bg1_st0d5t.png)",
+          }}
         >
           <div className="container">
             <div className="row">
@@ -50,6 +53,7 @@ function CaseDetails({ sitInfo, post }) {
                     alt=""
                     width="1000"
                     height="600"
+                    className="rounded-md"
                   />
                 </div>
                 <div className="dlab-content">
@@ -57,71 +61,43 @@ function CaseDetails({ sitInfo, post }) {
                     <PostBody content={post[0]?.body} />
                   </div> */}
                   <div className="row">
-                    <div className="col-lg-6">
+                    <div className="col-lg-12">
                       <PostBody content={post[0]?.body} />
                     </div>
-                    {/* <div className="col-lg-6">
-                      <h3>How You Start Web Development ?</h3>
-                      <p>
-                        Lorem Ipsum is simply dummy text of the printing and
-                        typesetting industry. Lorem Ipsum has been the industry
-                        standard dummy text ever since the 1500s, when an
-                        unknown printer took a galley.
-                      </p>
-                      <ul className="list-arrow primary m-b30">
-                        <li>
-                          Lorem Ipsum is simply dummy text of the printing.
-                        </li>
-                        <li>
-                          Lorem Ipsum has been the industry standard dummy text
-                          ever.
-                        </li>
-                        <li>
-                          when an unknown printer took a galley of type and
-                          scrambled.
-                        </li>
-                        <li>
-                          It has survived not only five centuries, but also the
-                          leap.
-                        </li>
-                        <li>
-                          Recently with desktop publishing software like Aldus
-                          PageMaker.
-                        </li>
-                        <li>
-                          Lorem Ipsum is simply dummy text of the printing
-                          industry.
-                        </li>
-                      </ul>
-                    </div> */}
-                    <div className="col-lg-6">
-                      <div className="video-bx style-3">
-                        <Image
-                          src={imageBuilder(post[0]?.coverImage)?.url()}
-                          alt=""
-                          width="1000"
-                          height="600"
-                        />
-                        <div className="video-btn">
-                          <a
-                            href="#"
-                            className="popup-youtube"
-                            onClick={() => setOpen(true)}
-                          >
-                            <i className="flaticon-play"></i>
-                          </a>
+                  </div>
+                  <div className="justify-content-center my-4 row">
+                    {post[0]?.youtube &&
+                      post[0]?.youtube.split(",").map((t) => (
+                        <div key={t} className="w-50">
+                          <div className="video-bx style-3">
+                            <Image
+                              src={imageBuilder(post[0]?.coverImage)?.url()}
+                              alt=""
+                              width="1000"
+                              height="600"
+                            />
+                            <div className="video-btn">
+                              <a
+                                href="#"
+                                className="popup-youtube"
+                                onClick={() => setOpen(true)}
+                              >
+                                <i className="flaticon-play"></i>
+                              </a>
+                            </div>
+                            {typeof window !== "undefined" &&
+                              post[0]?.youtube && (
+                                <ModalVideo
+                                  channel="youtube"
+                                  autoplay
+                                  isOpen={isOpen}
+                                  videoId={getIdYoutube(t)}
+                                  onClose={() => setOpen(false)}
+                                />
+                              )}
+                          </div>
                         </div>
-                        {typeof window !== "undefined" && (
-                          <ModalVideo
-                            channel="youtube"
-                            autoplay
-                            isOpen={isOpen}
-                            videoId={getIdYoutube()}
-                            onClose={() => setOpen(false)}
-                          />
-                        )}
-                      </div>
-                    </div>
+                      ))}
                   </div>
                 </div>
               </div>

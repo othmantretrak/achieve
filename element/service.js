@@ -10,7 +10,10 @@ function Service({ services }) {
       {/* <!-- Service --> */}
       <section
         className="content-inner wow fadeInU"
-        style={{ backgroundImage: "url(images/background/bg1.png)" }}
+        style={{
+          backgroundImage:
+            "url(https://res.cloudinary.com/tretrak/image/upload/v1651468156/achieve/bg1_st0d5t.png)",
+        }}
       >
         <div className="container">
           <div className="section-head style-3 text-center">

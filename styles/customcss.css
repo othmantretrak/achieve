@@ -900,6 +900,14 @@ span.imgio > img {
   .dlab-content .video-bx.style-3 {
     height: auto;
   }
+  .video-bx.style-3 .video-btn .popup-youtube {
+    width: 50px;
+    height: 50px;
+    font-size: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 .diensten-container {
 }
