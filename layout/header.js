@@ -32,11 +32,9 @@ function Header({ sitInfo }) {
               <div className="logo-header mostion logo-dark">
                 <Link href="/">
                   <a>
-                    <Image
+                    <img
                       src={imageBuilder(sitInfo[0]?.blackLogo)?.url()}
-                      alt="zbbi"
-                      width="376"
-                      height="123"
+                      alt="logo"
                     />
                   </a>
                 </Link>

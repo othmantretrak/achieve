@@ -37,7 +37,7 @@ const Works = ({ cases }) => {
                 className="swiper-wrapper"
                 slidesPerView={2}
                 autoHeight
-                calculateHeight
+                calculateheight="true"
                 centeredSlides={true}
                 autoplay={{ delay: 2000 }}
                 loop={true}

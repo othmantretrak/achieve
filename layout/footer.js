@@ -30,11 +30,9 @@ function Footer({ sitInfo }) {
                 <div className="col-xl-6 col-md-4">
                   <div className="footer-logo">
                     <a>
-                      <Image
-                        src={imageBuilder(sitInfo[0]?.blackLogo)?.url()}
-                        alt="zbbi"
-                        width="376"
-                        height="123"
+                      <img
+                        src={imageBuilder(sitInfo[0]?.whiteLogo)?.url()}
+                        alt="logo"
                       />
                     </a>
                   </div>
@@ -88,7 +86,8 @@ function Footer({ sitInfo }) {
                   {/*  <h5 className="footer-title">About Us</h5> */}
                   <p>
                     ‘’What the mind can conceive and believe it can achieve.’’
-                    <p>- Napoleon Hill</p>
+                    <br />
+                    <span>- Napoleon Hill</span>
                   </p>
                   <div className="dlab-social-icon">
                     <ul>

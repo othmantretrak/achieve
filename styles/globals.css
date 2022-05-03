@@ -127,13 +127,7 @@ html {
 .main-bar-wraper.is-fixed .custom-logo-white {
   display: none;
 }
-.logo-dark img,
-.footer-logo img {
-  filter: invert(1);
-}
-.text-black .logo-dark img {
-  filter: none;
-}
+
 /* ====================== [ Start Preloader ] ====================== */
 .pace {
   pointer-events: none;
