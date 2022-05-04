@@ -65,10 +65,10 @@ function CaseDetails({ sitInfo, post }) {
                       <PostBody content={post[0]?.body} />
                     </div>
                   </div>
-                  <div className="justify-content-center my-4 row">
+                  <div className="justify-content-center my-4 row videos-gallery">
                     {post[0]?.youtube &&
                       post[0]?.youtube.split(",").map((t) => (
-                        <div key={t} className="w-50">
+                        <div key={t} className="col-md-6 p-2">
                           <div className="video-bx style-3">
                             <Image
                               src={imageBuilder(post[0]?.coverImage)?.url()}
