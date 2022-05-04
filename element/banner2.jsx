@@ -48,12 +48,6 @@ function Banner2({ name }) {
           </div>
         </div>
 
-        <div className="shape19">
-          <img
-            src="https://res.cloudinary.com/tretrak/image/upload/v1651464334/achieve/shape18_xykoos.png"
-            alt="image"
-          />
-        </div>
         <div className="shape22">
           <img
             src="https://res.cloudinary.com/tretrak/image/upload/v1651464334/achieve/shape21_l90uqd.png"

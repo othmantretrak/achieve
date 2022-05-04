@@ -71,24 +71,28 @@ function Header({ sitInfo }) {
                 <div className="logo-header">
                   <Link href="/">
                     <a>
-                      <Image
+                      <img
                         src={imageBuilder(sitInfo[0]?.blackLogo)?.url()}
-                        alt="zbbi"
-                        width="376"
-                        height="123"
+                        alt="logo"
                       />
                     </a>
                   </Link>
                 </div>
                 <ul className="nav navbar-nav navbar">
-                  <li>
+                  <li
+                    onClick={() => setShow(false)}
+                    className={`${open === "home" ? "open" : ""}`}
+                  >
                     <Link href="/">
                       <a className={router.pathname == "/" ? "active" : ""}>
                         Home
                       </a>
                     </Link>
                   </li>
-                  <li className={`${open === "services" ? "open" : ""}`}>
+                  <li
+                    onClick={() => setShow(false)}
+                    className={`${open === "services" ? "open" : ""}`}
+                  >
                     <Link href="/over-ons">
                       <a
                         className={
@@ -99,7 +103,10 @@ function Header({ sitInfo }) {
                       </a>
                     </Link>
                   </li>
-                  <li className={`${open === "services" ? "open" : ""}`}>
+                  <li
+                    onClick={() => setShow(false)}
+                    className={`${open === "services" ? "open" : ""}`}
+                  >
                     <Link href="/diensten">
                       <a
                         className={
@@ -110,7 +117,10 @@ function Header({ sitInfo }) {
                       </a>
                     </Link>
                   </li>
-                  <li className={`${open === "services" ? "open" : ""}`}>
+                  <li
+                    onClick={() => setShow(false)}
+                    className={`${open === "services" ? "open" : ""}`}
+                  >
                     <Link href="/cases">
                       <a
                         className={router.pathname == "/cases" ? "active" : ""}
@@ -119,7 +129,10 @@ function Header({ sitInfo }) {
                       </a>
                     </Link>
                   </li>
-                  <li className={`${open === "services" ? "open" : ""}`}>
+                  <li
+                    onClick={() => setShow(false)}
+                    className={`${open === "services" ? "open" : ""}`}
+                  >
                     <Link href="/tarieven">
                       <a
                         className={
@@ -131,7 +144,10 @@ function Header({ sitInfo }) {
                     </Link>
                   </li>
 
-                  <li>
+                  <li
+                    onClick={() => setShow(false)}
+                    className={`${open === "contact" ? "open" : ""}`}
+                  >
                     <Link href="/contact">
                       <a
                         className={

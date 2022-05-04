@@ -31,6 +31,7 @@ const LoadingScreen = () => {
       </div>
       {showLoading === true ? (
         <Script
+          restartOnRequestAfter="false"
           id="pace"
           strategy="beforeInteractive"
           src="/assets/js/pace.min.js"

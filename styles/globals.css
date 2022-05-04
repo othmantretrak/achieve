@@ -151,7 +151,7 @@ html {
   -o-transition: all 1s;
   transition: all 1s;
 }
-.pace .pace-progress {
+.pace-inactive .pace-progress {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   max-width: 300px;
