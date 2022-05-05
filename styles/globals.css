@@ -151,7 +151,7 @@ html {
   -o-transition: all 1s;
   transition: all 1s;
 }
-.pace-inactive .pace-progress {
+.pace .pace-progress {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   max-width: 300px;
@@ -189,7 +189,7 @@ html {
   left: 0;
   height: 50vh;
   width: 100%;
-  background: #151515;
+  background: #5f3bff;
   -webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
   -o-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
   transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);

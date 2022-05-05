@@ -14,7 +14,7 @@ export function AuthProvider({ children }) {
     if (showLoading) {
       setTimeout(() => {
         setLoading(false);
-      }, 1000);
+      }, 4000);
     }
   }, [showLoading]);
 
@@ -22,7 +22,7 @@ export function AuthProvider({ children }) {
     showLoading,
   };
 
-  useEffect(() => {
+  /* useEffect(() => {
     let bodyEl = document.querySelector("body");
     let paceEl = document.querySelector(".pace");
     console.log("log from useeffect befor cheak");
@@ -34,7 +34,7 @@ export function AuthProvider({ children }) {
       elem.parentElement.removeChild(elem);
       paceEl.classList.add("hideX");
     }
-  }, []);
+  }, []); */
 
   return (
     <AuthContext.Provider value={value}>

@@ -26,12 +26,11 @@ const LoadingScreen = () => {
     <>
       <div className={`${showLoading === true ? "showX" : "hideX"}`}>
         <div id="preloader">
-          <div className="loading-text">Loading</div>
+          <div className="loading-text">bezig met laden</div>
         </div>
       </div>
       {showLoading === true ? (
         <Script
-          restartOnRequestAfter="false"
           id="pace"
           strategy="beforeInteractive"
           src="/assets/js/pace.min.js"
