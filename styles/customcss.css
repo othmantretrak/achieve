@@ -804,17 +804,7 @@ span.imgio > img {
     position: relative;
     overflow-x: auto;
   }
-  #__next
-    > div
-    > div
-    > section
-    > div
-    > div:nth-child(3)
-    > div
-    > table
-    > tbody
-    > tr
-    th {
+  .table.single-pricing-table > tbody > tr th {
     position: sticky;
     width: 200px;
     top: 0;
@@ -822,30 +812,15 @@ span.imgio > img {
     background-color: white;
     z-index: 5;
   }
-  /* .table.single-pricing-table tr td {
-    padding: 15px 0px;
-    max-width: 98px;
-    font-size: 0.8rem;
+
+  .table.single-pricing-table tr th.pricing-features.jouw {
+    position: sticky;
+    width: 200px;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 5;
   }
-  .single-pricing-table .custom-box .default-btn {
-    font-size: 0.7rem;
-    padding: 2px 2px;
-    width: 70px;
-    height: 59px;
-    flex-direction: column;
-    align-items: center;
-  }
-  .single-pricing-table .wrap-service svg {
-    width: 15px;
-    height: 15px;
-    padding: 0px;
-    margin-right: 3px;
-  }
-  .single-pricing-table .custom-box .default-btn p {
-    white-space: inherit;
-    margin-bottom: 0;
-    text-align: center;
-  }*/
 }
 .header-nav .dlab-social-icon a {
   margin-right: 19px;
@@ -940,4 +915,12 @@ footer .widget_about {
   }
 }
 .videos-gallery {
+}
+.case-details-test h1 {
+  color: var(--primary);
+  font-size: 3rem;
+}
+.case-details-test ul li i {
+  color: var(--primary);
+  margin-right: 5px;
 }

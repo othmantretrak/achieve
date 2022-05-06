@@ -58,7 +58,7 @@ function TablePrice({ service, tab }) {
         <table className=" single-pricing-table table">
           <thead>
             <tr className="">
-              <th className="pricing-features" scope="col">
+              <th className="pricing-features jouw" scope="col">
                 <h3>Kies jouw pakket</h3>
               </th>
               <th className="pricing-features" scope="col">

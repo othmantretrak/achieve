@@ -220,14 +220,14 @@ html {
 .loading-text {
   font-weight: 300;
   text-transform: uppercase;
-  letter-spacing: 10px;
+  /* letter-spacing: 10px; */
   position: absolute;
   top: calc(50% - 30px);
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  color: #c5a47e;
+  color: #ffffff;
   font-family: "Teko", sans-serif;
   z-index: 9999;
 }
