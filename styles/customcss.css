@@ -916,6 +916,7 @@ footer .widget_about {
 }
 .videos-gallery {
 }
+/* ------------ case details---------------- */
 .case-details-test h1 {
   color: var(--primary);
   font-size: 3rem;
@@ -923,4 +924,38 @@ footer .widget_about {
 .case-details-test ul li i {
   color: var(--primary);
   margin-right: 5px;
+}
+.textwrapper {
+  top: 50%;
+  background-color: white;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+}
+.textwrapper:after {
+  font-family: "Flaticon";
+  top: 10px;
+  content: "\f121";
+  right: 30px;
+  font-size: 70px;
+  color: #8639fa;
+}
+.padding-top-100px {
+  padding-top: 100px;
+}
+@media only screen and (max-width: 767px) {
+  .textwrapper {
+    width: 270px;
+  }
+  .textwrapper p {
+    font-size: 11px;
+  }
+  .textwrapper h6 {
+    font-size: 11px;
+  }
+  .textwrapper:after {
+    font-size: 30px;
+  }
 }

@@ -3,7 +3,7 @@ import { PortableText } from "@portabletext/react";
 
 function Accordion_sm({ faqs }) {
   const [activeDefault, setActiveDefault] = useState(1000);
-
+  console.log(faqs);
   return (
     <>
       <div
@@ -27,16 +27,10 @@ function Accordion_sm({ faqs }) {
                         setActiveDefault(activeDefault === i ? -1 : i)
                       }
                     >
-                      {" "}
                       {d.question}
                     </a>
                   </h5>
                 </div>
-                {/* <div className="collapse show" eventKey={`${i}`}>
-                            <div className="card-body">
-                                <p className="m-b0">{d.text}</p>
-                            </div>
-                        </div> */}
                 <div
                   className={`${
                     activeDefault === i ? "collapsed show" : "collapsed"
@@ -45,8 +39,11 @@ function Accordion_sm({ faqs }) {
                   onClick={() => setActiveDefault(activeDefault === i ? -1 : i)}
                 >
                   <div className="card-body">
-                    {/* <p className="m-b0">{d.answer}</p> */}
-                    <PortableText value={d.answer} />
+                    {Array.isArray(d.answer) ? (
+                      <PortableText value={d.answer} />
+                    ) : (
+                      <p>{d.answer} </p>
+                    )}
                   </div>
                 </div>
               </div>
