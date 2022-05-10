@@ -3,7 +3,7 @@ import { PortableText } from "@portabletext/react";
 
 function Accordion_sm({ faqs }) {
   const [activeDefault, setActiveDefault] = useState(1000);
-  console.log(faqs);
+  //console.log(faqs);
   return (
     <>
       <div

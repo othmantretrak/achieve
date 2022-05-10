@@ -1,29 +1,16 @@
-import Footer from "../../layout/footer";
-import Header from "../../layout/header";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import ModalVideo from "react-modal-video";
 
 import Image from "next/image";
-import AllServices from "../../element/all-services";
-import Link from "next/link";
-import {
-  getAllCases,
-  getAllFaq,
-  getAllFaqCategories,
-  getAllSiteInfo,
-  getOneCase,
-} from "../../lib/api";
-import Banner from "../../element/banner";
+import { getAllCases, getOneCase } from "../../lib/api";
 import Banner2 from "../../element/banner2";
 import { imageBuilder } from "../../lib/sanity";
-import PostBody from "../../component/post-body";
 import Cta from "../../element/cta";
 import Works from "../../component/works";
-import Faq3 from "../../component/faq3";
 import Accordion_sm from "../../element/accordion_sm";
 
-function CaseDetails({ faqs, faqCategories, cases, post }) {
+function CaseDetails({ cases, post }) {
   const [isOpen, setOpen] = useState(false);
   const router = useRouter();
   if (router.isFallback) {
@@ -117,61 +104,38 @@ function CaseDetails({ faqs, faqCategories, cases, post }) {
                 <h2 className="title">Veelgestelde vragen</h2>
                 <div className="dlab-separator style-2 bg-primary"></div>
               </div>
-              <div className="row">
-                <div className="col-md-6 p-3">
-                  <Image
-                    src="https://cdn.sanity.io/images/2v5nba1d/production/fddaf602d7ff151aad2a21a4597e807c41feb1be-1000x600.jpg"
-                    alt=""
-                    width="1000"
-                    height="600"
-                    className="rounded-md"
-                  />
-                </div>
-                <div className="col-md-6 p-3">
-                  <Image
-                    src="https://cdn.sanity.io/images/2v5nba1d/production/fddaf602d7ff151aad2a21a4597e807c41feb1be-1000x600.jpg"
-                    alt=""
-                    width="1000"
-                    height="600"
-                    className="rounded-md"
-                  />
-                </div>
-                <div className="col-md-6 p-3">
-                  <Image
-                    src="https://cdn.sanity.io/images/2v5nba1d/production/fddaf602d7ff151aad2a21a4597e807c41feb1be-1000x600.jpg"
-                    alt=""
-                    width="1000"
-                    height="600"
-                    className="rounded-md"
-                  />
-                </div>
-                <div className="col-md-6 p-3">
-                  <Image
-                    src="https://cdn.sanity.io/images/2v5nba1d/production/fddaf602d7ff151aad2a21a4597e807c41feb1be-1000x600.jpg"
-                    alt=""
-                    width="1000"
-                    height="600"
-                    className="rounded-md"
-                  />
-                </div>
-                <div className="col-md-6 p-3">
-                  <Image
-                    src="https://cdn.sanity.io/images/2v5nba1d/production/fddaf602d7ff151aad2a21a4597e807c41feb1be-1000x600.jpg"
-                    alt=""
-                    width="1000"
-                    height="600"
-                    className="rounded-md"
-                  />
-                </div>
-                <div className="col-md-6 p-3">
-                  <Image
-                    src="https://cdn.sanity.io/images/2v5nba1d/production/fddaf602d7ff151aad2a21a4597e807c41feb1be-1000x600.jpg"
-                    alt=""
-                    width="1000"
-                    height="600"
-                    className="rounded-md"
-                  />
-                </div>
+              <div className="justify-content-center my-4 row videos-gallery">
+                {post[0]?.youtube &&
+                  post[0]?.youtube.split(",").map((t) => (
+                    <div key={t} className="col-md-6 p-2">
+                      <div className="video-bx style-3">
+                        <Image
+                          src={imageBuilder(post[0]?.coverImage)?.url()}
+                          alt=""
+                          width="1000"
+                          height="600"
+                        />
+                        <div className="video-btn">
+                          <a
+                            href="#"
+                            className="popup-youtube"
+                            onClick={() => setOpen(true)}
+                          >
+                            <i className="flaticon-play"></i>
+                          </a>
+                        </div>
+                        {typeof window !== "undefined" && post[0]?.youtube && (
+                          <ModalVideo
+                            channel="youtube"
+                            autoplay
+                            isOpen={isOpen}
+                            videoId={getIdYoutube(t)}
+                            onClose={() => setOpen(false)}
+                          />
+                        )}
+                      </div>
+                    </div>
+                  ))}
               </div>
             </div>
             <div className="section-4 padding-top-100px ">
@@ -223,7 +187,8 @@ export async function getStaticProps({ params }) {
   const cases = await getAllCases();
   const post = await getOneCase(params?.slug);
   //console.log(`Building slug: ${params?.slug}`);
-  console.log(`Building case: ${post}`);
+  let filtredData = cases.filter((d) => d.slug !== params?.slug);
+  console.log(`Building cases: ${filtredData}`);
 
   if (!post) {
     return {
@@ -232,7 +197,7 @@ export async function getStaticProps({ params }) {
   }
   return {
     props: {
-      cases,
+      cases: filtredData,
       post: JSON.parse(JSON.stringify(post)),
     },
     revalidate: 1,
