@@ -3,7 +3,7 @@
 @import url("../icons/flaticon/flaticon.css");
 @import url("../icons/themify/themify-icons.css");
 :root {
-  --gradient: linear-gradient(to right, #8639fa 0, #5f3bff 51%, #8639fa 100%);
+  --gradient: linear-gradient(to right, #8639fa 0, #5f3bff 51%, #5f3bff 100%);
   --gradient-sec: linear-gradient(
     to right,
     #130065 0,
