@@ -3,7 +3,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["cdn.sanity.io", "res.cloudinary.com"],
+    domains: ["cdn.sanity.io", "res.cloudinary.com", "img.youtube.com"],
   },
   plugins: [
     "postcss-flexbugs-fixes",

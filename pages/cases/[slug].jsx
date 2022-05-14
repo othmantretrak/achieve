@@ -11,12 +11,12 @@ import Works from "../../component/works";
 import Accordion_sm from "../../element/accordion_sm";
 
 function CaseDetails({ cases, post }) {
-  const [isOpen, setOpen] = useState(false);
+  const [isOpen, setOpen] = useState("");
   const router = useRouter();
   if (router.isFallback) {
     return <div>Loading...</div>;
   }
-  //console.log(post);
+  //console.log("faq", post[0]?.faq);
   let qst = {
     doelstelling: "De doelstelling",
     strategie: "Onze strategie",
@@ -110,7 +110,9 @@ function CaseDetails({ cases, post }) {
                     <div key={t} className="col-md-6 p-2">
                       <div className="video-bx style-3">
                         <Image
-                          src={imageBuilder(post[0]?.coverImage)?.url()}
+                          src={`https://img.youtube.com/vi/${getIdYoutube(
+                            t
+                          )}/hqdefault.jpg`}
                           alt=""
                           width="1000"
                           height="600"
@@ -119,7 +121,7 @@ function CaseDetails({ cases, post }) {
                           <a
                             href="#"
                             className="popup-youtube"
-                            onClick={() => setOpen(true)}
+                            onClick={() => setOpen(t)}
                           >
                             <i className="flaticon-play"></i>
                           </a>
@@ -128,7 +130,7 @@ function CaseDetails({ cases, post }) {
                           <ModalVideo
                             channel="youtube"
                             autoplay
-                            isOpen={isOpen}
+                            isOpen={isOpen == t}
                             videoId={getIdYoutube(t)}
                             onClose={() => setOpen(false)}
                           />
@@ -164,8 +166,8 @@ function CaseDetails({ cases, post }) {
                     className="mx-auto rounded-md w-75"
                   />
 
-                  <div className="position-absolute textwrapper d-flex">
-                    <div>
+                  <div className="position-absolute textwrapper px-4 d-flex">
+                    <div className="p-4">
                       <h6 className="fa-2x">Zeer tevreden en perfect</h6>
                       <p>{post[0]?.testimonial?.text}</p>
                     </div>
@@ -188,7 +190,7 @@ export async function getStaticProps({ params }) {
   const post = await getOneCase(params?.slug);
   //console.log(`Building slug: ${params?.slug}`);
   let filtredData = cases.filter((d) => d.slug !== params?.slug);
-  console.log(`Building cases: ${filtredData}`);
+  console.log(`Building cases: ${post[0]}`);
 
   if (!post) {
     return {
@@ -205,11 +207,11 @@ export async function getStaticProps({ params }) {
 }
 export const getStaticPaths = async () => {
   const res = await getAllCases();
-  //console.log(res);
+  console.log(res);
   const paths = res.map(
     (post) =>
-      post.coverImage && {
-        params: { slug: post.slug },
+      post?.coverImage && {
+        params: { slug: post?.slug },
       }
   );
   return { paths, fallback: "blocking" };
