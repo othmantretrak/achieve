@@ -11,7 +11,7 @@ import "swiper/css/navigation";
 import "swiper/css/autoplay";
 import { imageBuilder } from "../lib/sanity";
 
-const Works = ({ cases }) => {
+const Works = ({ cases, title }) => {
   SwiperCore.use([Autoplay, Pagination, Navigation]);
   const navigationPrevRef = React.useRef(null);
   const navigationNextRef = React.useRef(null);
@@ -23,7 +23,7 @@ const Works = ({ cases }) => {
           <div className="section-head text-center">
             <div className="row justify-content-center">
               <div className="section-head style-3 text-center">
-                <h2 className="title">Laatst toegevoegde cases</h2>
+                <h2 className="title">{title}</h2>
                 <div className="dlab-separator style-2 bg-primary"></div>
               </div>
             </div>

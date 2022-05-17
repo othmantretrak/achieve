@@ -18,9 +18,9 @@ function CaseDetails({ cases, post }) {
   }
   //console.log("faq", post[0]?.faq);
   let qst = {
-    doelstelling: "De doelstelling",
-    strategie: "Onze strategie",
-    klantvraag: "De klantvraag",
+    aklantvraag: "Klantvraag",
+    bstrategie: "Strategie",
+    doelstelling: "Doelstelling",
   };
   const getIdYoutube = (ytb) => {
     let regex =
@@ -100,7 +100,7 @@ function CaseDetails({ cases, post }) {
             )}
 
             <div className="section-3 padding-top-100px ">
-              <div className="mx-auto pt-5 section-head text-center">
+              <div className="mx-auto section-head text-center">
                 <h2 className="title">Veelgestelde vragen</h2>
                 <div className="dlab-separator style-2 bg-primary"></div>
               </div>
@@ -143,7 +143,7 @@ function CaseDetails({ cases, post }) {
             <div className="section-4 padding-top-100px ">
               <div className="container ">
                 <div className="section-head style-3 text-center">
-                  <h2 className="title">FAQ</h2>
+                  <h2 className="title">Onze aanpak</h2>
                   <div className="dlab-separator style-2 bg-primary"></div>
                 </div>
                 <Accordion_sm faqs={faqsii} />
@@ -151,7 +151,7 @@ function CaseDetails({ cases, post }) {
             </div>
             {post[0]?.testimonial && (
               <div className="section-5 padding-top-100px  testimo">
-                <div className="mx-auto pt-5 section-head text-center">
+                <div className="mx-auto section-head text-center">
                   <h2 className="title">title-5</h2>
                   <div className="dlab-separator style-2 bg-primary"></div>
                 </div>
@@ -166,8 +166,8 @@ function CaseDetails({ cases, post }) {
                     className="mx-auto rounded-md w-75"
                   />
 
-                  <div className="position-absolute textwrapper px-4 d-flex">
-                    <div className="p-4">
+                  <div className="position-absolute textwrapper  d-flex">
+                    <div className="">
                       <h6 className="fa-2x">Zeer tevreden en perfect</h6>
                       <p>{post[0]?.testimonial?.text}</p>
                     </div>
@@ -176,7 +176,7 @@ function CaseDetails({ cases, post }) {
               </div>
             )}
             <div className="section-6 padding-top-100px  works-cases">
-              <Works cases={cases} />
+              <Works cases={cases} title="Bekijk ook andere cases" />
             </div>
           </div>
         </section>

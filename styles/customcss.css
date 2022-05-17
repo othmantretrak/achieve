@@ -932,7 +932,8 @@ footer .widget_about {
   transform: translate(-50%, -50%);
   text-align: center;
   border-radius: 10px;
-  padding: 10px;
+  padding: 30px;
+  width: 60vw;
 }
 .textwrapper:after {
   font-family: "Flaticon";
@@ -946,8 +947,15 @@ footer .widget_about {
   padding-top: 100px;
 }
 @media only screen and (max-width: 767px) {
+  .section-1 {
+    padding-top: 0px;
+  }
+  .video-bx.style-3 {
+    height: auto;
+  }
   .textwrapper {
-    width: 270px;
+    width: 74vw;
+    padding: 13px 11px 0 11px;
   }
   .textwrapper p {
     font-size: 11px;
