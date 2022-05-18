@@ -29,12 +29,14 @@ function Footer({ sitInfo }) {
               <div className="row align-items-center">
                 <div className="col-xl-6 col-md-4">
                   <div className="footer-logo">
-                    <a>
-                      <img
-                        src={imageBuilder(sitInfo[0]?.whiteLogo)?.url()}
-                        alt="logo"
-                      />
-                    </a>
+                    <Link href="/">
+                      <a>
+                        <img
+                          src="https://res.cloudinary.com/tretrak/image/upload/v1652851337/achieve/achieve-logo_njbari.svg"
+                          alt="logo"
+                        />
+                      </a>
+                    </Link>
                   </div>
                 </div>
                 <div className="col-xl-3 col-md-4 col-sm-6">

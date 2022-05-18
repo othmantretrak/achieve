@@ -98,48 +98,50 @@ function CaseDetails({ cases, post }) {
                 </div>
               </div>
             )}
-
-            <div className="section-3 padding-top-100px ">
-              <div className="mx-auto section-head text-center">
-                <h2 className="title">Veelgestelde vragen</h2>
-                <div className="dlab-separator style-2 bg-primary"></div>
-              </div>
-              <div className="justify-content-center my-4 row videos-gallery">
-                {post[0]?.youtube &&
-                  post[0]?.youtube.split(",").map((t) => (
-                    <div key={t} className="col-md-6 p-2">
-                      <div className="video-bx style-3">
-                        <Image
-                          src={`https://img.youtube.com/vi/${getIdYoutube(
-                            t
-                          )}/hqdefault.jpg`}
-                          alt=""
-                          width="1000"
-                          height="600"
-                        />
-                        <div className="video-btn">
-                          <a
-                            href="#"
-                            className="popup-youtube"
-                            onClick={() => setOpen(t)}
-                          >
-                            <i className="flaticon-play"></i>
-                          </a>
-                        </div>
-                        {typeof window !== "undefined" && post[0]?.youtube && (
-                          <ModalVideo
-                            channel="youtube"
-                            autoplay
-                            isOpen={isOpen == t}
-                            videoId={getIdYoutube(t)}
-                            onClose={() => setOpen(false)}
+            {post[0]?.youtube && (
+              <div className="section-3 padding-top-100px ">
+                <div className="mx-auto section-head text-center">
+                  <h2 className="title">Veelgestelde vragen</h2>
+                  <div className="dlab-separator style-2 bg-primary"></div>
+                </div>
+                <div className="justify-content-center my-4 row videos-gallery">
+                  {post[0]?.youtube &&
+                    post[0]?.youtube.split(",").map((t) => (
+                      <div key={t} className="col-md-6 p-2">
+                        <div className="video-bx style-3">
+                          <Image
+                            src={`https://img.youtube.com/vi/${getIdYoutube(
+                              t
+                            )}/hqdefault.jpg`}
+                            alt=""
+                            width="1000"
+                            height="600"
                           />
-                        )}
+                          <div className="video-btn">
+                            <a
+                              href="#"
+                              className="popup-youtube"
+                              onClick={() => setOpen(t)}
+                            >
+                              <i className="flaticon-play"></i>
+                            </a>
+                          </div>
+                          {typeof window !== "undefined" &&
+                            post[0]?.youtube && (
+                              <ModalVideo
+                                channel="youtube"
+                                autoplay
+                                isOpen={isOpen == t}
+                                videoId={getIdYoutube(t)}
+                                onClose={() => setOpen(false)}
+                              />
+                            )}
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                </div>
               </div>
-            </div>
+            )}
             <div className="section-4 padding-top-100px ">
               <div className="container ">
                 <div className="section-head style-3 text-center">
