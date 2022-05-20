@@ -4,6 +4,7 @@ import { useLoader } from "../common/useLoader";
 import { useRouter } from "next/router";
 import Footer from "./footer";
 import Header from "./header";
+import Hot from "../component/iconCompenents/Hot";
 
 function Layout({ children, sitInfo }) {
   const { showLoading } = useLoader();
@@ -44,10 +45,25 @@ function Layout({ children, sitInfo }) {
       paceEl.classList.add("hideX");
     }
   }, []); */
+  const handleIntake = () => {
+    Calendly.initPopupWidget({ url: "https://calendly.com/gratisintake" });
+    return false;
+  };
   return (
     <>
       <Header sitInfo={sitInfo} />
       {children}
+      <div className="extra-nav btn-mobile-nav">
+        <div className="extra-cell">
+          <button
+            onClick={handleIntake}
+            className="btn btn-corner  btn-primary"
+          >
+            <Hot />
+            Gratis intake
+          </button>
+        </div>
+      </div>
       <Footer sitInfo={sitInfo} />
     </>
   );

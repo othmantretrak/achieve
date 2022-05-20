@@ -82,17 +82,17 @@ function CaseDetails({ cases, post }) {
                   <h2 className="title">Wie is de klant?</h2>
                   <div className="dlab-separator style-2 bg-primary"></div>
                 </div>
-                <div className="row">
-                  <div className="col-md-6 p-3">
+                <div className="row caselogo justify-content-center flex-row">
+                  <div className="border-5 logo-img overflow-hidden p-3 rounded-circle">
                     <Image
                       src={imageBuilder(post[0]?.caseLogo)?.url()}
                       alt=""
                       width="300"
                       height="300"
-                      className="rounded-md"
+                      className="p-4"
                     />
                   </div>
-                  <div className="col-md-6 p-3">
+                  <div className="mt-5 text-center w-75 whoclient">
                     <p>{post[0].WhoClient}</p>
                   </div>
                 </div>
@@ -101,7 +101,7 @@ function CaseDetails({ cases, post }) {
             {post[0]?.youtube && (
               <div className="section-3 padding-top-100px ">
                 <div className="mx-auto section-head text-center">
-                  <h2 className="title">Veelgestelde vragen</h2>
+                  <h2 className="title">Het resultaat</h2>
                   <div className="dlab-separator style-2 bg-primary"></div>
                 </div>
                 <div className="justify-content-center my-4 row videos-gallery">
@@ -154,7 +154,7 @@ function CaseDetails({ cases, post }) {
             {post[0]?.testimonial && (
               <div className="section-5 padding-top-100px  testimo">
                 <div className="mx-auto section-head text-center">
-                  <h2 className="title">title-5</h2>
+                  <h2 className="title">De ervaring</h2>
                   <div className="dlab-separator style-2 bg-primary"></div>
                 </div>
                 <div className="d-flex mx-auto position-relative justify-content-center wrapper">

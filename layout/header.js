@@ -39,6 +39,7 @@ function Header({ sitInfo }) {
                   </a>
                 </Link>
               </div>
+
               {/* <!-- Nav Toggle Button --> */}
               <button
                 className={`navbar-toggler collapsed navicon justify-content-end ${
@@ -62,6 +63,7 @@ function Header({ sitInfo }) {
                   </button>
                 </div>
               </div>
+
               <div
                 className={`header-nav navbar-collapse collapse justify-content-end ${
                   show ? "show" : ""
@@ -159,6 +161,7 @@ function Header({ sitInfo }) {
                     </Link>
                   </li>
                 </ul>
+
                 <div className="dlab-social-icon">
                   <ul>
                     <Link href="https://www.facebook.com/achieve.nl/">

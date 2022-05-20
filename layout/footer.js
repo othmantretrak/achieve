@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import Image from "next/image";
 import { imageBuilder } from "../lib/sanity";
+
 function Footer({ sitInfo }) {
   if (!sitInfo) {
     return <></>;
@@ -254,6 +255,7 @@ function Footer({ sitInfo }) {
           </div>
         </div>
       </footer>
+
       {/* <!-- Footer End --> */}
     </>
   );
