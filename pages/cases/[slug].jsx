@@ -170,7 +170,9 @@ function CaseDetails({ cases, post }) {
 
                   <div className="position-absolute textwrapper  d-flex">
                     <div className="">
-                      <h6 className="fa-2x">Zeer tevreden en perfect</h6>
+                      <h6 className="fa-2x">
+                        {post[0]?.testimonial?.testititle}
+                      </h6>
                       <p>{post[0]?.testimonial?.text}</p>
                     </div>
                   </div>
