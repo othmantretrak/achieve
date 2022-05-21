@@ -153,7 +153,7 @@ function CaseDetails({ cases, post }) {
             </div>
             {post[0]?.testimonial && (
               <div className="section-5 padding-top-100px  testimo">
-                <div className="mx-auto section-head text-center">
+                <div className="mx-auto section-head style-3 text-center">
                   <h2 className="title">De ervaring</h2>
                   <div className="dlab-separator style-2 bg-primary"></div>
                 </div>
