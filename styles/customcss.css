@@ -1027,6 +1027,10 @@ footer .widget_about {
       opacity: 1;
     }
   }
+  .footer-logo {
+    margin-left: auto;
+    margin-right: auto;
+  }
   .caselogo .logo-img {
     width: 65%;
   }

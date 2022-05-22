@@ -36,7 +36,7 @@ function CaseDetails({ cases, post }) {
         filtered: true,
       };
     });
-  //console.log({ youtubeId: getIdYoutube(post[0].youtube) });
+  //console.log({ faq: post[0]?.faq });
   return (
     <>
       <div className="page-content bg-white ">
@@ -142,15 +142,17 @@ function CaseDetails({ cases, post }) {
                 </div>
               </div>
             )}
-            <div className="section-4 padding-top-100px ">
-              <div className="container ">
-                <div className="section-head style-3 text-center">
-                  <h2 className="title">Onze aanpak</h2>
-                  <div className="dlab-separator style-2 bg-primary"></div>
+            {post[0]?.faq && (
+              <div className="section-4 padding-top-100px ">
+                <div className="container ">
+                  <div className="section-head style-3 text-center">
+                    <h2 className="title">Onze aanpak</h2>
+                    <div className="dlab-separator style-2 bg-primary"></div>
+                  </div>
+                  <Accordion_sm faqs={faqsii} />
                 </div>
-                <Accordion_sm faqs={faqsii} />
               </div>
-            </div>
+            )}
             {post[0]?.testimonial && (
               <div className="section-5 padding-top-100px  testimo">
                 <div className="mx-auto section-head style-3 text-center">
