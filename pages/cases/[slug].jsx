@@ -153,7 +153,7 @@ function CaseDetails({ cases, post }) {
                 </div>
               </div>
             )}
-            {post[0]?.testimonial && (
+            {post[0]?.testimonial?.testimonialImg && (
               <div className="section-5 padding-top-100px  testimo">
                 <div className="mx-auto section-head style-3 text-center">
                   <h2 className="title">De ervaring</h2>
