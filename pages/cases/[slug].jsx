@@ -112,7 +112,7 @@ function CaseDetails({ cases, post }) {
                           <Image
                             src={`https://img.youtube.com/vi/${getIdYoutube(
                               t
-                            )}/hqdefault.jpg`}
+                            )}/maxresdefault.jpg`}
                             alt=""
                             width="1000"
                             height="600"
