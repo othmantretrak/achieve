@@ -19,7 +19,7 @@ function PricingT4({ prices }) {
       <section className="content-inner pt-100px bg-gray">
         <div className="container">
           <div className="section-head style-3 text-center">
-            <h2 className="title">Onze diensten in de vorm van pakketten</h2>
+            <h2 className="title">Selecteer één van onze diensten</h2>
             <div className="dlab-separator style-2 bg-primary"></div>
           </div>
           <Tabs onclickTab={handleClick} tab={tab} prices={prices} />

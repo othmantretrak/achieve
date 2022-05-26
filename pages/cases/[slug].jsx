@@ -37,6 +37,7 @@ function CaseDetails({ cases, post }) {
       };
     });
   //console.log({ faq: post[0]?.faq });
+  let bgLogoColor = post[0]?.slug == "ayeway" ? "#ffc9ca" : "white";
   return (
     <>
       <div className="page-content bg-white ">
@@ -56,9 +57,9 @@ function CaseDetails({ cases, post }) {
                   <h1>{post[0].title}</h1>
                   <p>{post[0].aboutCase}</p>
                   <h5>Geleverde diensten</h5>
-                  <ul className="d-flex flex-row justify-content-around">
+                  <ul className="">
                     {post[0].GeleverdeDiensten?.split(",").map((x) => (
-                      <li key={x} className="font-13">
+                      <li key={x} className="font-13 list-service">
                         <i className="fa-solid fa-circle-check"></i>
                         <span>{x}</span>
                       </li>
@@ -83,7 +84,14 @@ function CaseDetails({ cases, post }) {
                   <div className="dlab-separator style-2 bg-primary"></div>
                 </div>
                 <div className="row caselogo justify-content-center flex-row">
-                  <div className="border-5 logo-img overflow-hidden p-3 rounded-circle">
+                  <div
+                    className="border-5 logo-img overflow-hidden p-3 rounded-circle"
+                    style={{ backgroundColor: bgLogoColor }}
+                  >
+                    {/*   <img
+                      src={imageBuilder(post[0]?.caseLogo)?.url()}
+                      alt="case logo"
+                    /> */}
                     <Image
                       src={imageBuilder(post[0]?.caseLogo)?.url()}
                       alt=""
@@ -100,7 +108,7 @@ function CaseDetails({ cases, post }) {
             )}
             {post[0]?.youtube && (
               <div className="section-3 padding-top-100px ">
-                <div className="mx-auto section-head text-center">
+                <div className="mx-auto section-head style-3 text-center">
                   <h2 className="title">Het resultaat</h2>
                   <div className="dlab-separator style-2 bg-primary"></div>
                 </div>
@@ -108,7 +116,7 @@ function CaseDetails({ cases, post }) {
                   {post[0]?.youtube &&
                     post[0]?.youtube.split(",").map((t) => (
                       <div key={t} className="col-md-6 p-2">
-                        <div className="video-bx style-3">
+                        <div className="bg-primary style-3 video-bx">
                           <Image
                             src={`https://img.youtube.com/vi/${getIdYoutube(
                               t
@@ -153,34 +161,45 @@ function CaseDetails({ cases, post }) {
                 </div>
               </div>
             )}
-            {post[0]?.testimonial?.testimonialImg && (
-              <div className="section-5 padding-top-100px  testimo">
-                <div className="mx-auto section-head style-3 text-center">
-                  <h2 className="title">De ervaring</h2>
-                  <div className="dlab-separator style-2 bg-primary"></div>
-                </div>
-                <div className="d-flex mx-auto position-relative justify-content-center wrapper">
-                  <Image
-                    src={imageBuilder(
-                      post[0]?.testimonial?.testimonialImg
-                    )?.url()}
-                    alt=""
-                    width="1000"
-                    height="600"
-                    className="mx-auto rounded-md w-75"
-                  />
+            {post[0]?.testimonial?.testimonialImg &&
+              post[0]?.testimonial?.text && (
+                <div className="section-5 padding-top-100px  testimo">
+                  <div className="mx-auto section-head style-3 text-center">
+                    <h2 className="title">De ervaring</h2>
+                    <div className="dlab-separator style-2 bg-primary"></div>
+                  </div>
+                  <div className="d-flex mx-auto position-relative justify-content-center wrapper">
+                    <Image
+                      src={imageBuilder(
+                        post[0]?.testimonial?.testimonialImg
+                      )?.url()}
+                      alt=""
+                      width="1000"
+                      height="600"
+                      className="mx-auto rounded-md w-75"
+                    />
 
-                  <div className="position-absolute textwrapper  d-flex">
-                    <div className="">
-                      <h6 className="fa-2x">
-                        {post[0]?.testimonial?.testititle}
-                      </h6>
-                      <p>{post[0]?.testimonial?.text}</p>
+                    <div className="testimonial-4 quote-right">
+                      <div className="testimonial-text">
+                        <strong className="testimonial-name">
+                          {post[0]?.testimonial?.testititle}
+                        </strong>
+                        <div className="m-b20 stars">
+                          <i className="fa-solid fa-star"></i>
+                          <i className="fa-solid fa-star"></i>
+                          <i className="fa-solid fa-star"></i>
+                          <i className="fa-solid fa-star"></i>
+                          <i className="fa-solid fa-star"></i>
+                        </div>
+                        {/*    <h6 className="fa-2x">
+                          {post[0]?.testimonial?.testititle}
+                        </h6> */}
+                        <p>{post[0]?.testimonial?.text}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            )}
+              )}
             <div className="section-6 padding-top-100px  works-cases">
               <Works cases={cases} title="Bekijk ook andere cases" />
             </div>
@@ -196,7 +215,7 @@ export async function getStaticProps({ params }) {
   const post = await getOneCase(params?.slug);
   //console.log(`Building slug: ${params?.slug}`);
   let filtredData = cases.filter((d) => d.slug !== params?.slug);
-  console.log(`Building cases: ${post[0]}`);
+  //console.log(`Building cases: ${post[0]}`);
 
   if (!post) {
     return {
@@ -213,7 +232,7 @@ export async function getStaticProps({ params }) {
 }
 export const getStaticPaths = async () => {
   const res = await getAllCases();
-  console.log(res);
+  //console.log(res);
   const paths = res.map(
     (post) =>
       post?.coverImage && {

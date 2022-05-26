@@ -72,8 +72,10 @@ function Footer({ sitInfo }) {
                     </div>
                     <div className="icon-content">
                       <p style={{ marginBottom: "0" }}>{sitInfo2[0]}</p>
-                      <p style={{ marginBottom: "0" }}> {sitInfo2[2]}</p>
-                      <p style={{ marginBottom: "0" }}>{sitInfo2[1]}</p>
+                      <p style={{ marginBottom: "0", fontSize: "14px" }}>
+                        {sitInfo2[1] + " " + sitInfo2[2]}
+                      </p>
+                      {/*    <p style={{ marginBottom: "0" }}>{sitInfo2[1]}</p> */}
                     </div>
                   </div>
                 </div>

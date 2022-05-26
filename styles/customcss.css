@@ -963,6 +963,20 @@ footer .widget_about {
   border-radius: 10px;
   padding-bottom: 50px;
 }
+.section-1 .list-service {
+  font-size: 13px;
+  background-color: #f5f5f5;
+  padding: 15px;
+  display: inline-block;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-right: 11px;
+}
+.section-5 .testimonial-4 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
 .caselogo .logo-img {
   border-color: #8639fa;
   background-color: #fff;
@@ -1034,6 +1048,11 @@ footer .widget_about {
   .caselogo .logo-img {
     width: 65%;
   }
+  .caselogo .whoclient p {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+  }
   .ccta i {
     animation: blink 1s infinite;
   }
@@ -1066,14 +1085,23 @@ footer .widget_about {
   button.scroltop {
     bottom: 66px !important;
   }
-  /*
-  .site-header .main-bar .extra-nav .btn {
-    font-size: 11px;
+  .section-5 .testimonial-4 .testimonial-text {
+    padding: 0px;
+    position: relative;
+    font-size: 13px;
+    font-weight: 400;
   }
-  .site-header .main-bar .extra-nav .btn svg {
-    width: 23px;
-    margin-bottom: 0px;
-  } */
+  .section-5 .testimonial-4 {
+    padding: 11px;
+  }
+  .section-5 .testimonial-4 .testimonial-name {
+    font-size: 15px;
+    line-height: 11px;
+    margin-bottom: 7px;
+  }
+  .section-5 .testimonial-4 .m-b20 {
+    margin-bottom: 5px;
+  }
 }
 @media (min-width: 1200px) {
   .swiper-container {
