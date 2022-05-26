@@ -17943,9 +17943,9 @@ button.scroltop {
 .clients-logo .logo-hover {
   display: none !important;
 }
-.clients-logo:hover {
+/* .clients-logo:hover {
   background: #8639fa;
-}
+} */
 .clients-logo:hover .logo-main {
   display: none;
 }
