@@ -53,7 +53,7 @@ function CaseDetails({ cases, post }) {
             <div className="section-1 padding-top-100px ">
               <div className="row">
                 <div className="col-md-6 p-3">
-                  <h3>CASE</h3>
+                  <h3>Case</h3>
                   <h1>{post[0].title}</h1>
                   <p>{post[0].aboutCase}</p>
                   <h5>Geleverde diensten</h5>
@@ -85,7 +85,7 @@ function CaseDetails({ cases, post }) {
                 </div>
                 <div className="row caselogo justify-content-center flex-row">
                   <div
-                    className="border-5 logo-img overflow-hidden p-3 rounded-circle"
+                    className=" logo-img overflow-hidden p-3 rounded-circle"
                     style={{ backgroundColor: bgLogoColor }}
                   >
                     {/*   <img
@@ -161,14 +161,14 @@ function CaseDetails({ cases, post }) {
                 </div>
               </div>
             )}
-            {post[0]?.testimonial?.testimonialImg &&
-              post[0]?.testimonial?.text && (
-                <div className="section-5 padding-top-100px  testimo">
-                  <div className="mx-auto section-head style-3 text-center">
-                    <h2 className="title">De ervaring</h2>
-                    <div className="dlab-separator style-2 bg-primary"></div>
-                  </div>
-                  <div className="d-flex mx-auto position-relative justify-content-center wrapper">
+            {post[0]?.testimonial?.text && (
+              <div className="section-5 padding-top-100px  testimo">
+                <div className="mx-auto section-head style-3 text-center">
+                  <h2 className="title">De ervaring</h2>
+                  <div className="dlab-separator style-2 bg-primary"></div>
+                </div>
+                <div className="d-flex mx-auto position-relative justify-content-center wrapper">
+                  {post[0]?.testimonial?.testimonialImg && (
                     <Image
                       src={imageBuilder(
                         post[0]?.testimonial?.testimonialImg
@@ -178,28 +178,29 @@ function CaseDetails({ cases, post }) {
                       height="600"
                       className="mx-auto rounded-md w-75"
                     />
+                  )}
 
-                    <div className="testimonial-4 quote-right">
-                      <div className="testimonial-text">
-                        <strong className="testimonial-name">
-                          {post[0]?.testimonial?.testititle}
-                        </strong>
-                        <div className="m-b20 stars">
-                          <i className="fa-solid fa-star"></i>
-                          <i className="fa-solid fa-star"></i>
-                          <i className="fa-solid fa-star"></i>
-                          <i className="fa-solid fa-star"></i>
-                          <i className="fa-solid fa-star"></i>
-                        </div>
-                        {/*    <h6 className="fa-2x">
+                  <div className="testimonial-4 quote-right">
+                    <div className="testimonial-text">
+                      <strong className="testimonial-name">
+                        {post[0]?.testimonial?.testititle}
+                      </strong>
+                      <div className="m-b20 stars">
+                        <i className="fa-solid fa-star"></i>
+                        <i className="fa-solid fa-star"></i>
+                        <i className="fa-solid fa-star"></i>
+                        <i className="fa-solid fa-star"></i>
+                        <i className="fa-solid fa-star"></i>
+                      </div>
+                      {/*    <h6 className="fa-2x">
                           {post[0]?.testimonial?.testititle}
                         </h6> */}
-                        <p>{post[0]?.testimonial?.text}</p>
-                      </div>
+                      <p>{post[0]?.testimonial?.text}</p>
                     </div>
                   </div>
                 </div>
-              )}
+              </div>
+            )}
             <div className="section-6 padding-top-100px  works-cases">
               <Works cases={cases} title="Bekijk ook andere cases" />
             </div>

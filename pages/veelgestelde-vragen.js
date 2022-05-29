@@ -9,7 +9,7 @@ import Faq3 from "../component/faq3";
 function FAQ1({ sitInfo, faqCategories, faqs }) {
   return (
     <>
-      <div className="page-content bg-white">
+      <div className="page-content bg-gray">
         <Banner2 name="Veelgestelde vragen" />
 
         {/* <!-- Faq --> */}

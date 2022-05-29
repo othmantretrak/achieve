@@ -19,7 +19,7 @@ function Projects({ sitInfo, testimonials, cases, categories }) {
     <div className="cases">
       <Banner2 name="Cases" />
       {/* <Projects3 categories={categories} cases={cases} /> */}
-      <Works cases={cases} />
+      <Works classn="case-index" cases={cases} />
       <Testimonial2 testimonials={testimonials} />
       <Cta />
     </div>

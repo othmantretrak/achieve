@@ -11,24 +11,29 @@ import "swiper/css/navigation";
 import "swiper/css/autoplay";
 import { imageBuilder } from "../lib/sanity";
 
-const Works = ({ cases, title }) => {
+const Works = ({ cases, title, classn }) => {
   SwiperCore.use([Autoplay, Pagination, Navigation]);
   const navigationPrevRef = React.useRef(null);
   const navigationNextRef = React.useRef(null);
   //console.log({ cases });
+  let classSection = classn
+    ? ` ${classn} work-carousel2 metro section-padding dark`
+    : "work-carousel2 metro section-padding dark";
   return (
-    <section className="work-carousel2 metro section-padding dark">
+    <section className={classSection}>
       <div className="container-fluid">
-        <div className="container">
-          <div className="section-head text-center">
-            <div className="row justify-content-center">
-              <div className="section-head style-3 text-center">
-                <h2 className="title">{title}</h2>
-                <div className="dlab-separator style-2 bg-primary"></div>
+        {title && (
+          <div className="container">
+            <div className="section-head text-center">
+              <div className="row justify-content-center">
+                <div className="section-head style-3 text-center">
+                  <h2 className="title">{title}</h2>
+                  <div className="dlab-separator style-2 bg-primary"></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        )}
         <div className="row">
           <div className="col-lg-12 no-padding">
             <div className="swiper-container">

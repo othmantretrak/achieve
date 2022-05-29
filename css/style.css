@@ -17547,7 +17547,7 @@ ul.primary li:before {
 
 button.scroltop {
   box-shadow: -4px 4px 24px -10px #8639fa !important;
-  background: #8639fa;
+  background-image: var(--gradient);
   border-color: #8639fa;
   border-radius: 4px;
   border-style: solid;
@@ -20742,3 +20742,4 @@ footer .widget_getintuch ul li i {
 
 /*# sourceMappingURL=style.css.map */
 @import "../styles/customcss.css";
+@import "../styles/responsive.css";
