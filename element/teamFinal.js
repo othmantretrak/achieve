@@ -61,7 +61,10 @@ function TeamFinal({ team }) {
                     </div>
                     <ul className="dlab-social-icon primary-light">
                       <li>
-                        <a href={t.email} className="fa fa-envelope"></a>
+                        <a
+                          href={`mailto: ${t.email}`}
+                          className="fa fa-envelope"
+                        ></a>
                       </li>
                       {t.instagram && (
                         <li>

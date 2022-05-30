@@ -895,3 +895,9 @@ footer .widget_about {
 section.case-index {
   margin-top: 100px;
 }
+.testimo-without-img {
+  margin-bottom: 100px;
+}
+.testimo-without-img .section-head {
+  margin-bottom: 110px;
+}

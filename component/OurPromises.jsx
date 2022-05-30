@@ -19,7 +19,7 @@ function OurPromises() {
           <h4>Communicatie</h4>
           <p>
             Door duidelijke communicatie tussen beide partijen zullen we
-            optimaal samen werken, groeien en vooruit gaan.
+            optimaal samenwerken, groeien en vooruit gaan.
           </p>
         </div>
         <div className="col-md">
@@ -43,7 +43,7 @@ function OurPromises() {
           <Passion />
           <h4>Passie</h4>
           <p>
-            Wanneer je doet waar je van houd, komt het beste naar boven. Vertel
+            Wanneer je doet waar je van houdt, komt het beste naar boven. Vertel
             jij over jouw passie, versterken wij die met die van ons.
           </p>
         </div>

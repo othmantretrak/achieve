@@ -54,7 +54,7 @@ function Home({
           <Clients companies={companies} />
           <AboutUs />
           <Service services={services} />
-          <Works cases={cases} title="Laatst toegevoegde cases" />
+          <Works cases={cases} title="Case studies" />
           <PricingT4 prices={prices} />
           <Testimonial2 testimonials={testimonials} />
           <div className="container homepagefaq-container bg-gray">

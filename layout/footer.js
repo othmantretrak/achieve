@@ -73,7 +73,7 @@ function Footer({ sitInfo }) {
                     <div className="icon-content">
                       <p style={{ marginBottom: "0" }}>{sitInfo2[0]}</p>
                       <p style={{ marginBottom: "0", fontSize: "14px" }}>
-                        {sitInfo2[1] + " " + sitInfo2[2]}
+                        {sitInfo2[2] + " " + sitInfo2[1]}
                       </p>
                       {/*    <p style={{ marginBottom: "0" }}>{sitInfo2[1]}</p> */}
                     </div>
@@ -91,8 +91,8 @@ function Footer({ sitInfo }) {
                   {/*  <h5 className="footer-title">About Us</h5> */}
                   <p>
                     ‘’What the mind can conceive and believe it can achieve.’’
-                    <br />
-                    <span>- Napoleon Hill</span>
+                    <br className="no-visible-mobile" />
+                    <span> - Napoleon Hill</span>
                   </p>
                   <div className="dlab-social-icon">
                     <ul>

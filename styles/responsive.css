@@ -24,7 +24,12 @@
     text-align: center;
     padding-bottom: 31px;
   }
-
+  .no-visible-mobile {
+    display: none;
+  }
+  .main-bar .logo-header {
+    width: 140px;
+  }
   .content-inner.prt-accordion {
     padding-right: 10px;
     padding-left: 10px;
@@ -32,6 +37,12 @@
 }
 /* =========== tarievien mobile ========== */
 @media only screen and (max-width: 600px) {
+  .no-visible-mobile {
+    display: none;
+  }
+  .main-bar .logo-header {
+    width: 140px;
+  }
   .pricing-list-tab .tabs li {
     display: block;
     margin-top: 5px;
