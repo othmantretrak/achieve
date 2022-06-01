@@ -9,6 +9,7 @@ import { imageBuilder } from "../../lib/sanity";
 import Cta from "../../element/cta";
 import Works from "../../component/works";
 import Accordion_sm from "../../element/accordion_sm";
+import MetaTags from "../../layout/MetaTags";
 
 function CaseDetails({ cases, post }) {
   const [isOpen, setOpen] = useState("");
@@ -40,6 +41,12 @@ function CaseDetails({ cases, post }) {
   let bgLogoColor = post[0]?.slug == "ayeway" ? "#ffc9ca" : "white";
   return (
     <>
+      <MetaTags
+        title={post[0].title}
+        keywords={post[0].title}
+        desc={post[0]?.aboutCase}
+        image={imageBuilder(post[0]?.coverImage)?.url()}
+      />
       <div className="page-content bg-white ">
         <Banner2 name="" />
         <section

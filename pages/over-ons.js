@@ -8,11 +8,13 @@ import Banner2 from "../element/banner2";
 import Cta from "../element/cta";
 import OurPromises from "../component/OurPromises";
 import TeamFinal from "../element/teamFinal";
+import MetaTags from "../layout/MetaTags";
 
 function AboutUs1({ sitInfo, team, testimonials }) {
   const [isOpen, setOpen] = useState(false);
   return (
     <>
+      <MetaTags title="Over ons" keywords="Over ons" desc="Achieve Over ons" />
       <div className="page-content bg-white">
         {/* <!-- Banner  --> */}
         <Banner2 name="Over ons" />

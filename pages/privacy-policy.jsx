@@ -5,10 +5,16 @@ import { getAllPrivacy, getAllSiteInfo } from "../lib/api";
 import Banner2 from "../element/banner2";
 import PostBody from "../component/post-body";
 import Cta from "../element/cta";
+import MetaTags from "../layout/MetaTags";
 
 function PrivacyPolicy({ sitInfo, privacy }) {
   return (
     <>
+      <MetaTags
+        title="Privacy policy"
+        keywords="Privacy policy"
+        desc="Achieve Privacy policy"
+      />
       <div className="page-content bg-white">
         {/* <!-- Banner  --> */}
         <Banner2 name="Privacy policy" />

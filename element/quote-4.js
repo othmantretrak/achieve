@@ -37,7 +37,7 @@ function Quote4() {
                   <li className="contact-info color-3 bg-hover active hover-bottom text-center p-5 m-3">
                     <span>
                       <i
-                        style={{ color: "#fc573b" }}
+                        style={{ color: "#8639fa" }}
                         className="fas fa-envelope-open-text fa-3x"
                       ></i>
                     </span>

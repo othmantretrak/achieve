@@ -3,11 +3,13 @@ import Cta from "../element/cta";
 import Quote4 from "../element/quote-4";
 import Footer from "../layout/footer";
 import Header from "../layout/header";
+import MetaTags from "../layout/MetaTags";
 import { getAllSiteInfo } from "../lib/api";
 
 function ContactUs1({ sitInfo }) {
   return (
     <div className="contact-us">
+      <MetaTags title="Contact" keywords="Contact" desc="Achieve Contact" />
       <div className="page-content bg-white">
         {/* <!-- Banner  --> */}
         <Banner2 name="Contact" />

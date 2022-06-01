@@ -5,10 +5,12 @@ import Banner2 from "../element/banner2";
 import Header from "../layout/header";
 import Cta from "../element/cta";
 import Clients from "../element/clients";
+import MetaTags from "../layout/MetaTags";
 
 function PricingTable3({ sitInfo, prices, companies }) {
   return (
     <>
+      <MetaTags title="Tarieven" keywords="Tarieven" desc="Achieve Tarieven" />
       <div className="page-content bg-gray pricing-tablee">
         {/* <!-- Banner  --> */}
         <Banner2 name="Tarieven" />

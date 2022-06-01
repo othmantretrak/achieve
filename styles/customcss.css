@@ -265,7 +265,7 @@ sup {
   overflow: hidden;
   z-index: 1;
   color: #fff;
-  background-color: #ff612f;
+  background-image: var(--gradient);
   transition: 0.5s;
   border-radius: 5px;
   font-weight: 500;
@@ -410,6 +410,9 @@ sup {
 .input-group > .form-control {
   border: none;
 }
+.input-group > .form-control input {
+  -webkit-appearance: none !important;
+}
 .dzForm .row .col-sm-12 button.btn-primary {
   width: 100%;
   border-radius: 5px;
@@ -452,7 +455,7 @@ sup {
 }
 .color-3.bg-hover:hover::after,
 .color-3.bg-hover.active::after {
-  background-color: #fc573b;
+  background-image: var(--gradient);
 }
 .bg-hover.hover-bottom::after {
   bottom: 0;

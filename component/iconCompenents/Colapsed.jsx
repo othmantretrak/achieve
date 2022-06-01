@@ -1,14 +1,23 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Collapse from "@kunukn/react-collapse";
 import PremaryBtn from "../PremaryBtn";
 import RespBtn from "../RespBtn";
+import { useTab } from "../../common/useTabs";
 
-function Colapsed({ children }) {
+function Colapsed({ children, id }) {
   const [collapse, setCollapse] = useState(false);
+  const { tab } = useTab();
+
   const toggleAction = () => {
-    //console.log("clicked", collapse);
     setCollapse(!collapse);
   };
+  useEffect(() => {
+    if (tab == id) {
+      setCollapse(true);
+    } else {
+      setCollapse(false);
+    }
+  }, [tab, id]);
   return (
     <div>
       <Collapse

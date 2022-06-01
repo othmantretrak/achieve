@@ -2,8 +2,10 @@ import Link from "next/link";
 
 import Image from "next/image";
 import { imageBuilder } from "../lib/sanity";
+import { useTab } from "../common/useTabs";
 
 function Footer({ sitInfo }) {
+  const { tab, setTab } = useTab();
   if (!sitInfo) {
     return <></>;
   }
@@ -112,6 +114,14 @@ function Footer({ sitInfo }) {
                           href={sitInfo[0].instagram}
                         ></a>
                       </li>
+                      <li>
+                        <a
+                          target="_blank"
+                          rel="noreferrer"
+                          className="fa-brands fa-linkedin"
+                          href={sitInfo[0].linkedin}
+                        ></a>
+                      </li>
                       {/*  <li>
                         <a
                           className="fa-brands fa-twitter"
@@ -174,32 +184,68 @@ function Footer({ sitInfo }) {
                   <ul>
                     <li>
                       <Link href="/diensten">
-                        <a>Branding</a>
+                        <a
+                          onClick={() =>
+                            setTab("46f8f6b9-9a20-4ff2-b7c3-092d845efb5d")
+                          }
+                        >
+                          Branding
+                        </a>
                       </Link>
                     </li>
                     <li>
                       <Link href="/diensten">
-                        <a>Web Development</a>
+                        <a
+                          onClick={() =>
+                            setTab("07a26140-baad-4b7e-bb4c-b405ee254a9a")
+                          }
+                        >
+                          Web Development
+                        </a>
                       </Link>
                     </li>
                     <li>
                       <Link href="/diensten">
-                        <a>Content Creation</a>
+                        <a
+                          onClick={() =>
+                            setTab("5620aa90-a452-49b2-b1d2-a8c6fcb746eb")
+                          }
+                        >
+                          Content Creation
+                        </a>
                       </Link>
                     </li>
                     <li>
                       <Link href="/diensten">
-                        <a>Email Marketing</a>
+                        <a
+                          onClick={() =>
+                            setTab("af06528f-7c23-4c52-811e-927003a4a7a3")
+                          }
+                        >
+                          Email Marketing
+                        </a>
                       </Link>
                     </li>
                     <li>
                       <Link href="/diensten">
-                        <a>Social Advertising </a>
+                        <a
+                          onClick={() =>
+                            setTab("8c970907-4e9b-4741-8749-ab16696270ef")
+                          }
+                        >
+                          Social Advertising{" "}
+                        </a>
                       </Link>
                     </li>
                     <li>
                       <Link href="/diensten">
-                        <a>Search Engine Advertising</a>
+                        <a
+                          onClick={() =>
+                            setTab("2dee630c-afe0-4756-89e7-66562d68672e")
+                          }
+                        >
+                          Search Engine Advertising
+                        </a>
                       </Link>
                     </li>
                   </ul>

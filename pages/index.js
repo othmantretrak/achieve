@@ -23,6 +23,7 @@ import {
 import Works from "../component/works";
 import Faq3 from "../component/faq3";
 import Layout from "../layout/Layout";
+import MetaTags from "../layout/MetaTags";
 function Home({
   testimonials,
   faqs,
@@ -43,11 +44,12 @@ function Home({
   }, []);
   return (
     <>
-      <Head>
-        <title>
-          Achieve – Groeien op basis van data en de kracht van creativiteit.
-        </title>
-      </Head>
+      <MetaTags
+        title="Groeien op basis van data en de kracht van creativiteit."
+        keywords="media agency, ads management"
+        desc="Groeien op basis van data en de kracht van creativiteit."
+      />
+
       <Layout>
         <div className="page-content homepage-container bg-gray" id="top">
           <Slider1 />

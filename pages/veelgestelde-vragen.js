@@ -5,10 +5,16 @@ import { getAllFaq, getAllFaqCategories, getAllSiteInfo } from "../lib/api";
 import Banner2 from "../element/banner2";
 import Cta from "../element/cta";
 import Faq3 from "../component/faq3";
+import MetaTags from "../layout/MetaTags";
 
 function FAQ1({ sitInfo, faqCategories, faqs }) {
   return (
     <>
+      <MetaTags
+        title="Veelgestelde vragen"
+        keywords="Veelgestelde vragen"
+        desc="Achieve Veelgestelde vragen"
+      />
       <div className="page-content bg-gray">
         <Banner2 name="Veelgestelde vragen" />
 

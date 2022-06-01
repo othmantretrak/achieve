@@ -12,6 +12,7 @@ import "../styles/switcher.css";
 import { AuthProvider } from "../common/useLoader";
 import Layout from "../layout/Layout";
 import { getAllSiteInfo } from "../lib/api";
+import { TabProvider } from "../common/useTabs";
 
 let siteInfo;
 
@@ -59,9 +60,11 @@ function MyApp({ Component, pageProps, navigationProps }) {
     <>
       <div className="page-wraper">
         <AuthProvider>
-          <Layout sitInfo={navigationProps}>
-            <Component {...pageProps} />
-          </Layout>
+          <TabProvider>
+            <Layout sitInfo={navigationProps}>
+              <Component {...pageProps} />
+            </Layout>
+          </TabProvider>
         </AuthProvider>
       </div>
 

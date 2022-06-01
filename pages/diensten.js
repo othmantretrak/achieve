@@ -8,10 +8,12 @@ import {
 import Banner2 from "../element/banner2";
 import Cta from "../element/cta";
 import Faq3 from "../component/faq3";
+import MetaTags from "../layout/MetaTags";
 
 function Services1({ sitInfo, faqs, services, faqCategories }) {
   return (
     <>
+      <MetaTags title="Diensten" keywords="Diensten" desc="Achieve Diensten" />
       <div className="page-content bg-gray">
         <Banner2 name="Diensten" />
         <AllServices services={services} />
