@@ -19,18 +19,10 @@ function PrivacyPolicy({ sitInfo, privacy }) {
         {/* <!-- Banner  --> */}
         <Banner2 name="Privacy policy" />
         {/* <!-- About Us --> */}
-        <section className="content-inner pt-100px">
+        <section className="content-inner ">
           <div className="container">
-            <div className="row align-items-center">
-              <div
-                className=" m-b30 wow fadeInRight"
-                data-wow-duration="2s"
-                data-wow-delay="0.4s"
-              >
-                <div className={markdownStyles.markdown}>
-                  <PostBody content={privacy && privacy[0]?.body} />
-                </div>
-              </div>
+            <div className={markdownStyles.markdown}>
+              <PostBody content={privacy && privacy[0]?.body} />
             </div>
           </div>
         </section>

@@ -16,7 +16,7 @@ function PricingT4({ prices }) {
   return (
     <>
       {/* <!-- Pricing Table --> */}
-      <section className="content-inner pt-100px bg-gray">
+      <section className="content-inner  bg-gray">
         <div className="container">
           <div className="section-head style-3 text-center">
             <h2 className="title">Selecteer één van onze diensten</h2>

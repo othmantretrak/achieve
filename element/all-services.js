@@ -10,7 +10,7 @@ function AllServices({ services }) {
     <>
       {/* <!-- Service --> */}
       <section
-        className="content-inner pt-100px wow fadeInU"
+        className="content-inner  wow fadeInU"
         style={{
           backgroundImage:
             "url(https://res.cloudinary.com/tretrak/image/upload/v1651468156/achieve/bg1_st0d5t.png)",

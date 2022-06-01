@@ -170,6 +170,9 @@ function Header({ sitInfo }) {
                     <Link href="https://www.instagram.com/achieve.nl/">
                       <a className="fa-brands fa-instagram"></a>
                     </Link>
+                    <Link href="https://www.linkedin.com/company/achieve-nl/">
+                      <a className="fa-brands fa-linkedin"></a>
+                    </Link>
                   </ul>
                 </div>
               </div>
