@@ -18,7 +18,7 @@ function Testimonial2({ testimonials }) {
             <h2 className="title">Zij gingen je voor</h2>
             <div className="dlab-separator style-2 bg-primary"></div>
           </div>
-          <div className="row">
+          <div className="overflow-hidden row">
             <div className="col-md-12">
               <TestimonialSlider2 testimonials={testimonials} />
             </div>
