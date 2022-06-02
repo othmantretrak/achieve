@@ -17,6 +17,7 @@ const MetaTags = ({ title, keywords, desc, image, url }) => {
       <meta property="og:title" content={`Achieve – ${title}`} />
       <meta property="og:description" content={desc} />
       <meta property="og:image" itemProp="image" content={img} />
+      <meta property="og:image:secure_url" itemProp="image" content={img} />
 
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content={url} />
