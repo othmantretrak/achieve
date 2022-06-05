@@ -70,7 +70,7 @@ function Slider1() {
                       data-wow-delay="2s"
                       className="wow fadeInUp btn btn-link d-inline-flex align-items-center"
                     >
-                      <i className="fa fa-angle-right m-r10"></i>Onze Diensten
+                      <i className="fa fa-angle-right m-r10"></i>Onze diensten
                     </a>
                   </Link>
                 </div>

@@ -21,7 +21,7 @@ function AboutUs1({ sitInfo, team, testimonials }) {
         {/* <!-- Banner End --> */}
 
         {/* <!-- About Us --> */}
-        <section className="content-inner ">
+        <section className="content-inner m-t100 ">
           <div className="container">
             <div className="row align-items-center">
               <div

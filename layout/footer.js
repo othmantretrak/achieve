@@ -92,7 +92,7 @@ function Footer({ sitInfo }) {
                 <div className="widget widget_about">
                   {/*  <h5 className="footer-title">About Us</h5> */}
                   <p>
-                    ‘’What the mind can conceive and believe it can achieve.’’
+                    ‘’What the mind can conceive and believe, it can achieve.’’
                     <br className="no-visible-mobile" />
                     <span> - Napoleon Hill</span>
                   </p>

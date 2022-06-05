@@ -21,6 +21,23 @@ export default function Document() {
           async
         ></script>
 
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=286152365`}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '286152365', {
+              page_path: window.location.pathname,
+            });
+          `,
+          }}
+        />
+
         <link
           rel="icon"
           type="image/png"
