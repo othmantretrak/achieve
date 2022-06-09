@@ -125,9 +125,13 @@ function CaseDetails({ cases, post }) {
                       <div key={t} className="col-md-6 p-2">
                         <div className="bg-primary style-3 video-bx">
                           <Image
-                            src={`https://img.youtube.com/vi/${getIdYoutube(
-                              t
-                            )}/maxresdefault.jpg`}
+                            src={
+                              getIdYoutube(t) == "Zym-gH3zUC0"
+                                ? "https://res.cloudinary.com/tretrak/image/upload/v1654731984/achieve/ayaw_rkbkwm.webp"
+                                : `https://img.youtube.com/vi/${getIdYoutube(
+                                    t
+                                  )}/maxresdefault.jpg`
+                            }
                             alt=""
                             width="1000"
                             height="600"
