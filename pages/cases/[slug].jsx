@@ -42,8 +42,8 @@ function CaseDetails({ cases, post }) {
   return (
     <>
       <MetaTags
-        title={post[0].title}
-        keywords={post[0].title}
+        title={post[0]?.title}
+        keywords={post[0]?.title}
         desc={post[0]?.aboutCase}
         image={imageBuilder(post[0]?.coverImage)?.url()}
       />
@@ -84,6 +84,16 @@ function CaseDetails({ cases, post }) {
                 </div>
               </div>
             </div>
+            {post[0].caseWebsite && (
+              <a
+                href={post[0].caseWebsite}
+                className="btn btn-primary case-website text-uppercase"
+                target="_blank"
+                rel="noreferrer"
+              >
+                bekijk de website
+              </a>
+            )}
             {post[0]?.caseLogo && post[0].WhoClient && (
               <div className="section-2 padding-top-100px ">
                 <div className="section-head style-3 text-center">
@@ -113,7 +123,7 @@ function CaseDetails({ cases, post }) {
                 </div>
               </div>
             )}
-            {post[0]?.youtube && (
+            {post[0]?.youtube && !post[0].caseWebsite && (
               <div className="section-3 padding-top-100px ">
                 <div className="mx-auto section-head style-3 text-center">
                   <h2 className="title">Het resultaat</h2>

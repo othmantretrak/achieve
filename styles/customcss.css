@@ -904,3 +904,11 @@ section.case-index {
 .testimo-without-img .section-head {
   margin-bottom: 110px;
 }
+.container .case-website {
+  background-image: var(--gradient);
+  transition: all 0.5s;
+}
+.container .case-website:hover {
+  background-image: var(--gradient-sec);
+  color: white;
+}
