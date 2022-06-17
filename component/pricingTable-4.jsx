@@ -1,22 +1,33 @@
+import { useEffect, useRef } from "react";
 import { useState } from "react";
 import Fire from "./iconCompenents/Fire";
 import PriceCard from "./PriceCard";
 import TablePrice from "./tablePrice";
 import Tabs from "./Tabs";
+import useOnScreen from "../common/useOnScreen";
 function PricingT4({ prices }) {
   const [tab, setTab] = useState(prices[0]._id);
   const [tabName, setTabName] = useState(prices[0].name);
+  const [showHand, setShowHand] = useState(false);
   const handleClick = (p, name) => {
     //console.log(p);
     setTab(p);
     setTabName(name);
   };
-  //console.log({ prices });
+  const ref = useRef();
+  const isVisible = useOnScreen(ref);
+  useEffect(() => {
+    isVisible && setShowHand(true);
+
+    setTimeout(() => {
+      setShowHand(false);
+    }, "8000");
+  }, [isVisible]);
 
   return (
     <>
       {/* <!-- Pricing Table --> */}
-      <section className="content-inner m-t100 bg-gray">
+      <section ref={ref} className="content-inner m-t100 bg-gray">
         <div className="container">
           <div className="section-head style-3 text-center">
             <h2 className="title">Selecteer één van onze diensten</h2>
@@ -29,6 +40,16 @@ function PricingT4({ prices }) {
             </div>
           ))}
         </div>
+        {showHand && (
+          <div id="container-div">
+            <div>
+              <img
+                id="hand"
+                src="https://cdn-icons-png.flaticon.com/512/1093/1093252.png"
+              />
+            </div>
+          </div>
+        )}
       </section>
     </>
   );

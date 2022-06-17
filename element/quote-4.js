@@ -134,8 +134,8 @@ function Quote4() {
                     </div>
                   </div>
 
-                  <div className="col-sm-12">
-                    <div className="contact-btn custom-box">
+                  <div className="col-sm-12 contact-btn">
+                    <div className=" custom-box">
                       <button
                         name="submit"
                         type="submit"

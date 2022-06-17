@@ -10,6 +10,8 @@ import Cta from "../../element/cta";
 import Works from "../../component/works";
 import Accordion_sm from "../../element/accordion_sm";
 import MetaTags from "../../layout/MetaTags";
+import Link from "next/link";
+import CustomBtn from "../../element/CustomBtn";
 
 function CaseDetails({ cases, post }) {
   const [isOpen, setOpen] = useState("");
@@ -85,14 +87,13 @@ function CaseDetails({ cases, post }) {
               </div>
             </div>
             {post[0].caseWebsite && (
-              <a
-                href={post[0].caseWebsite}
-                className="btn btn-primary case-website text-uppercase"
-                target="_blank"
-                rel="noreferrer"
-              >
-                bekijk de website
-              </a>
+              <div className="case-website">
+                <CustomBtn
+                  className=" case-website text-uppercase"
+                  title="bekijk de website"
+                  onClick={() => router.push(post[0].caseWebsite)}
+                />
+              </div>
             )}
             {post[0]?.caseLogo && post[0].WhoClient && (
               <div className="section-2 padding-top-100px ">
@@ -105,17 +106,19 @@ function CaseDetails({ cases, post }) {
                     className=" logo-img overflow-hidden p-3 rounded-circle"
                     style={{ backgroundColor: bgLogoColor }}
                   >
-                    {/*   <img
-                      src={imageBuilder(post[0]?.caseLogo)?.url()}
-                      alt="case logo"
-                    /> */}
-                    <Image
-                      src={imageBuilder(post[0]?.caseLogo)?.url()}
-                      alt=""
-                      width="300"
-                      height="300"
-                      className="p-4"
-                    />
+                    <Link
+                      href={post[0].caseWebsite ? post[0].caseWebsite : "#"}
+                    >
+                      <a>
+                        <Image
+                          src={imageBuilder(post[0]?.caseLogo)?.url()}
+                          alt=""
+                          width="300"
+                          height="300"
+                          className="p-4"
+                        />
+                      </a>
+                    </Link>
                   </div>
                   <div className="mt-5 text-center w-75 whoclient">
                     <p>{post[0].WhoClient}</p>

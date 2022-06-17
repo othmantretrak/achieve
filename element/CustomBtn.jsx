@@ -4,7 +4,7 @@ import Hot from "../component/iconCompenents/Hot";
 function CustomBtn({ onClick, title }) {
   return (
     <div className="custom-box">
-      <button onClick={onClick} className="default-btn" href="/login/">
+      <button onClick={onClick} className="default-btn">
         <Hot />
         <p>{title}</p>
         <span></span>

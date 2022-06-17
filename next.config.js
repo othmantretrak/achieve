@@ -31,6 +31,25 @@ const nextConfig = {
       },
     ],
   ],
+  async redirects() {
+    return [
+      {
+        source: "/cms" || "/login" || "/backend",
+        destination: "https://achieve-backend.vercel.app/studio/desk",
+        permanent: true,
+      },
+      {
+        source: "/login",
+        destination: "https://achieve-backend.vercel.app/studio/desk",
+        permanent: true,
+      },
+      {
+        source: "/backend",
+        destination: "https://achieve-backend.vercel.app/studio/desk",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;

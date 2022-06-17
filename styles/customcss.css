@@ -904,11 +904,29 @@ section.case-index {
 .testimo-without-img .section-head {
   margin-bottom: 110px;
 }
-.container .case-website {
-  background-image: var(--gradient);
-  transition: all 0.5s;
+.container .case-website,
+.container .contact-btn {
+  margin-bottom: 100px;
 }
-.container .case-website:hover {
-  background-image: var(--gradient-sec);
+.container .case-website button,
+.container .contact-btn button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  text-transform: uppercase;
+}
+.container .case-website button p,
+.container .contact-btn button p {
+  padding: 0;
+  margin: 0;
+}
+.container .contact-btn button span {
+  left: 300px;
+}
+.container .contact-btn button {
+  width: 100%;
+}
+.container .contact-btn button i {
   color: white;
 }
