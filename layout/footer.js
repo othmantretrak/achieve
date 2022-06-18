@@ -6,10 +6,10 @@ import { useTab } from "../common/useTabs";
 
 function Footer({ sitInfo }) {
   const { tab, setTab } = useTab();
-  if (!sitInfo) {
+  if (!sitInfo?.info) {
     return <></>;
   }
-  const sitInfo2 = sitInfo[0]?.address.split(",");
+  const sitInfo2 = sitInfo?.info[0]?.address.split(",");
 
   return (
     <>
@@ -33,7 +33,7 @@ function Footer({ sitInfo }) {
                 <div className="col-xl-6 col-md-4">
                   <div className="footer-logo">
                     <Link href="/">
-                      <a>
+                      <a className="   text-center">
                         <img
                           src="https://res.cloudinary.com/tretrak/image/upload/v1652851337/achieve/achieve-logo_njbari.svg"
                           alt="logo"
@@ -46,20 +46,25 @@ function Footer({ sitInfo }) {
                   <div className="icon-bx-wraper left m-b10">
                     <div className="icon-lg">
                       <a href="#" className="icon-cell">
-                        <i className="flaticon-email"></i>
+                        <img
+                          src={imageBuilder(
+                            sitInfo?.settings[0].FooterIcons.emailIcon
+                          )?.url()}
+                          alt=""
+                        />
                       </a>
                     </div>
                     <div className="icon-content">
                       <p>
                         <a className="text-white" href={`tel: 0031854016590`}>
-                          {sitInfo[0].phone}
+                          {sitInfo?.info[0].phone}
                         </a>
                         <br />
                         <a
                           className="text-white"
-                          href={`mailto: ${sitInfo[0].email}`}
+                          href={`mailto: ${sitInfo?.info[0].email}`}
                         >
-                          {sitInfo[0].email}
+                          {sitInfo?.info[0].email}
                         </a>
                       </p>
                     </div>
@@ -69,7 +74,12 @@ function Footer({ sitInfo }) {
                   <div className="icon-bx-wraper left m-b10">
                     <div className="icon-lg">
                       <a href="#" className="icon-cell">
-                        <i className="flaticon-location"></i>
+                        <img
+                          src={imageBuilder(
+                            sitInfo?.settings[0].FooterIcons.addressIcon
+                          )?.url()}
+                          alt=""
+                        />
                       </a>
                     </div>
                     <div className="icon-content">
@@ -103,7 +113,7 @@ function Footer({ sitInfo }) {
                           target="_blank"
                           rel="noreferrer"
                           className="fa-brands fa-facebook"
-                          href={sitInfo[0].facebook}
+                          href={sitInfo?.info[0].facebook}
                         ></a>
                       </li>
                       <li>
@@ -111,7 +121,7 @@ function Footer({ sitInfo }) {
                           target="_blank"
                           rel="noreferrer"
                           className="fa-brands fa-instagram"
-                          href={sitInfo[0].instagram}
+                          href={sitInfo?.info[0].instagram}
                         ></a>
                       </li>
                       <li>
@@ -119,7 +129,7 @@ function Footer({ sitInfo }) {
                           target="_blank"
                           rel="noreferrer"
                           className="fa-brands fa-linkedin"
-                          href={sitInfo[0].linkedin}
+                          href={sitInfo?.info[0].linkedin}
                         ></a>
                       </li>
                       {/*  <li>
@@ -183,7 +193,7 @@ function Footer({ sitInfo }) {
                   <h5 className="footer-title">Onze diensten</h5>
                   <ul>
                     <li>
-                      <Link href="/diensten">
+                      <Link href="/diensten#46f8f6b9-9a20-4ff2-b7c3-092d845efb5d">
                         <a
                           onClick={() =>
                             setTab("46f8f6b9-9a20-4ff2-b7c3-092d845efb5d")
@@ -194,7 +204,7 @@ function Footer({ sitInfo }) {
                       </Link>
                     </li>
                     <li>
-                      <Link href="/diensten">
+                      <Link href="/diensten#07a26140-baad-4b7e-bb4c-b405ee254a9a">
                         <a
                           onClick={() =>
                             setTab("07a26140-baad-4b7e-bb4c-b405ee254a9a")
@@ -205,7 +215,7 @@ function Footer({ sitInfo }) {
                       </Link>
                     </li>
                     <li>
-                      <Link href="/diensten">
+                      <Link href="/diensten#5620aa90-a452-49b2-b1d2-a8c6fcb746eb">
                         <a
                           onClick={() =>
                             setTab("5620aa90-a452-49b2-b1d2-a8c6fcb746eb")
@@ -216,7 +226,7 @@ function Footer({ sitInfo }) {
                       </Link>
                     </li>
                     <li>
-                      <Link href="/diensten">
+                      <Link href="/diensten#af06528f-7c23-4c52-811e-927003a4a7a3">
                         <a
                           onClick={() =>
                             setTab("af06528f-7c23-4c52-811e-927003a4a7a3")
@@ -227,7 +237,7 @@ function Footer({ sitInfo }) {
                       </Link>
                     </li>
                     <li>
-                      <Link href="/diensten">
+                      <Link href="/diensten#8c970907-4e9b-4741-8749-ab16696270ef">
                         <a
                           onClick={() =>
                             setTab("8c970907-4e9b-4741-8749-ab16696270ef")
@@ -238,7 +248,7 @@ function Footer({ sitInfo }) {
                       </Link>
                     </li>
                     <li>
-                      <Link href="/diensten">
+                      <Link href="/diensten#2dee630c-afe0-4756-89e7-66562d68672e">
                         <a
                           onClick={() =>
                             setTab("2dee630c-afe0-4756-89e7-66562d68672e")

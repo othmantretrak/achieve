@@ -49,9 +49,13 @@ function Layout({ children, sitInfo }) {
     Calendly.initPopupWidget({ url: "https://calendly.com/gratisintake" });
     return false;
   };
+  const divStyle = {
+    "--secondary": `${sitInfo?.settings[0]?.btnhovercolor?.hex}`,
+  };
+  console.log({ "log from layout": sitInfo?.settings?.btnhovercolor });
   return (
-    <>
-      <Header sitInfo={sitInfo} />
+    <div style={divStyle}>
+      <Header sitInfo={sitInfo?.info} />
       {children}
       <div className="extra-nav btn-mobile-nav">
         <div className="extra-cell">
@@ -65,7 +69,7 @@ function Layout({ children, sitInfo }) {
         </div>
       </div>
       <Footer sitInfo={sitInfo} />
-    </>
+    </div>
   );
 }
 

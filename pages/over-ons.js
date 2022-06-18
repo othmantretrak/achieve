@@ -3,14 +3,19 @@ import { useState } from "react";
 import Header from "../layout/header";
 import Footer from "../layout/footer";
 import Testimonial2 from "../element/testimonial-2";
-import { getAllSiteInfo, getAllTeams, getAllTestimonials } from "../lib/api";
+import {
+  getAllOverOns,
+  getAllSiteInfo,
+  getAllTeams,
+  getAllTestimonials,
+} from "../lib/api";
 import Banner2 from "../element/banner2";
 import Cta from "../element/cta";
 import OurPromises from "../component/OurPromises";
 import TeamFinal from "../element/teamFinal";
 import MetaTags from "../layout/MetaTags";
 
-function AboutUs1({ sitInfo, team, testimonials }) {
+function AboutUs1({ team, testimonials, overOns }) {
   const [isOpen, setOpen] = useState(false);
   return (
     <>
@@ -44,6 +49,7 @@ function AboutUs1({ sitInfo, team, testimonials }) {
                   </h6> */}
                   <h2 className="title">Hallo! Wij zijn Achieve.</h2>
                 </div>
+                {/*  {overOns[0]?.introduction} */}
                 <p>
                   Achieve is een digital agency bestaande uit een kleine groep
                   specialisten met ieder hun specifieke ambities, kwaliteiten en
@@ -82,7 +88,7 @@ function AboutUs1({ sitInfo, team, testimonials }) {
           </div>
         </section>
       </div>
-      <OurPromises />
+      <OurPromises overOns={overOns} />
       {/* <Team team={team} /> */}
       <TeamFinal team={team} />
       {/* <Team team={team} /> */}
@@ -95,9 +101,10 @@ export async function getStaticProps({ preview = false }) {
   const sitInfo = await getAllSiteInfo(preview);
   const team = await getAllTeams(preview);
   const testimonials = await getAllTestimonials(preview);
+  const overOns = await getAllOverOns(preview);
   //console.log({ team });
   return {
-    props: { sitInfo, team, testimonials },
+    props: { sitInfo, team, testimonials, overOns },
     revalidate: 1,
   };
 }

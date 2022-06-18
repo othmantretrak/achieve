@@ -23,6 +23,9 @@
   #container-div {
     display: none;
   }
+  .form-wrapper {
+    margin-top: 91px;
+  }
 }
 @media only screen and (max-width: 575px) {
   .section-head h2.title {
@@ -123,14 +126,48 @@
       left: 45%;
       transform: rotate(15deg);
     }
-    40% {
+    20% {
       left: 13%;
       transform: rotate(0deg);
     }
-    100% {
+    50% {
       left: 13%;
-      transform: rotate(0dg);
+      transform: rotate(0deg);
     }
+    80% {
+      left: 13%;
+      transform: rotate(0deg);
+    }
+    95% {
+      transform: rotate(15deg);
+    }
+    98% {
+      transform: rotate(15deg);
+    }
+    99% {
+      transform: rotate(15deg);
+    }
+    99.9999% {
+      transform: rotate(15deg);
+    }
+    100% {
+      left: 45%;
+      transform: rotate(15dg);
+    }
+  }
+  footer .footer-logo a img {
+    max-width: 70%;
+  }
+  .footer-info .footer-logo {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e1e1f0;
+    padding-bottom: 20px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin-left: auto;
   }
 }
 @media only screen and (max-width: 767px) {

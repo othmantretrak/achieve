@@ -26,6 +26,7 @@ function AllServices({ services }) {
                     className="col-lg-4 col-md-6 wow fadeInUp"
                     data-wow-duration="2s"
                     data-wow-delay="0.1s"
+                    id={s._id}
                   >
                     <div
                       className={`${

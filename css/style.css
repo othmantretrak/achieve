@@ -27,7 +27,7 @@
   --gray: #6c757d;
   --gray-dark: #343a40;
   --primary: #8639fa;
-  --secondary: #1f2471;
+  --secondary: #13c4a1;
   --success: #029e76;
   --info: #00aeff;
   --warning: #fea500;
@@ -14038,7 +14038,7 @@ textarea {
   vertical-align: middle;
   max-width: 100%;
   width: auto;
-  height: 70px;
+  height: 50px;
 }
 
 .icon-md {

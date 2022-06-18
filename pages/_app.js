@@ -1,6 +1,4 @@
 import { useEffect, useState } from "react";
-import Slider from "react-rangeslider";
-import LoadingScreen from "../component/Loading-Screen/loading-screen";
 import "react-rangeslider/lib/index.css";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
@@ -11,7 +9,7 @@ import "../styles/globals.css";
 import "../styles/switcher.css";
 import { AuthProvider } from "../common/useLoader";
 import Layout from "../layout/Layout";
-import { getAllSiteInfo } from "../lib/api";
+import { getAllSettings, getAllSiteInfo } from "../lib/api";
 import { TabProvider } from "../common/useTabs";
 
 let siteInfo;
@@ -85,7 +83,9 @@ MyApp.getInitialProps = async () => {
   }
 
   //const res = await fetch("http://localhost:3000/api/navigation");
-  const navigationProps = await getAllSiteInfo();
+  const info = await getAllSiteInfo();
+  const settings = await getAllSettings();
+  let navigationProps = { info, settings };
   //const navigationProps = await res.json()
   siteInfo = navigationProps;
 

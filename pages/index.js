@@ -6,7 +6,6 @@ import Service from "../element/service";
 import Slider1 from "../element/slider-1";
 import Testimonial2 from "../element/testimonial-2";
 import initIsotope from "../common/initIsotope";
-import Head from "next/head";
 import PricingT4 from "../component/pricingTable-4";
 import {
   getAllCases,

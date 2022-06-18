@@ -1,10 +1,12 @@
 import React from "react";
+import { imageBuilder } from "../lib/sanity";
 import Communication from "./iconCompenents/Communication";
 import Passion from "./iconCompenents/Passion";
 import Professionaliteit from "./iconCompenents/Professionaliteit";
 import Transparantie from "./iconCompenents/Transparantie";
 
-function OurPromises() {
+function OurPromises({ overOns }) {
+  console.log({ overOns: overOns[0].introduction });
   return (
     <div className="container our-promises">
       <div className="section-head style-3 text-center">
@@ -15,37 +17,42 @@ function OurPromises() {
       {/*   <h4>De kernwaarden van Achieve op een rijtje.</h4> */}
       <div className="row">
         <div className="col-md">
-          <Communication />
+          <img
+            src={imageBuilder(
+              overOns[0]?.communicatie?.communicatieIcon
+            )?.url()}
+            alt=""
+          />
           <h4>Communicatie</h4>
-          <p>
-            Door duidelijke communicatie tussen beide partijen zullen we
-            optimaal samenwerken, groeien en vooruit gaan.
-          </p>
+          <p>{overOns[0]?.communicatie?.text}</p>
         </div>
         <div className="col-md">
-          <Transparantie />
+          <img
+            src={imageBuilder(
+              overOns[0]?.transparantie?.transparantieIcon
+            )?.url()}
+            alt=""
+          />
           <h4>Transparantie</h4>
-          <p>
-            Te allen tijde zullen we onderbouwd advies geven over de resultaten.
-            In overleg worden er keuzes gemaakt en toegepast.
-          </p>
+          <p>{overOns[0]?.transparantie?.text}</p>
         </div>
         <div className="col-md">
-          <Professionaliteit />
+          <img
+            src={imageBuilder(
+              overOns[0]?.professionaliteit?.professionaliteitIcon
+            )?.url()}
+            alt=""
+          />
           <h4>Professionaliteit</h4>
-          <p>
-            De adviezen en keuzes zijn altijd met zuivere intentie, afgewogen
-            door professionals met ervaring in het werkveld en met oog op
-            externe invloeden.
-          </p>
+          <p>{overOns[0]?.professionaliteit?.text}</p>
         </div>
         <div className="col-md">
-          <Passion />
+          <img
+            src={imageBuilder(overOns[0]?.passie?.passieIcon)?.url()}
+            alt=""
+          />
           <h4>Passie</h4>
-          <p>
-            Wanneer je doet waar je van houdt, komt het beste naar boven. Vertel
-            jij over jouw passie, versterken wij die met die van ons.
-          </p>
+          <p>{overOns[0]?.passie?.text}</p>
         </div>
       </div>
     </div>

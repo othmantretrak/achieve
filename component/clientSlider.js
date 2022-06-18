@@ -3,36 +3,36 @@ import { imageBuilder } from "../lib/sanity";
 
 function ClientSlider({ companies }) {
   const settings = {
-    dots: false,
+    dots: true,
     infinite: true,
-    slidesToShow: 6,
-    slidesToScroll: 1,
+    slidesToShow: 4,
+    //slidesToScroll: 3,
     autoplay: true,
-    speed: 2000,
+    speed: 500,
     arrows: false,
     swipe: true,
-    swipeToSlide: true,
-    adaptiveHeight: true,
+    swipeToSlide: false,
+    adaptiveHeight: false,
     responsive: [
       {
         breakpoint: 1200,
         settings: {
           slidesToShow: 4,
-          slidesToScroll: 1,
+          //slidesToScroll: 2,
         },
       },
       {
         breakpoint: 767,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 1,
+          //slidesToScroll: 2,
         },
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1,
+          slidesToScroll: 2,
         },
       },
     ],

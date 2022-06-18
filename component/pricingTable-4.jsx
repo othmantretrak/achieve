@@ -40,12 +40,12 @@ function PricingT4({ prices }) {
             </div>
           ))}
         </div>
-        {showHand && (
+        {!showHand && (
           <div id="container-div">
             <div>
               <img
                 id="hand"
-                src="https://cdn-icons-png.flaticon.com/512/1093/1093252.png"
+                src="https://res.cloudinary.com/tretrak/image/upload/v1655529351/achieve/1093252_tql41u.png"
               />
             </div>
           </div>

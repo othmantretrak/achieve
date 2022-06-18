@@ -56,7 +56,7 @@ function Quote4() {
             </div>
 
             <div
-              className=" m-b30 wow fadeInRight col-12 col-lg-6 pt-4 pt-lg-0"
+              className=" m-b30 wow fadeInRight col-12 col-lg-6 pt-4 form-wrapper"
               data-wow-duration="2s"
               data-wow-delay="0.4s"
             >
