@@ -40,7 +40,7 @@ function PricingT4({ prices }) {
             </div>
           ))}
         </div>
-        {!showHand && (
+        {showHand && (
           <div id="container-div">
             <div>
               <img
