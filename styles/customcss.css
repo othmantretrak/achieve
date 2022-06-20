@@ -291,7 +291,7 @@ sup {
   background-image: var(--gradient);
   display: flex;
   width: 200px;
-  margin-left: -50px;
+  /*   margin-left: -50px; */
   justify-content: center;
   padding-right: 55px;
 }
