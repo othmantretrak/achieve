@@ -20578,7 +20578,8 @@ footer .widget-link li {
 footer .widget-link a {
   color: #fff;
 }
-footer .widget_services ul li a {
+footer .widget_services ul li a,
+footer .widget_services ul li button {
   position: relative;
   color: #fff;
   padding: 5px 0 5px 0;
@@ -20587,7 +20588,12 @@ footer .widget_services ul li a {
   -ms-transition: all 0.5s;
   transition: all 0.5s;
 }
-footer .widget_services ul li a:hover {
+footer .widget_services ul li button {
+  background: none;
+  border: none;
+}
+footer .widget_services ul li a:hover,
+footer .widget_services ul li button:hover {
   padding: 5px 0 5px 10px;
 }
 footer .widget_services.style-1 ul li a {

@@ -3,13 +3,24 @@ import Link from "next/link";
 import Image from "next/image";
 import { imageBuilder } from "../lib/sanity";
 import { useTab } from "../common/useTabs";
+import { menu } from "../data/footerOnzediensten";
+import { useRouter } from "next/router";
 
 function Footer({ sitInfo }) {
   const { tab, setTab } = useTab();
+  const router = useRouter();
   if (!sitInfo?.info) {
     return <></>;
   }
   const sitInfo2 = sitInfo?.info[0]?.address.split(",");
+  const setTabtab = (tab, href) => {
+    router.push(href, undefined, { scroll: false });
+    setTab(tab);
+    const errorElement = document.getElementById(tab);
+    if (errorElement) {
+      errorElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <>
@@ -192,72 +203,13 @@ function Footer({ sitInfo }) {
                 <div className="widget widget_services">
                   <h5 className="footer-title">Onze diensten</h5>
                   <ul>
-                    <li>
-                      <Link href="/diensten#46f8f6b9-9a20-4ff2-b7c3-092d845efb5d">
-                        <a
-                          onClick={() =>
-                            setTab("46f8f6b9-9a20-4ff2-b7c3-092d845efb5d")
-                          }
-                        >
-                          Branding
-                        </a>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/diensten#07a26140-baad-4b7e-bb4c-b405ee254a9a">
-                        <a
-                          onClick={() =>
-                            setTab("07a26140-baad-4b7e-bb4c-b405ee254a9a")
-                          }
-                        >
-                          Web Development
-                        </a>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/diensten#5620aa90-a452-49b2-b1d2-a8c6fcb746eb">
-                        <a
-                          onClick={() =>
-                            setTab("5620aa90-a452-49b2-b1d2-a8c6fcb746eb")
-                          }
-                        >
-                          Content Creation
-                        </a>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/diensten#af06528f-7c23-4c52-811e-927003a4a7a3">
-                        <a
-                          onClick={() =>
-                            setTab("af06528f-7c23-4c52-811e-927003a4a7a3")
-                          }
-                        >
-                          Email Marketing
-                        </a>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/diensten#8c970907-4e9b-4741-8749-ab16696270ef">
-                        <a
-                          onClick={() =>
-                            setTab("8c970907-4e9b-4741-8749-ab16696270ef")
-                          }
-                        >
-                          Social Advertising{" "}
-                        </a>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/diensten#2dee630c-afe0-4756-89e7-66562d68672e">
-                        <a
-                          onClick={() =>
-                            setTab("2dee630c-afe0-4756-89e7-66562d68672e")
-                          }
-                        >
-                          Search Engine Advertising
-                        </a>
-                      </Link>
-                    </li>
+                    {menu.map((item) => (
+                      <li key={item.id}>
+                        <button onClick={() => setTabtab(item.id, item.href)}>
+                          {item.title}
+                        </button>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>

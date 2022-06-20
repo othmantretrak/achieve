@@ -15,6 +15,10 @@ export default function Document() {
           href="https://assets.calendly.com/assets/external/widget.css"
           rel="stylesheet"
         />
+        <meta
+          name="facebook-domain-verification"
+          content="y7jdiieyc6esn9o3msl6bbovwms137"
+        />
         <script
           src="https://assets.calendly.com/assets/external/widget.js"
           type="text/javascript"
@@ -23,7 +27,7 @@ export default function Document() {
 
         <script
           async
-          src={`https://www.googletagmanager.com/gtag/js?id=286152365`}
+          src={`https://www.googletagmanager.com/gtag/js?id=UA-207363931-1`}
         />
         <script
           dangerouslySetInnerHTML={{
@@ -31,7 +35,7 @@ export default function Document() {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '286152365', {
+            gtag('config', 'UA-207363931-1', {
               page_path: window.location.pathname,
             });
           `,
