@@ -21,13 +21,7 @@ function AllServices({ services }) {
             {services &&
               services.map((s) => {
                 return (
-                  <div
-                    key={s._id}
-                    className="col-lg-4 col-md-6 wow fadeInUp"
-                    data-wow-duration="2s"
-                    data-wow-delay="0.1s"
-                    id={s._id}
-                  >
+                  <div key={s._id} className="col-lg-4 col-md-6 " id={s._id}>
                     <div
                       className={`${
                         open === s._id

@@ -25,6 +25,7 @@
     "react-modal-video": "^1.2.8",
     "react-motion": "^0.5.2",
     "react-rangeslider": "^2.2.0",
+    "react-scroll-into-view": "^1.12.0",
     "react-scroll-to-top": "^1.0.8",
     "react-slick": "^0.28.1",
     "react-text-collapse": "^0.6.1",

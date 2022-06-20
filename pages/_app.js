@@ -11,6 +11,7 @@ import { AuthProvider } from "../common/useLoader";
 import Layout from "../layout/Layout";
 import { getAllSettings, getAllSiteInfo } from "../lib/api";
 import { TabProvider } from "../common/useTabs";
+import { ScrollService } from "../common/useOnscrollService";
 
 let siteInfo;
 
@@ -59,9 +60,11 @@ function MyApp({ Component, pageProps, navigationProps }) {
       <div className="page-wraper">
         <AuthProvider>
           <TabProvider>
-            <Layout sitInfo={navigationProps}>
-              <Component {...pageProps} />
-            </Layout>
+            <ScrollService>
+              <Layout sitInfo={navigationProps}>
+                <Component {...pageProps} />
+              </Layout>
+            </ScrollService>
           </TabProvider>
         </AuthProvider>
       </div>

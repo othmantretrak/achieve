@@ -11,7 +11,7 @@ function Quote4() {
       <div className="content-inner pt-100px">
         <div className="container">
           <div className="row align-items-center">
-            <div className="col-12 col-lg-5 m-b30 wow fadeInLeft">
+            <div className="col-12 col-lg-5 align-self-end wow fadeInLeft">
               <div className="section-heading text-center mb-3">
                 <h2>Let&apos;s connect!</h2>
                 <p className="d-sm-block mt-4">
@@ -34,7 +34,10 @@ function Quote4() {
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     </p> */}
                   </li>
-                  <li className="contact-info color-3 bg-hover active hover-bottom text-center p-5 m-3">
+                  <li
+                    style={{ marginBottom: "0px !important" }}
+                    className="contact-info color-3 bg-hover active hover-bottom text-center p-5 m-3"
+                  >
                     <span>
                       <i
                         style={{ color: "#8639fa" }}
@@ -56,7 +59,7 @@ function Quote4() {
             </div>
 
             <div
-              className=" m-b30 wow fadeInRight col-12 col-lg-6 pt-4 form-wrapper"
+              className=" wow fadeInRight col-12 col-lg-6 pt-4 form-wrapper"
               data-wow-duration="2s"
               data-wow-delay="0.4s"
             >

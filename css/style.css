@@ -2,6 +2,7 @@
 
 @import url("../icons/flaticon/flaticon.css");
 @import url("../icons/themify/themify-icons.css");
+
 :root {
   --gradient: linear-gradient(to right, #8639fa 0, #5f3bff 51%, #5f3bff 100%);
   --gradient-sec: linear-gradient(
@@ -20,7 +21,7 @@
   --red: #ff586e;
   --orange: #ff8853;
   --yellow: #ffa808;
-  --green: #029e76;
+  --green: #13c4a1;
   --teal: #20c997;
   --cyan: #17a2b8;
   --white: #fff;
@@ -15773,13 +15774,13 @@ textarea {
   opacity: 1;
 }
 .slick-dots li button:before {
-  width: 10px;
-  height: 10px;
-  content: "";
-  opacity: 1;
-  background: #8639fa;
-  border-radius: 30px;
-  margin: 4px;
+  width: 10px !important;
+  height: 10px !important;
+  content: "" !important;
+  opacity: 1 !important;
+  background: #8639fa !important;
+  border-radius: 30px !important;
+  margin: 4px !important;
 }
 .slick-dots li.slick-active li {
   width: 30px;

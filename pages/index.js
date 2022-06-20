@@ -49,7 +49,7 @@ function Home({
         desc="Groeien op basis van data en de kracht van creativiteit."
       />
 
-      <Layout>
+      <>
         <div className="page-content homepage-container bg-gray" id="top">
           <Slider1 />
           <Clients companies={companies} />
@@ -67,7 +67,7 @@ function Home({
           </div>
           <Cta />
         </div>
-      </Layout>
+      </>
     </>
   );
 }

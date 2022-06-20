@@ -181,7 +181,7 @@
   border-top: none;
 }
 .single-pricing-table i {
-  color: var(--secondary);
+  color: var(--green);
 }
 .single-pricing-table.left-align .price,
 .single-pricing-table.left-align .pricing-header {
@@ -250,11 +250,8 @@ sup {
 }
 /* custom btn */
 .custom-box {
-  padding-left: 40px;
   margin-top: 30px;
-  /* text-align: center; */
   display: flex;
-  justify-content: center;
 }
 
 .custom-box .default-btn {
@@ -326,7 +323,7 @@ sup {
 }
 .default-btn:hover {
   color: #fff;
-  box-shadow: 0 5px 28.5px 1.5px rgba(19, 196, 161, 0.3) !important;
+  /*   box-shadow: 0 5px 28.5px 1.5px rgba(19, 196, 161, 0.3) !important; */
 }
 /* custom tab */
 .pricing-list-tab .tabs {
@@ -907,6 +904,9 @@ section.case-index {
 .container .contact-btn {
   margin-bottom: 100px;
 }
+.container .contact-btn {
+  margin-bottom: 0px;
+}
 .container .case-website button,
 .container .contact-btn button {
   display: flex;
@@ -928,4 +928,7 @@ section.case-index {
 }
 .container .contact-btn button i {
   color: white;
+}
+div:target {
+  background-color: gold !important;
 }
