@@ -204,7 +204,7 @@ function Footer({ sitInfo }) {
                   <h5 className="footer-title">Onze diensten</h5>
                   <ul>
                     {menu.map((item) => (
-                      <li key={item.id}>
+                      <li className="text-left" key={item.id}>
                         <button onClick={() => setTabtab(item.id, item.href)}>
                           {item.title}
                         </button>
