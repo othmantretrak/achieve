@@ -27,7 +27,7 @@ function PricingT4({ prices }) {
   return (
     <>
       {/* <!-- Pricing Table --> */}
-      <section ref={ref} className="content-inner m-t100 bg-gray">
+      <section ref={ref} className="content-inner m-t100 bg-gray pricing-table">
         <div className="container">
           <div className="section-head style-3 text-center">
             <h2 className="title">Selecteer één van onze diensten</h2>

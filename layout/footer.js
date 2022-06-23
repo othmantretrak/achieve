@@ -205,7 +205,10 @@ function Footer({ sitInfo }) {
                   <ul>
                     {menu.map((item) => (
                       <li className="text-left" key={item.id}>
-                        <button onClick={() => setTabtab(item.id, item.href)}>
+                        <button
+                          className="text-left"
+                          onClick={() => setTabtab(item.id, item.href)}
+                        >
                           {item.title}
                         </button>
                       </li>
@@ -213,6 +216,7 @@ function Footer({ sitInfo }) {
                   </ul>
                 </div>
               </div>
+
               <div
                 className="col-xl-3 col-lg-3 col-sm-6 wow fadeIn"
                 data-wow-duration="2s"

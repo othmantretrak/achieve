@@ -3,7 +3,7 @@ import ClientSlider from "./../component/clientSlider";
 function Clients({ companies }) {
   return (
     <>
-      <div className="content-inner-2 pt-100px">
+      <div className="content-inner-2 client pt-100px">
         <div className="container">
           <div className="section-head style-3 text-center">
             <h2 className="title">Deze bedrijven gingen je voor</h2>

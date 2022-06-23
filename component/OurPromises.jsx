@@ -6,7 +6,7 @@ import Professionaliteit from "./iconCompenents/Professionaliteit";
 import Transparantie from "./iconCompenents/Transparantie";
 
 function OurPromises({ overOns }) {
-  console.log({ overOns: overOns[0].introduction });
+  //console.log({ overOns: overOns[0].introduction });
   return (
     <div className="container our-promises">
       <div className="section-head style-3 text-center">

@@ -902,7 +902,7 @@ section.case-index {
 }
 .container .case-website,
 .container .contact-btn {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 .container .contact-btn {
   margin-bottom: 0px;
@@ -931,4 +931,18 @@ section.case-index {
 }
 div:target {
   background-color: gold !important;
+}
+
+/* start page */
+.start-quote .wive {
+  height: 420px;
+}
+.mb-100 {
+  margin-bottom: 100px;
+}
+.start-page .pricing-table.m-t100 {
+  margin-top: 50px;
+}
+.start-page .client.pt-100px {
+  padding-top: 50px;
 }

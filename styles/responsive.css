@@ -169,6 +169,13 @@
     align-content: center;
     margin-left: auto;
   }
+  /* start page */
+  /*   .start-quote .wive {
+    height: 120px;
+  }
+  .start-quote p {
+    font-size: 1rem;
+  } */
 }
 @media only screen and (max-width: 767px) {
   .dlab-content .video-bx.style-3 {
@@ -182,10 +189,16 @@
     align-items: center;
     justify-content: center;
   }
+  .start-quote .wive {
+    height: 200px;
+  }
 }
 @media (min-width: 992px) {
   footer .container > .row div:nth-child(3) {
     padding-left: 0px;
+  }
+  .start-quote .wive {
+    height: 300px;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -314,5 +327,8 @@
   .swiper-container {
     max-width: 1199px;
     margin: 0 auto;
+  }
+  .start-quote .wive {
+    height: 400px;
   }
 }
