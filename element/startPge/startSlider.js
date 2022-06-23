@@ -72,7 +72,7 @@ function StartSlider() {
                 >
                   <img
                     className="move-1"
-                    src="https://svgshare.com/i/iXH.svg"
+                    src="https://res.cloudinary.com/tretrak/image/upload/v1655960586/achieve/Frame_asp2oa.svg"
                     alt=""
                   />
                 </div>

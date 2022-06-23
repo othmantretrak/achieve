@@ -18,7 +18,7 @@ function StartService() {
             <div className="start-service-content  w-75">
               <img
                 className="max-w200"
-                src="https://svgshare.com/i/iYL.svg"
+                src="https://res.cloudinary.com/tretrak/image/upload/v1655960655/achieve/Frame_1_v0wmvh.svg"
                 alt=""
               />
               <h4> MEER WEBSITE VERKEER </h4>
@@ -28,7 +28,7 @@ function StartService() {
             <div className="start-service-content w-75">
               <img
                 className="max-w200"
-                src="https://svgshare.com/i/iVw.svg"
+                src="https://res.cloudinary.com/tretrak/image/upload/v1655960654/achieve/Frame_2_mqmmde.svg"
                 alt=""
               />
               <h4>MEER CONVERSIES</h4>
@@ -38,7 +38,7 @@ function StartService() {
             <div className="start-service-content w-75">
               <img
                 className="max-w200"
-                src="https://svgshare.com/i/iWo.svg"
+                src="https://res.cloudinary.com/tretrak/image/upload/v1655960654/achieve/Frame_3_sy2yjs.svg"
                 alt=""
               />
               <h4> MEER WEBSITE VERKEER </h4>
