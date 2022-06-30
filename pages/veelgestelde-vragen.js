@@ -20,7 +20,7 @@ function FAQ1({ sitInfo, faqCategories, faqs }) {
 
         {/* <!-- Faq --> */}
         <section
-          className="content-inner "
+          className="content-inner pt-100px"
           style={{
             backgroundImage:
               "url(https://res.cloudinary.com/tretrak/image/upload/v1651468156/achieve/bg1_st0d5t.png)",

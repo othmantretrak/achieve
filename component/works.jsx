@@ -106,7 +106,7 @@ const Works = ({ cases, title, classn }) => {
                                 </span>
                               </div>
                               <div className="cont">
-                                <h6>{slide.title}</h6>
+                                <h6>Case</h6>
                                 <h4>{slide.title}</h4>
                               </div>
                             </div>

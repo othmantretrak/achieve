@@ -11,6 +11,8 @@ import Works from "../../component/works";
 import Accordion_sm from "../../element/accordion_sm";
 import MetaTags from "../../layout/MetaTags";
 import Link from "next/link";
+import Hot from "../../component/iconCompenents/Hot";
+
 import CustomBtn from "../../element/CustomBtn";
 
 function CaseDetails({ cases, post }) {
@@ -87,13 +89,22 @@ function CaseDetails({ cases, post }) {
               </div>
             </div>
             {post[0].caseWebsite && (
-              <div className="case-website">
-                <CustomBtn
-                  className=" case-website text-uppercase"
-                  title="bekijk de website"
-                  onClick={() => router.push(post[0].caseWebsite)}
-                />
-              </div>
+              <>
+                <div className="case-website">
+                  <div className="custom-box">
+                    <a
+                      href={post[0].caseWebsite}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="default-btn"
+                    >
+                      <Hot />
+                      <p>bekijk de website</p>
+                      <span></span>
+                    </a>
+                  </div>
+                </div>
+              </>
             )}
             {post[0]?.caseLogo && post[0].WhoClient && (
               <div className="section-2 padding-top-100px ">

@@ -903,11 +903,12 @@ section.case-index {
 .container .case-website,
 .container .contact-btn {
   margin-bottom: 50px;
+  color: #fff;
 }
 .container .contact-btn {
   margin-bottom: 0px;
 }
-.container .case-website button,
+.container .case-website a,
 .container .contact-btn button {
   display: flex;
   justify-content: center;
@@ -915,7 +916,7 @@ section.case-index {
   gap: 4px;
   text-transform: uppercase;
 }
-.container .case-website button p,
+.container .case-website a p,
 .container .contact-btn button p {
   padding: 0;
   margin: 0;
