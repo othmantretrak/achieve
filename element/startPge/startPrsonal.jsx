@@ -6,7 +6,7 @@ import WiveSvg from "../svgs/WiveSvg";
 
 function StartPersonal() {
   return (
-    <section className="bg-light personal-quote mb-100">
+    <section className="bg-light personal-quote mb-3">
       <div className="container py-5 ">
         <div className="mx-auto section-head style-3 text-center">
           <h2 className="title">

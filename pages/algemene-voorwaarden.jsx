@@ -13,7 +13,7 @@ function TermOfUse({ sitInfo, terms }) {
         {/* <!-- Banner  --> */}
         <Banner2 name="Algemene voorwaarden" />
         {/* <!-- About Us --> */}
-        <section className="content-inner ">
+        <section className="content-inner  pt-100px">
           <div className="container">
             <div className="row align-items-center">
               <div

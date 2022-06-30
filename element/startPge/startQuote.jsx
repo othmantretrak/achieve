@@ -9,7 +9,7 @@ function StartQuote() {
     <section
       className="bg-g my-5 py-5 start-quote"
       style={{
-        backgroundImage: "var(--gradient)",
+        backgroundColor: "#333333",
         textAlign: "center",
       }}
     >

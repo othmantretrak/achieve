@@ -1,4 +1,5 @@
 import Link from "next/link";
+import TeamStartSvg from "../svgs/teamStart";
 
 function StartAboutUs() {
   return (
@@ -12,11 +13,7 @@ function StartAboutUs() {
               data-wow-delay="0.2s"
             >
               <div className="dz-media">
-                <img
-                  src="https://res.cloudinary.com/tretrak/image/upload/v1655950644/achieve/team_wpv1kn.svg"
-                  className="move-1"
-                  alt=""
-                />
+                <TeamStartSvg />
               </div>
             </div>
             <div

@@ -19,7 +19,7 @@ function PrivacyPolicy({ sitInfo, privacy }) {
         {/* <!-- Banner  --> */}
         <Banner2 name="Privacy policy" />
         {/* <!-- About Us --> */}
-        <section className="content-inner ">
+        <section className="content-inner  pt-100px">
           <div className="container">
             <div className={markdownStyles.markdown}>
               <PostBody content={privacy && privacy[0]?.body} />
